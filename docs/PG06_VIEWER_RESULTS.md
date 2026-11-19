@@ -49,10 +49,11 @@ bun run check                      # motor, día/noche, i18n y sidecar: todo cor
 **Checkpoint Git:** los nueve archivos anteriores se incluyeron en un commit local
 de `main` con mensaje `feat(pg06): visor aislado de sprites overworld y documentación
 de auditoría`. No se incluyeron sprites, derivados, temporales ni datos privados.
-Estado Git final:
+Estado Git final: rama `main`, con el checkpoint como commit local (no publicado;
+la relación exacta con `origin/main` puede cambiar si se hace push). Árbol
+rastreado limpio; único elemento sin seguimiento:
 
 ```
-## main...origin/main
 ?? docs/stitch/reference/
 ```
 
@@ -67,7 +68,7 @@ ni derivados dentro del repositorio.
 | Canvas lógico 160×144 y fondo original | `#scene` con `imageSmoothingEnabled=false`, imagen `/room.png` servida desde `apps/web/assets/room/guarderia.png` | capturas `01`, `08`, `09`; `image-rendering: pixelated` en CSS |
 | 16 frames y coordenadas reales | `frameRects()` mide 16 rectángulos por corridas de alfa > 8; celdas vacías `w=h=0` | Electrode: 16 celdas, 0 vacías, rect `x10 y18 w44 h42`, digest `a93e859d` |
 | Escalas 16/24/40/64 | `scaleForTier()` aplica `factor = tier / alturaVisible`, redondeo a enteros y anclaje por pies | Electrode visible 44×42 → factor 0,952 → destino 42×40 a tier 40; montaje `05-escalas.png` |
-| Tres paletas | `rgba` (defecto), `gbc4` (4 colores exactos del nursery) y `gbc16` (16 tonos derivados, aproximación no oficial) | conteo en navegador: RGBA 9 colores visibles, GBC4 **4**, GBC16 8 usados; montaje `04-paletas.png` |
+| Tres paletas | `rgba` (defecto), `gbc4` (4 colores exactos del nursery) y `gbc16` (16 tonos derivados, aproximación no oficial) | conteo en navegador: RGBA 9 colores visibles, GBC4 **4**, GBC16 **7 de 16** en Electrode frame 0 (5–8 según sprite); montaje `04-paletas.png`, §7.2 |
 | Ancla de pies ajustable | cruz y caja opcionales, sliders X/Y, arrastre sobre el canvas, botón de restaurar | `footX/footY` 75/103 → 60/95 → restaurado 75/103 |
 | Comparaciones | grupos «4 mascotas» (101/490/034/081), «Extremos» (095/321/595/810/643/249), «Shiny actual» y checkboxes individuales | capturas `02-cuatro-mascotas.png`, `03-extremos.png`, `06-shiny.png` |
 | Animación | botones Animar/Parar, 4 frames por fila, velocidad configurable 280 ms por defecto | `frameInRow` 0 → 2 tras 700 ms, parado en 2; `playing:false` |
