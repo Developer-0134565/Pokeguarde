@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;background-color:#fef8f7;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#0055c7", "primary-fixed-dim": "#ffb3ad", "tertiary-fixed-dim": "#f8bd2a", "surface-container-low": "#f8f2f2", "inverse-on-surface": "#f6efef", "on-secondary": "#ffffff", "surface": "#fef8f7", "on-primary": "#ffffff", "on-surface": "#1d1b1b", "secondary-fixed": "#d9e2ff", "on-surface-variant": "#5b403e", "on-primary-fixed-variant": "#930011", "surface-container-high": "#ede7e6", "on-primary-fixed": "#410003", "on-secondary-container": "#fefcff", "on-error": "#ffffff", "surface-container-highest": "#e7e1e1", "surface-tint": "#b91d23", "surface-dim": "#ded9d8", "inverse-surface": "#323030", "on-primary-container": "#fffcff", "surface-variant": "#e7e1e1", "on-tertiary-fixed-variant": "#5c4300", "error": "#ba1a1a", "tertiary-container": "#956e00", "error-container": "#ffdad6", "on-secondary-fixed": "#001945", "secondary-container": "#146df4", "secondary-fixed-dim": "#b0c6ff", "on-tertiary-container": "#fffbff", "background": "#fef8f7", "primary-container": "#d93636", "surface-bright": "#fef8f7", "on-background": "#1d1b1b", "primary-fixed": "#ffdad6", "surface-container": "#f3ecec", "on-secondary-fixed-variant": "#00419c", "on-error-container": "#93000a", "outline-variant": "#e3beba", "primary": "#b51a21", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffdfa0", "on-tertiary-fixed": "#261a00", "tertiary": "#765700", "outline": "#8f706d", "inverse-primary": "#ffb3ad", "on-tertiary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "gutter-sm": "0.5rem", "margin": "1rem", "space-sm": "0.5rem", "margin-lg": "2.5rem", "space-xs": "0.25rem", "margin-md": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-sm": ["Space Mono"], "body-lg": ["Space Grotesk"], "headline-md": ["Space Mono"], "headline-lg": ["Space Mono"], "body-sm": ["Space Grotesk"], "headline-xl": ["Space Mono"], "headline-xl-mobile": ["Space Mono"], "label-lg": ["Space Mono"], "label-md": ["Space Mono"], "body-md": ["Space Grotesk"] }, "fontSize": { "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.12em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-primary/95 backdrop-blur-xl shadow-[0_4px_16px_rgba(181,26,33,0.18)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center shadow-inner"><div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center"><div class="w-2.5 h-2.5 rounded-full bg-on-secondary opacity-90"></div></div></div></div><div class="flex items-center gap-1.5 pl-1"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span><span class="w-2 h-2 rounded-full bg-secondary-fixed"></span></div><div class="ml-space-xs"><span class="font-label-sm text-label-sm text-primary-fixed block uppercase opacity-80 leading-none">SYS-02</span><h1 class="font-headline-md text-headline-md text-on-primary leading-tight uppercase">Ficha / Datos</h1></div></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8 space-y-4">
+<!-- SCRIPT FOR TAB HIGHLIGHT & INTERACTIONS -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll("nav a[data-path]");
+      tabs.forEach(tab => {
+        if (tab.getAttribute("data-path") === "ficha-datos") {
+          tab.classList.remove("text-on-surface-variant");
+          tab.classList.add("text-primary", "font-bold");
+          const icon = tab.querySelector(".material-symbols-outlined");
+          if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+        }
+      });
+    });
+
+    function triggerCartridgeSync(btn) {
+      const label = document.getElementById("sync-status-text");
+      const icon = btn.querySelector(".material-symbols-outlined");
+      btn.disabled = true;
+      btn.classList.add("opacity-70");
+      icon.classList.add("animate-spin");
+      label.innerText = "ACCEDIENDO A SRAM...";
+      
+      setTimeout(() => {
+        icon.classList.remove("animate-spin");
+        btn.disabled = false;
+        btn.classList.remove("opacity-70");
+        label.innerText = "CARTUCHO .SAV EXPORTADO CON ÉXITO";
+        btn.classList.replace("bg-primary", "bg-tertiary");
+        setTimeout(() => {
+          label.innerText = "SRAM SINCRONIZADA [CHK: 0x9F4C]";
+          btn.classList.replace("bg-tertiary", "bg-primary");
+        }, 3000);
+      }, 1200);
+    }
+  </script>
+<!-- CHASSIS META HEADER / QUICK HARDWARE STATUS -->
+<div class="w-full bg-surface-container-high rounded-xl p-3 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest">DATA-LINK ACTIVE</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">BAT:</span>
+<div class="w-8 h-3 bg-surface-container-highest rounded-sm p-0.5 flex gap-0.5">
+<div class="h-full w-2 bg-primary"></div>
+<div class="h-full w-2 bg-primary"></div>
+<div class="h-full w-2 bg-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold ml-1">94%</span>
+</div>
+</div>
+<!-- CHIKORITA MAIN SUMMARY CARD (GBC RPG LCD BEZEL) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-4 relative overflow-hidden">
+<!-- Top Bar with ID & Name -->
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-sm text-label-sm rounded uppercase tracking-wider">
+            N.º 152
+          </span>
+<span class="px-2 py-0.5 bg-primary-container text-on-primary font-label-sm text-label-sm rounded uppercase tracking-wider">
+            PLANTA
+          </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1 uppercase tracking-tight">CHIKORITA</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Hoja Dulce • Gen II Pokédex</p>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Nivel</span>
+<span class="font-headline-lg text-headline-lg text-primary leading-none">24</span>
+</div>
+</div>
+<!-- Center Display: Pixel Pet Habitat Scene & Status Pill -->
+<div class="mt-3 relative rounded-lg bg-surface-container overflow-hidden shadow-inner flex flex-col items-center">
+<img class="w-full h-40 object-cover object-center" data-alt="Charming 8-bit pixel art of Chikorita happily resting on a white circular rug in a warm retro nursery bedroom. Nostalgic Gen II handheld game graphic style with brown wooden floor, red trimmed window showing bright yellow sun, tiny water and food bowls nearby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8Y6LyKUBYGGDKiSUYemy5axkQ4QbqBisyUDg7BbSqyPYRBAcSc3fhLDy3M6PX1bQCx741o2Y1kwSoycG7_-UemNa5sPGNwNsduo3D6cUOT7BMNvR8XOR-XiE50ksgwG_WTbGwD8QnoHu7lwMRhyjNZ2JXyM7nMyyhe7K9GHcWZde9Rqpb4DmVmL-z1r8hf1pIxnx_S6v8EQUiqBx1fAMn-f01n-BPwow-aiDnZeYS"/>
+<!-- In-screen RPG Mood Ribbon -->
+<div class="w-full bg-surface-container-highest/95 px-3 py-1.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Ánimo: <span class="text-primary font-bold">Muy Feliz</span></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">EXP: 8,420 / 9,100</span>
+</div>
+</div>
+<!-- Quick Vital Strip -->
+<div class="grid grid-cols-3 gap-2 mt-3 pt-2 bg-surface-container-low rounded-lg p-2.5">
+<div class="flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Peso</span>
+<span class="font-label-lg text-label-lg text-on-surface mt-0.5">6.4 kg</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Amistad</span>
+<span class="font-label-lg text-label-lg text-primary mt-0.5">220/255</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Naturaleza</span>
+<span class="font-label-lg text-label-lg text-on-surface mt-0.5">Firme</span>
+</div>
+</div>
+</div>
+<!-- SECCIÓN: LAS 6 NECESIDADES (BAROMETRO DE CUIDADOS) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-4 space-y-3">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">ecg_heart</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Necesidades Vitales</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 bg-primary/10 text-primary rounded-full uppercase">ÓPTIMO</span>
+</div>
+<!-- Gauges Grid -->
+<div class="space-y-2.5">
+<!-- 1. Comida -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">restaurant</span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Comida (Saciedad)</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">85%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden flex">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<!-- 2. Felicidad -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">sentiment_very_satisfied</span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Felicidad</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">92%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<!-- 3. Energía -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Energía</span>
+</div>
+<span class="font-label-md text-label-md text-secondary font-bold">68%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary-container h-full rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<!-- 4. Higiene -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">water_drop</span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Higiene</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">95%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<!-- 5. Disciplina -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">military_tech</span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Disciplina</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">74%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden flex">
+<div class="bg-on-surface-variant h-full rounded-full" style="width: 74%"></div>
+</div>
+</div>
+<!-- 6. Sueño -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">bedtime</span>
+<span class="font-label-md text-label-md text-error uppercase">Sueño (Alerta)</span>
+</div>
+<span class="font-label-md text-label-md text-error font-bold">30%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden flex">
+<div class="bg-error h-full rounded-full" style="width: 30%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- TARJETA: REPARTO DE EVS Y ESTADÍSTICAS TÉCNICAS -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-4 space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">query_stats</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Reparto de EVs</h3>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Esfuerzo Acumulado en Batallas</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase block">TOTAL EVS</span>
+<span class="font-headline-md text-headline-md text-primary">363 <span class="text-on-surface-variant font-label-sm text-label-sm">/ 510</span></span>
+</div>
+</div>
+<!-- Radar / Segmented Stat Bars -->
+<div class="space-y-2 pt-1">
+<!-- PS -->
+<div class="flex items-center gap-2">
+<span class="w-16 font-label-md text-label-md text-on-surface font-bold uppercase">PS</span>
+<div class="flex-1 bg-surface-container-highest h-3 rounded overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 52%"></div>
+</div>
+<span class="w-12 text-right font-label-md text-label-md text-on-surface">132 / 252</span>
+</div>
+<!-- Ataque -->
+<div class="flex items-center gap-2">
+<span class="w-16 font-label-md text-label-md text-on-surface font-bold uppercase">Ataque</span>
+<div class="flex-1 bg-surface-container-highest h-3 rounded overflow-hidden flex">
+<div class="bg-primary-container h-full" style="width: 25%"></div>
+</div>
+<span class="w-12 text-right font-label-md text-label-md text-on-surface">64 / 252</span>
+</div>
+<!-- Defensa -->
+<div class="flex items-center gap-2">
+<span class="w-16 font-label-md text-label-md text-on-surface font-bold uppercase">Defensa</span>
+<div class="flex-1 bg-surface-container-highest h-3 rounded overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 38%"></div>
+</div>
+<span class="w-12 text-right font-label-md text-label-md text-on-surface">96 / 252</span>
+</div>
+<!-- At. Esp. -->
+<div class="flex items-center gap-2">
+<span class="w-16 font-label-md text-label-md text-on-surface font-bold uppercase">At. Esp</span>
+<div class="flex-1 bg-surface-container-highest h-3 rounded overflow-hidden flex">
+<div class="bg-tertiary-container h-full" style="width: 14%"></div>
+</div>
+<span class="w-12 text-right font-label-md text-label-md text-on-surface">35 / 252</span>
+</div>
+<!-- Def. Esp. -->
+<div class="flex items-center gap-2">
+<span class="w-16 font-label-md text-label-md text-on-surface font-bold uppercase">Def. Esp</span>
+<div class="flex-1 bg-surface-container-highest h-3 rounded overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 10%"></div>
+</div>
+<span class="w-12 text-right font-label-md text-label-md text-on-surface">24 / 252</span>
+</div>
+<!-- Velocidad -->
+<div class="flex items-center gap-2">
+<span class="w-16 font-label-md text-label-md text-on-surface font-bold uppercase">Velocidad</span>
+<div class="flex-1 bg-surface-container-highest h-3 rounded overflow-hidden flex">
+<div class="bg-error h-full" style="width: 5%"></div>
+</div>
+<span class="w-12 text-right font-label-md text-label-md text-on-surface">12 / 252</span>
+</div>
+</div>
+<!-- Summary IV preview badge -->
+<div class="mt-2 p-2 bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">military_tech</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Potencial Genético (IVs):</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">SOBRESALIENTE</span>
+</div>
+</div>
+<!-- GUÍA DE ENTRENAMIENTO Y EFECTOS DE EJERCICIOS -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-4 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">fitness_center</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Guía de Entrenamiento</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase">TABLA II</span>
+</div>
+<!-- Exercises Bento Tiles -->
+<div class="space-y-2">
+<!-- Ejercicio 1: Carrera en el Parque -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">sprint</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase">Carrera Rápida</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">+2 EV Velocidad • -15% Energía</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm font-bold uppercase">10 MIN</span>
+</div>
+<!-- Ejercicio 2: Baño Termal e Hidratación -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">hot_tub</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase">Baño de Aromas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">+15% Higiene • +10% Felicidad</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm font-bold uppercase">5 MIN</span>
+</div>
+<!-- Ejercicio 3: Estiramiento de Hoja -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">self_improvement</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface uppercase">Meditación Solar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">+2 EV Def. Esp • +8% Disciplina</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm font-bold uppercase">15 MIN</span>
+</div>
+</div>
+</div>
+<!-- SINCRONIZACIÓN Y EXPORTACIÓN .SAV -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-4 space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">save</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Cartucho &amp; Sincronía</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Exporta las estadísticas actuales al archivo de memoria física para consolas Game Boy Color y emuladores compatibles.
+    </p>
+<!-- Visual Retro Cartridge Placeholder -->
+<div class="relative w-full rounded-lg overflow-hidden bg-surface-container-highest p-3 flex items-center gap-3">
+<img class="w-16 h-16 rounded-md object-cover flex-shrink-0" data-alt="Close up photograph of an iconic retro Game Boy Color clear red cartridge with internal microchip circuits and gold connectors visible under clean studio lighting, 90s tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOvey9iY9PRmDa0rbzYMu9e7lC58LWXgiXlEf3Jnp3RruVnxrojZEQ99NWTg_Z5hA3epMjpHNeCRTnPHy_LVXDubKqmj9OjqvxsA3mjMDQgXvoTPBCfzCuyHyC9O-a7ireoH0t2eQ4sjXY9I9T-8OG2KGCO2fVEFaNpf0_c_eHWB4SdlrAgwanI0RmGCJUIiHc2eVnhwrYrGQ4Tue46lnaS9uYD8460sI0wqTsPOCA"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase bg-primary text-on-primary px-1.5 py-0.5 rounded">GBC-SAV</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">32.0 KB</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold truncate mt-1">POKEMON_CRYSTAL_SPA.SAV</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5" id="sync-status-text">SRAM SINCRONIZADA [CHK: 0x9F4C]</span>
+</div>
+</div>
+<!-- Dual Step Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="w-full py-2.5 px-3 bg-surface-container text-on-surface rounded-lg font-label-md text-label-md uppercase font-bold active:translate-y-0.5 transition-transform flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>1: Previsualizar</span>
+</button>
+<button class="w-full py-2.5 px-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md uppercase font-bold active:translate-y-0.5 transition-transform flex items-center justify-center gap-1.5 shadow-sm" onclick="triggerCartridgeSync(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>2: Exportar .SAV</span>
+</button>
+</div>
+</div>
+<!-- PERFORATED RETRO SPEAKER ACCENT (CHASSIS METAPHOR) -->
+<div class="w-full py-2 flex items-center justify-center gap-1.5 opacity-40">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface"></span>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_20px_rgba(29,27,27,0.06)]" data-active-classes="text-primary font-bold"><div class="h-16 px-gutter-sm flex items-center justify-around"><a class="flex flex-col items-center justify-center w-28 h-12 text-on-surface-variant transition-colors" data-path="guarderia" href="#"><span class="material-symbols-outlined text-[20px]">egg</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-0.5">GUARDERÍA</span></a><a class="flex flex-col items-center justify-center w-28 h-12 text-on-surface-variant transition-colors" data-path="ficha-datos" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-0.5">FICHA / DATOS</span></a><a class="flex flex-col items-center justify-center w-28 h-12 text-on-surface-variant transition-colors" data-path="equipo-activo" href="#"><span class="material-symbols-outlined text-[20px]">shield</span><span class="font-label-sm text-label-sm tracking-wider uppercase mt-0.5">EQUIPO ACTIVO</span></a></div></nav></body></html>

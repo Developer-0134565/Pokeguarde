@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@font-face {
+  font-family: 'PKMN RBYGSC';
+  src: url('https://raw.githubusercontent.com/filipekiss/pokemon-font/master/dist/pokemon-font.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/thegrb90/pokered-starter@master/src/assets/font/pokemon-font.ttf') format('truetype'),
+       local('PKMN RBYGSC'), local('Pokemon GB');
+}
+body, * {
+  font-family: 'PKMN RBYGSC', 'Pokemon GB', 'Press Start 2P', monospace !important;
+}
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.btn-press-active { transform: translateY(4px) scale(0.96) !important; filter: brightness(0.9); }
+@keyframes bounce-quick { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.animate-chiko-action { animation: bounce-quick 0.35s ease infinite alternate; }
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary":"#0055c7","primary-fixed-dim":"#ffb3ad","tertiary-fixed-dim":"#f8bd2a","surface-container-low":"#f8f2f2","inverse-on-surface":"#f6efef","on-secondary":"#ffffff","surface":"#fef8f7","on-primary":"#ffffff","on-surface":"#1d1b1b","secondary-fixed":"#d9e2ff","on-surface-variant":"#5b403e","on-primary-fixed-variant":"#930011","surface-container-high":"#ede7e6","on-primary-fixed":"#410003","on-secondary-container":"#fefcff","on-error":"#ffffff","surface-container-highest":"#e7e1e1","surface-tint":"#b91d23","surface-dim":"#ded9d8","inverse-surface":"#323030","on-primary-container":"#fffcff","surface-variant":"#e7e1e1","on-tertiary-fixed-variant":"#5c4300","error":"#ba1a1a","tertiary-container":"#956e00","error-container":"#ffdad6","on-secondary-fixed":"#001945","secondary-container":"#146df4","secondary-fixed-dim":"#b0c6ff","on-tertiary-container":"#fffbff","background":"#fef8f7","primary-container":"#d93636","surface-bright":"#fef8f7","on-background":"#1d1b1b","primary-fixed":"#ffdad6","surface-container":"#f3ecec","on-secondary-fixed-variant":"#00419c","on-error-container":"#93000a","outline-variant":"#e3beba","primary":"#b51a21","surface-container-lowest":"#ffffff","tertiary-fixed":"#ffdfa0","on-tertiary-fixed":"#261a00","tertiary":"#765700","outline":"#8f706d","inverse-primary":"#ffb3ad","on-tertiary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1rem","gutter-sm":"0.5rem","margin":"1rem","space-sm":"0.5rem","margin-lg":"2.5rem","space-xs":"0.25rem","margin-md":"1.5rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","gutter-lg":"1.5rem"}}}};</script><link data-snapdom="injected-import" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=VT323&amp;display=swap" rel="stylesheet"></head><body class="bg-surface antialiased"><header class="fixed top-0 w-full z-50 bg-primary-container shadow-[0_4px_0_0_#930011]" style="font-family: Space Mono, monospace !important;"><div class="bg-primary px-margin py-1.5 text-on-primary text-[10px] sm:text-[11px] flex items-center justify-between shadow-[inset_0_-1px_0_rgba(0,0,0,0.2)] tracking-wider"><div class="flex items-center gap-space-md"><span>MODEL: PKG-02 SILVER EDITION</span><span class="hidden sm:inline">LINK CABLE: READY</span><span>TRAINER: RED</span></div><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>PWR 100%</span><span>MEM: 512K/OK</span></div></div><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center"><div class="w-14 h-14 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]"><div class="w-11 h-11 rounded-full bg-secondary flex items-center justify-center shadow-[inset_2px_2px_4px_rgba(255,255,255,0.6),inset_-2px_-2px_4px_rgba(0,0,0,0.5)]"><div class="w-4 h-4 rounded-full bg-secondary-fixed opacity-70 -mt-3 -ml-3"></div></div></div></div><div class="flex items-center gap-space-xs"><div class="w-3 h-3 rounded-full bg-primary shadow-[inset_1px_1px_2px_rgba(255,255,255,0.8)]"></div><div class="w-3 h-3 rounded-full bg-tertiary-fixed-dim shadow-[inset_1px_1px_2px_rgba(255,255,255,0.8)]"></div><div class="w-3 h-3 rounded-full bg-secondary-container shadow-[inset_1px_1px_2px_rgba(255,255,255,0.8)]"></div></div><div class="ml-space-sm pl-space-md hidden sm:block"><div class="text-base sm:text-lg text-on-primary-container tracking-wider font-bold">POKÉGUARDE</div><div class="text-[9px] text-primary-fixed-dim tracking-widest">OS Ver. 2.44 EXP</div></div></div><nav class="flex items-center gap-1 sm:gap-space-xs" data-active-classes="bg-surface text-primary font-bold shadow-[2px_2px_0_0_#930011]"><a class="px-2 sm:px-space-md py-1.5 sm:py-space-sm rounded text-[10px] sm:text-xs uppercase tracking-wider text-on-primary-container transition-all hover:bg-primary hover:text-on-primary" data-path="guarderia" href="#">Guardería</a><a class="px-2 sm:px-space-md py-1.5 sm:py-space-sm rounded text-[10px] sm:text-xs uppercase tracking-wider text-on-primary-container transition-all hover:bg-primary hover:text-on-primary" data-path="ficha-datos" href="#">Ficha / Datos</a><a class="px-2 sm:px-space-md py-1.5 sm:py-space-sm rounded text-[10px] sm:text-xs uppercase tracking-wider text-on-primary-container transition-all hover:bg-primary hover:text-on-primary" data-path="equipo-activo" href="#">Equipo Activo</a><a class="px-2 sm:px-space-md py-1.5 sm:py-space-sm rounded text-[10px] sm:text-xs uppercase tracking-wider text-on-primary-container transition-all hover:bg-primary hover:text-on-primary" data-path="biblioteca" href="#">Biblioteca</a></nav><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full items-center justify-center p-space-md sm:p-space-lg select-none">
+<!-- Outer Handheld Console Chassis -->
+<div class="relative flex flex-col items-center select-none py-6">
+<!-- Keychain loop / top ring hole for authentic 90s virtual pet aesthetic -->
+<div class="relative z-0 -mb-8 flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-[#930011] p-2.5 shadow-[inset_0_5px_8px_rgba(0,0,0,0.6),0_8px_12px_rgba(0,0,0,0.35)] flex items-center justify-center">
+<div class="w-11 h-11 rounded-full bg-surface shadow-[inset_0_4px_6px_rgba(0,0,0,0.8)] border-[3px] border-[#541111]"></div>
+</div>
+<!-- Metal keychain connector chain link -->
+<div class="w-5 h-6 rounded-full border-[3px] border-[#9e9e9e] -mt-2.5 bg-gradient-to-b from-[#e0e0e0] to-[#757575] shadow-[0_2px_4px_rgba(0,0,0,0.4)]"></div>
+</div>
+<!-- Authentic Classic 1990s Egg/Oval Shaped Tamagotchi Outer Plastic Housing -->
+<div class="relative z-10 w-[420px] sm:w-[580px] md:w-[680px] bg-gradient-to-b from-[#ea4343] via-[#d93636] to-[#a3151b] rounded-[220px_220px_280px_280px] p-6 sm:p-10 shadow-[0_25px_45px_rgba(0,0,0,0.45),0_10px_0_#75000c,inset_0_5px_10px_rgba(255,255,255,0.5),inset_0_-10px_20px_rgba(0,0,0,0.55)] flex flex-col items-center border-[5px] border-[#75000c]" style="width: min(840px, 98vw); border-radius: 280px 280px 340px 340px;">
+<!-- Top Tamagotchi Device Brand Stamp & Indicator -->
+<div class="w-full flex items-center justify-between px-8 pt-1 pb-4 text-center">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#f8bd2a] shadow-[0_0_10px_#f8bd2a] animate-pulse"></span>
+<span class="text-[9px] sm:text-[10px] text-[#ffdad6] tracking-widest font-bold uppercase">LINK ACTIVE</span>
+</div>
+<div class="text-sm sm:text-base text-[#fffcff] tracking-[0.25em] uppercase font-bold drop-shadow-[2px_2px_0_#930011]">
+        POKÉGUARDE
+      </div>
+<div class="text-[9px] sm:text-[10px] text-[#ffdad6] px-2 py-0.5 rounded bg-[#930011]/80 font-bold tracking-wider">
+        GEN II
+      </div>
+</div>
+<!-- Molded Ivory/Warm-White Bezel Inset -->
+<div class="w-full max-w-[560px] bg-[#f8f2f2] rounded-[56px_56px_68px_68px] p-4 sm:p-5 shadow-[inset_0_5px_10px_rgba(0,0,0,0.35),0_4px_8px_rgba(0,0,0,0.25)] border-[4px] border-[#ded9d8] flex flex-col items-center" style="max-width: 710px; width: 100%; border-radius: 64px 64px 76px 76px;">
+<!-- Top Bezel Mini Indicator Filament -->
+<div class="w-full flex items-center justify-between px-4 pb-2.5 text-[9px] sm:text-[10px] text-[#5b403e]">
+<span class="tracking-wider uppercase font-bold text-[#b51a21]" id="status-header">CHIKORITA #152</span>
+<span class="tracking-widest opacity-75 text-[8px] sm:text-[9px]" id="screen-mode-indicator">MATRIZ ACTIVA</span>
+</div>
+<!-- Sunken Retro LCD Bezel with authentic scanline overlay & screen frame -->
+<div class="relative w-full aspect-[10/9] max-w-[510px] bg-[#d0c8a8] rounded shadow-[inset_4px_4px_0_#1d1b1b,inset_-3px_-3px_0_rgba(255,255,255,0.6)] overflow-hidden flex flex-col justify-between border-[3px] border-[#1d1b1b]" style="max-width: 664px; width: 100%; display: flex; flex-direction: column;">
+<!-- CRT Scanline Overlay -->
+<div class="absolute inset-0 pointer-events-none z-30 opacity-15 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black" style="background-size: 100% 4px; background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0px, rgba(0, 0, 0, 0.25) 1px, transparent 1px, transparent 2px);"></div>
+<!-- 160x144 Pixel-Art Room Stage -->
+<div class="relative w-full h-full flex-1 overflow-hidden" id="tamagotchi-stage" style="min-height: 380px; height: 420px; max-height: 440px;">
+<!-- Room Background - Exact 160x144 Pixel Art Image Asset -->
+<div class="w-full h-full select-none pointer-events-none flex items-center justify-center transition-transform duration-200" id="room-bg-container" style="image-rendering: pixelated; shape-rendering: crispEdges;">
+<img alt="Pokéguarde Guardería Retro LCD" class="w-full h-full object-cover select-none pointer-events-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2o7kDlftIjkMelZaQaz4zG0Eo9SAg7iY1oHKakLM2Qdh7ht0s9QP2r3ONw9-VI7eehnNPUBmhpFJx1f7g452iueIua7JJ-ASPZbpxJ__6wvv-9D9I4YHXRDrTD07sVT_xOq4ZZaYvbE-j0xVupNSTj7HChaybMtCFYZzvkDCSNgni61HCcTwA3yWCPzRGC0i6bWadvGtEWEUk9zKYDVWcdRfTvqNWk35A4vpcPpLk" style="image-rendering: crisp-edges;">
+</div>
+<!-- Separate Pixel Poop Sprite Overlay -->
+
+<!-- Pet Mood Heart / Emote Bubble (Floating) -->
+
+<!-- Care Menu (CUIDADOS) Overlay - Authentic Pokémon Crystal GBC styling -->
+<div class="absolute top-2 left-2 sm:top-3 sm:left-3 z-30 w-52 sm:w-60 bg-surface-container-lowest p-2 shadow-[3px_3px_0_#1d1b1b] rounded-none border-[3px] border-on-surface select-none transition-transform duration-200" id="care-menu">
+<div class="border-[2px] border-on-surface p-1.5 bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between border-b-[2px] border-on-surface pb-1 mb-1">
+<span class="text-[11px] sm:text-xs tracking-wider text-on-surface font-bold uppercase">CUIDADOS</span>
+<span class="text-[9px] text-primary font-bold">SELECT</span>
+</div>
+<div class="flex flex-col text-on-surface gap-0.5" id="menu-items-container"><button class="care-item flex items-center gap-1.5 px-1.5 py-1 text-left w-full transition-colors cursor-pointer border border-transparent bg-on-surface text-surface shadow-sm" onclick="handleItemClick(0)" type="button"><span class="cursor-arrow font-bold w-3 text-center text-primary text-[10px] opacity-100 text-secondary-fixed">▶</span><span class="text-base sm:text-lg inline-block transform transition-transform leading-none">🍓</span><span class="text-[10px] sm:text-[11px] tracking-wider uppercase font-bold">COMER</span></button>
+<button class="care-item flex items-center gap-1.5 px-1.5 py-1 text-left w-full transition-colors cursor-pointer border border-transparent text-on-surface" onclick="handleItemClick(1)" type="button"><span class="cursor-arrow font-bold w-3 text-center opacity-0 text-primary text-[10px]">▶</span><span class="text-base sm:text-lg inline-block transform transition-transform leading-none">🎾</span><span class="text-[10px] sm:text-[11px] tracking-wider uppercase font-bold">JUGAR</span></button>
+<button class="care-item flex items-center gap-1.5 px-1.5 py-1 text-left w-full transition-colors cursor-pointer border border-transparent text-on-surface" onclick="handleItemClick(2)" type="button"><span class="cursor-arrow font-bold w-3 text-center opacity-0 text-primary text-[10px]">▶</span><span class="text-base sm:text-lg inline-block transform transition-transform leading-none">🧼</span><span class="text-[10px] sm:text-[11px] tracking-wider uppercase font-bold">LIMPIAR</span></button>
+<button class="care-item flex items-center gap-1.5 px-1.5 py-1 text-left w-full transition-colors cursor-pointer border border-transparent text-on-surface" onclick="handleItemClick(3)" type="button"><span class="cursor-arrow font-bold w-3 text-center opacity-0 text-primary text-[10px]">▶</span><span class="text-base sm:text-lg inline-block transform transition-transform leading-none">💖</span><span class="text-[10px] sm:text-[11px] tracking-wider uppercase font-bold">ACARICIAR</span></button>
+<button class="care-item flex items-center gap-1.5 px-1.5 py-1 text-left w-full transition-colors cursor-pointer border border-transparent text-on-surface" onclick="handleItemClick(4)" type="button"><span class="cursor-arrow font-bold w-3 text-center opacity-0 text-primary text-[10px]">▶</span><span class="text-base sm:text-lg inline-block transform transition-transform leading-none">❗</span><span class="text-[10px] sm:text-[11px] tracking-wider uppercase font-bold">REPRENDER</span></button>
+<button class="care-item flex items-center gap-1.5 px-1.5 py-1 text-left w-full transition-colors cursor-pointer border border-transparent text-on-surface" onclick="handleItemClick(5)" type="button"><span class="cursor-arrow font-bold w-3 text-center opacity-0 text-primary text-[10px]">▶</span><span class="text-base sm:text-lg inline-block transform transition-transform leading-none" id="sleep-icon">🌙</span><span class="text-[10px] sm:text-[11px] tracking-wider uppercase font-bold" id="sleep-label">DORMIR</span></button></div>
+</div>
+</div>
+<!-- Sleep Shade Mask -->
+<div class="absolute inset-0 bg-[#001945]/70 pointer-events-none opacity-0 transition-opacity duration-500 z-10 flex flex-col items-center justify-center gap-2" id="sleep-mask">
+<span class="text-surface tracking-widest text-[11px] bg-inverse-surface px-3 py-1.5 rounded shadow-[2px_2px_0_#000] animate-pulse">Z Z Z . . .</span>
+<span class="text-[9px] text-[#ffdfa0] bg-black/60 px-2 py-0.5 rounded">MODO REPOSO ACTIVO</span>
+</div>
+</div>
+<!-- Authentic GBC RPG Dialogue Action Pane calibrated for 8px Pokémon Game Boy font -->
+<div class="relative w-full bg-surface-container-lowest p-2 sm:p-2.5 border-t-[4px] border-on-surface z-40 shadow-[0_-3px_0_rgba(0,0,0,0.3)]" style="padding: 10px 12px 12px;">
+<div class="border-[3px] border-on-surface p-2 sm:p-2.5 bg-surface-container-low min-h-[64px] flex items-center justify-between gap-2 shadow-[inset_1px_1px_0_#ffffff] overflow-hidden" style="min-height: 104px; padding: 18px 16px;">
+<div class="text-on-surface text-[11px] sm:text-[12px] leading-relaxed sm:leading-relaxed tracking-wide flex-1 font-bold line-clamp-2" id="dialogue-text">¡Chikorita descansa tranquila en el tapete de la guardería! Espera tus cuidados.</div>
+<div class="text-primary font-bold text-xs sm:text-sm animate-pulse pl-1.5 select-none shrink-0" id="dialogue-arrow">▼</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Exact 3 Classic Tamagotchi Rubbery Physical Buttons scaled up proportionally -->
+<div class="w-full max-w-[520px] pt-8 pb-4 flex items-center justify-around px-4 relative" style="max-width: 650px; width: 100%;">
+<!-- Button 1 (LEFT): NAVEGAR -->
+<div class="flex flex-col items-center group relative translate-y-2">
+<div class="p-1.5 rounded-full bg-[#75000c] shadow-[inset_0_3px_5px_rgba(0,0,0,0.6)]">
+<button aria-label="Botón Izquierdo: Navegar" class="tamagotchi-btn w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-b from-[#ffe0a3] to-[#e6af45] text-[#261a00] text-sm sm:text-base font-bold flex items-center justify-center shadow-[0_5px_0_#956e00,inset_0_3px_3px_rgba(255,255,255,0.85)] hover:brightness-105 active:translate-y-1 active:shadow-[0_1px_0_#956e00] transition-all cursor-pointer" id="btn-navigate" onclick="triggerNavButton()" type="button">
+            A
+</button>
+</div>
+<span class="text-[9px] sm:text-[10px] text-[#ffdad6] mt-2.5 font-bold tracking-wider text-center uppercase">IZQ: NAVEGAR</span>
+<span class="text-[8px] text-[#ffdad6]/70 mt-0.5">[← / ↓ / A]</span>
+</div>
+<!-- Button 2 (CENTER): CONFIRMAR / A / OK -->
+<div class="flex flex-col items-center group relative -translate-y-1">
+<div class="p-1.5 rounded-full bg-[#75000c] shadow-[inset_0_3px_5px_rgba(0,0,0,0.6)]">
+<button aria-label="Botón Central: Confirmar" class="tamagotchi-btn w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-b from-[#2b59c3] to-[#1442a8] text-[#ffffff] text-base sm:text-lg font-bold flex items-center justify-center shadow-[0_6px_0_#002466,inset_0_3px_3px_rgba(255,255,255,0.8)] hover:brightness-110 active:translate-y-1 active:shadow-[0_1px_0_#002466] transition-all cursor-pointer" id="btn-confirm" onclick="triggerConfirmButton()" type="button">
+            B
+</button>
+</div>
+<span class="text-[9px] sm:text-[10px] text-[#ffffff] mt-2.5 font-bold tracking-wider text-center uppercase text-[#ffdad6]">CENTRO: ACEPTAR</span>
+<span class="text-[8px] text-[#ffdad6]/70 mt-0.5">[Enter / Espacio]</span>
+</div>
+<!-- Button 3 (RIGHT): CANCELAR / ATRÁS -->
+<div class="flex flex-col items-center group relative translate-y-2">
+<div class="p-1.5 rounded-full bg-[#75000c] shadow-[inset_0_3px_5px_rgba(0,0,0,0.6)]">
+<button aria-label="Botón Derecho: Cancelar" class="tamagotchi-btn w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-b from-[#454242] to-[#262424] text-[#fef8f7] text-sm sm:text-base font-bold flex items-center justify-center shadow-[0_5px_0_#141212,inset_0_3px_3px_rgba(255,255,255,0.5)] hover:brightness-110 active:translate-y-1 active:shadow-[0_1px_0_#141212] transition-all cursor-pointer" id="btn-cancel" onclick="triggerCancelButton()" type="button">
+            C
+</button>
+</div>
+<span class="text-[9px] sm:text-[10px] text-[#ffdad6] mt-2.5 font-bold tracking-wider text-center uppercase">DER: CANCELAR</span>
+<span class="text-[8px] text-[#ffdad6]/70 mt-0.5">[Esc / B]</span>
+</div>
+</div>
+<!-- Bottom Subtle Speaker Grille / Tamagotchi Sound Ports -->
+<div class="w-full flex items-center justify-center gap-2 pt-2 pb-1 opacity-60">
+<div class="w-2 h-2 rounded-full bg-[#541111]"></div>
+<div class="w-2 h-2 rounded-full bg-[#541111]"></div>
+<div class="w-2 h-2 rounded-full bg-[#541111]"></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let selectedIndex = 0;
+  let isSleeping = false;
+  let isPoopCleaned = false;
+  let menuVisible = true;
+
+  const defaultRestMessage = "¡Chikorita descansa tranquila en el tapete de la guardería! Espera tus cuidados.";
+
+  function flashButton(btnId) {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    btn.classList.add('btn-press-active');
+    setTimeout(() => {
+      btn.classList.remove('btn-press-active');
+    }, 120);
+  }
+
+  function updateMenuDisplay() {
+    const items = document.querySelectorAll('.care-item');
+    items.forEach((item, idx) => {
+      const arrow = item.querySelector('.cursor-arrow');
+      if (idx === selectedIndex) {
+        if (arrow) {
+          arrow.classList.remove('opacity-0');
+          arrow.classList.add('opacity-100', 'text-secondary-fixed');
+        }
+        item.classList.add('bg-on-surface', 'text-surface', 'shadow-sm');
+        item.classList.remove('text-on-surface');
+      } else {
+        if (arrow) {
+          arrow.classList.add('opacity-0');
+          arrow.classList.remove('opacity-100', 'text-secondary-fixed');
+        }
+        item.classList.remove('bg-on-surface', 'text-surface', 'shadow-sm');
+        item.classList.add('text-on-surface');
+      }
+    });
+  }
+
+  function triggerNavButton() {
+    flashButton('btn-navigate');
+    if (!menuVisible) {
+      toggleCareMenu(true);
+      return;
+    }
+    const items = document.querySelectorAll('.care-item');
+    selectedIndex = (selectedIndex + 1) % items.length;
+    updateMenuDisplay();
+  }
+
+  function handleItemClick(idx) {
+    selectedIndex = idx;
+    updateMenuDisplay();
+    triggerConfirmButton();
+  }
+
+  function triggerConfirmButton() {
+    flashButton('btn-confirm');
+    const dialogue = document.getElementById('dialogue-text');
+    const stageContainer = document.getElementById('room-bg-container');
+
+    // Make sure menu is visible when confirming
+    if (!menuVisible) {
+      toggleCareMenu(true);
+      return;
+    }
+
+    // Temporarily animate stage or chikorita
+    if (stageContainer) {
+      stageContainer.classList.add('animate-chiko-action');
+      setTimeout(() => stageContainer.classList.remove('animate-chiko-action'), 600);
+    }
+
+    switch (selectedIndex) {
+      case 0: // COMER
+        dialogue.textContent = "¡Chikorita come bayas alegremente! +1 Satisfacción.";
+        showEmote("🍓");
+        break;
+
+      case 1: // JUGAR
+        dialogue.textContent = "¡Jugaste a atrapar con Chikorita! Se ve muy feliz.";
+        showEmote("🎾");
+        break;
+
+      case 2: // LIMPIAR
+        cleanScreenAction();
+        break;
+
+      case 3: // ACARICIAR
+        dialogue.textContent = "¡Chikorita siente tu afecto y ronronea!";
+        showEmote("♥");
+        break;
+
+      case 4: // REPRENDER
+        dialogue.textContent = "Chikorita aprendió la lección y se porta mejor.";
+        showEmote("❗");
+        break;
+
+      case 5: // DORMIR / DESPERTAR
+        toggleSleepAction();
+        break;
+    }
+  }
+
+  function toggleSleepAction() {
+    isSleeping = !isSleeping;
+    const mask = document.getElementById('sleep-mask');
+    const sleepLabel = document.getElementById('sleep-label');
+    const sleepIcon = document.getElementById('sleep-icon');
+    const dialogue = document.getElementById('dialogue-text');
+    const statusHeader = document.getElementById('status-header');
+
+    if (isSleeping) {
+      mask.classList.remove('opacity-0');
+      mask.classList.add('opacity-100');
+      sleepLabel.textContent = "DESPERTAR";
+      if (sleepIcon) sleepIcon.textContent = "☀️";
+      dialogue.textContent = "¡Shh! Chikorita está descansando.";
+      if (statusHeader) statusHeader.textContent = "CHIKORITA (DURMIENDO)";
+      showEmote("💤");
+    } else {
+      mask.classList.add('opacity-0');
+      mask.classList.remove('opacity-100');
+      sleepLabel.textContent = "DORMIR";
+      if (sleepIcon) sleepIcon.textContent = "🌙";
+      dialogue.textContent = "¡Chikorita se despertó llena de vitalidad matutina!";
+      if (statusHeader) statusHeader.textContent = "CHIKORITA #152";
+      showEmote("✨");
+    }
+  }
+
+  function cleanScreenAction() {
+    const poop = document.getElementById('pixel-poop');
+    const dialogue = document.getElementById('dialogue-text');
+    if (!isPoopCleaned) {
+      isPoopCleaned = true;
+      poop.style.opacity = '0';
+      poop.style.transform = 'scale(0.5)';
+      setTimeout(() => {
+        poop.style.display = 'none';
+      }, 300);
+      dialogue.textContent = "¡El suelo de la guardería ha quedado reluciente!";
+      showEmote("🧼");
+    } else {
+      dialogue.textContent = "¡El tapete ya está completamente limpio e impecable!";
+      showEmote("✨");
+    }
+  }
+
+  function toggleCareMenu(forceOpen = null) {
+    const menu = document.getElementById('care-menu');
+    if (!menu) return;
+    if (forceOpen === true) {
+      menuVisible = true;
+      menu.classList.remove('hidden');
+    } else if (forceOpen === false) {
+      menuVisible = false;
+      menu.classList.add('hidden');
+    } else {
+      menuVisible = !menuVisible;
+      menu.classList.toggle('hidden', !menuVisible);
+    }
+    const indicator = document.getElementById('screen-mode-indicator');
+    if (indicator) {
+      indicator.textContent = menuVisible ? "MATRIZ ACTIVA" : "VISTA AMBIENTE";
+    }
+  }
+
+  function triggerCancelButton() {
+    flashButton('btn-cancel');
+    const dialogue = document.getElementById('dialogue-text');
+    dialogue.textContent = defaultRestMessage;
+    // Toggle care menu visibility
+    toggleCareMenu();
+  }
+
+  function showEmote(symbol) {
+    const emote = document.getElementById('heart-emote');
+    const emoteChar = document.getElementById('emote-char');
+    if (!emote || !emoteChar) return;
+    emoteChar.textContent = symbol;
+    emote.classList.remove('opacity-0', 'scale-75');
+    emote.classList.add('opacity-100', 'scale-125', 'animate-bounce');
+    setTimeout(() => {
+      emote.classList.remove('animate-bounce', 'scale-125');
+      emote.classList.add('scale-100');
+    }, 600);
+  }
+
+  // Keyboard controls listener
+  window.addEventListener('keydown', (e) => {
+    // Avoid interfering if user is focused on forms
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) {
+      return;
+    }
+
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+      e.preventDefault();
+      triggerNavButton();
+    } else if (e.key === 'Enter' || e.key === ' ' || e.key === 'z' || e.key === 'Z') {
+      e.preventDefault();
+      triggerConfirmButton();
+    } else if (e.key === 'Escape' || e.key === 'b' || e.key === 'B' || e.key === 'x' || e.key === 'X') {
+      e.preventDefault();
+      triggerCancelButton();
+    }
+  });
+
+  // Initial menu state render
+  updateMenuDisplay();
+</script></main><footer class="w-full bg-surface-container-high py-space-lg shadow-[inset_0_3px_0_0_#ded9d8]" style="font-family: Space Mono, monospace !important;"><div class="max-w-7xl mx-auto px-margin flex flex-col md:flex-row items-center justify-between gap-space-md text-[10px] sm:text-[11px] text-on-surface-variant tracking-wider"><div>POKÉGUARDE HARDWARE SIMULATOR • SYSTEM CHASSIS SPEC NO. 0151</div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="inline-block w-2 h-2 rounded-full bg-on-surface-variant"></span><span class="inline-block w-2 h-2 rounded-full bg-on-surface-variant"></span><span class="inline-block w-2 h-2 rounded-full bg-on-surface-variant"></span></div><span>SLOT-1: INSERTED</span><span>GBC POKÉ-MONITOR</span></div></div></footer>
+
+
+
+
+</body></html>
