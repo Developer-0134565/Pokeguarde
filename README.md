@@ -190,6 +190,7 @@ scripts         utilidades
 - `docs/GUARDERIA.md`: motor determinista, necesidades, acciones, minijuegos, topes
   de EV/stat exp, render GBC, HUD, ciclo día/noche e i18n.
 - `fixtures/FIXTURES.md`: hashes y resultados del spike.
+- `docs/ROADMAP.md`: fases 0-10, hitos y etiquetas DECIDED / PROPOSED / UNRESOLVED / DEFERRED.
 
 La exportación y su protocolo de escritura están en `AGENTS.md` («Estado de la
 fase 4» y «Escritura de saves») y la medición de ida y vuelta en `docs/FASE-0.md` §9.

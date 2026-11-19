@@ -489,3 +489,28 @@ Checkpoint remoto anterior a Stitch: `checkpoint/pre-stitch-2026-11-19` (commit 
 
 **PG-06 — Auditoría de sprites overworld y spike de renderizado.**
 Leer `docs/PG-06_SPRITE_AUDIT_TASK.md` antes de actuar. El usuario dispone del archivo local `/home/missingn0/Descargas/Gen 1-7 OV SPrites.7z`: 2937 imágenes con 16 fotogramas por Pokémon (según el usuario), mayoritariamente PNG de 256×256 o 512×512. **No asumir cuadrícula 4×4** sin inspección. Categorías 16/24/40/64 píxeles propuestas según altura Pokédex, pendientes de validar con bounds de alfa, orientación y ancla. Primera respuesta de Sol: estado Git, auditoría READ-ONLY y plan, sin tocar motor, BD ni saves. No publicar sprites de terceros sin revisar licencia y autorización.
+
+## Guarderías compartidas (PG-08)
+
+- Máximo de **dos Pokémon simultáneos** por Guardería.
+- Pueden existir Pokémon **propios y visitantes**.
+- El **anfitrión asume el cuidado cotidiano** de ambos.
+- El **propietario conserva la titularidad y el derecho de recuperación**.
+- El sistema debe permitir **funcionamiento local y web pública**.
+- El **modo local no debe depender de cuentas, pagos o conexión permanente**.
+
+## Seguridad (PG-08)
+
+- Los Pokémon depositados en la plataforma deben protegerse mediante **cifrado en almacenamiento y tránsito**.
+- El cifrado **no sustituye** la autenticación, autorización ni la protección contra duplicaciones.
+- Los **archivos originales de saves no deben exponerse** a otros usuarios.
+- No sobrescribir saves originales por acciones multijugador **sin autorización explícita**.
+- Toda modificación de datos de un Pokémon debe pasar por **validaciones del servidor**.
+- Las operaciones de depósito, aceptación, recuperación y breeding deben ser **transaccionales e idempotentes**.
+- Mantener **trazabilidad de cambios relevantes**.
+
+## Separación de responsabilidades
+
+- **Stitch**: diseño visual y flujos de interfaz.
+- **OpenCode**: implementación, validación, persistencia, seguridad y mecánicas.
+- **No interpretar maquetas Stitch como reglas autorizadas del juego**.
