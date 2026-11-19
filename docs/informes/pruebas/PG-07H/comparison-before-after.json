@@ -1,0 +1,159 @@
+{
+  "generado": "2026-11-19T10:27:31.896Z",
+  "beforePath": "/home/<usuario>/Descargas/PG-07H-BACKUP/20261119T102213Z/pokegotchi.db",
+  "afterPath": "/home/<usuario>/Proyectos/Pokeguarde/data/pokegotchi.db",
+  "before": {
+    "info": {
+      "saves": 2,
+      "inventories": 2,
+      "pokemon": 110,
+      "pets": 4,
+      "exports": 8,
+      "integrity": "ok"
+    },
+    "saves": [
+      {
+        "id": 1,
+        "sha256": "1c5e78d94ade25d4f91f8f09a683a8def724a7bb74b4d701331b9ad2275e0212",
+        "filename": "gen4-heartgold-spain.srm",
+        "generation": 4,
+        "boxCountColumn": 6,
+        "inventorySha256": "66b756bf6a67e5c1fd137e9411dc551fba46c049622cd8751cdd94b2ba479e65",
+        "hasStorage": false,
+        "storage": null,
+        "boxes": 6,
+        "totalPositions": 0,
+        "emptyPositions": 0,
+        "emptyBoxes": 0,
+        "occupiedSlots": 99,
+        "party": 6,
+        "counts": {
+          "total": 105,
+          "legal": 68,
+          "unverified": 17,
+          "illegal": 20
+        },
+        "legalColumns": {
+          "legal": 68,
+          "unverified": 17,
+          "illegal": 20
+        }
+      },
+      {
+        "id": 2,
+        "sha256": "e361b6ea5b16ae1f8d200cc26ea5a40b613ec1a0413d10147147cdd3f2b6cce2",
+        "filename": "gen1-blue-usa.srm",
+        "generation": 1,
+        "boxCountColumn": 0,
+        "inventorySha256": "7adb5535ca8488132fd358390c55128801236b355b1be5ff6d654b16e09043bc",
+        "hasStorage": false,
+        "storage": null,
+        "boxes": 0,
+        "totalPositions": 0,
+        "emptyPositions": 0,
+        "emptyBoxes": 0,
+        "occupiedSlots": 0,
+        "party": 5,
+        "counts": {
+          "total": 5,
+          "legal": 0,
+          "unverified": 0,
+          "illegal": 5
+        },
+        "legalColumns": {
+          "legal": 0,
+          "unverified": 0,
+          "illegal": 5
+        }
+      }
+    ]
+  },
+  "after": {
+    "info": {
+      "saves": 2,
+      "inventories": 2,
+      "pokemon": 110,
+      "pets": 4,
+      "exports": 8,
+      "integrity": "ok"
+    },
+    "saves": [
+      {
+        "id": 1,
+        "sha256": "1c5e78d94ade25d4f91f8f09a683a8def724a7bb74b4d701331b9ad2275e0212",
+        "filename": "gen4-heartgold-spain.srm",
+        "generation": 4,
+        "boxCountColumn": 18,
+        "inventorySha256": "5ee712b6456696ca9d83200767885c6d84cfb5f6f2e35c62450b36dd9fc1f3b7",
+        "hasStorage": true,
+        "storage": {
+          "available": true,
+          "availability": "available",
+          "boxCount": 18,
+          "boxCountSource": "SaveFile.BoxCount",
+          "slotCount": 30,
+          "slotCountSource": "SaveFile.BoxSlotCount",
+          "boxDataSlots": 540,
+          "namesAvailable": true,
+          "emptySlotsKnown": true,
+          "error": null
+        },
+        "boxes": 18,
+        "totalPositions": 540,
+        "emptyPositions": 441,
+        "emptyBoxes": 12,
+        "occupiedSlots": 99,
+        "party": 6,
+        "counts": {
+          "total": 105,
+          "legal": 68,
+          "unverified": 17,
+          "illegal": 20
+        },
+        "legalColumns": {
+          "legal": 68,
+          "unverified": 17,
+          "illegal": 20
+        }
+      },
+      {
+        "id": 2,
+        "sha256": "e361b6ea5b16ae1f8d200cc26ea5a40b613ec1a0413d10147147cdd3f2b6cce2",
+        "filename": "gen1-blue-usa.srm",
+        "generation": 1,
+        "boxCountColumn": 12,
+        "inventorySha256": "2552c2c4eb57de99c1a7249fa236785b40d13a98e5685c074f1bc8483a3acfdc",
+        "hasStorage": true,
+        "storage": {
+          "available": true,
+          "availability": "available",
+          "boxCount": 12,
+          "boxCountSource": "SaveFile.BoxCount",
+          "slotCount": 20,
+          "slotCountSource": "SaveFile.BoxSlotCount",
+          "boxDataSlots": 240,
+          "namesAvailable": true,
+          "emptySlotsKnown": true,
+          "error": null
+        },
+        "boxes": 12,
+        "totalPositions": 240,
+        "emptyPositions": 240,
+        "emptyBoxes": 12,
+        "occupiedSlots": 0,
+        "party": 5,
+        "counts": {
+          "total": 5,
+          "legal": 0,
+          "unverified": 0,
+          "illegal": 5
+        },
+        "legalColumns": {
+          "legal": 0,
+          "unverified": 0,
+          "illegal": 5
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "mision": "PG-07H",
+  "generado": "2026-11-19",
+  "baseProduccion": {
+    "ruta": "/home/<usuario>/Proyectos/Pokeguarde/data/pokegotchi.db",
+    "hashInicial": "2fb9e76bc8b8bb820a77e21342abe7b079f687749503315e13c0cf95106675e0",
+    "hashFinal": "3c6fb19447b7f58441822006c7e422cb2744274a7817b3a8b9d9609d3001fb4a"
+  },
+  "backup": {
+    "ruta": "/home/<usuario>/Descargas/PG-07H-BACKUP/20261119T102213Z/pokegotchi.db",
+    "sha256": "42d8a3a105420c2edde14b000d24116c8f1be7675bc4d02e65f0ad7a7fa45d58"
+  },
+  "evidencias": {
+    "dry-run-real-db.json": "f35d660a8f06566ab7dc7bd7d1053c0d3c8df4d42e41d2a613d24b68fd4e2c1f",
+    "verify-only.json": "a068ae0e0af00474b95afe4436aa7385467365801e009e5551c42e1150287d23",
+    "apply-real.json": "5a4f43b5a62f1930ca7bfe162f71319c732a5e747dd189d72af18bcb04ee8e40",
+    "apply-idempotent.json": "4e1593fff80aed6a29247de5b62983b80d4e67387ab711dfcc12f3e25208e05d",
+    "comparison-before-after.json": "112846010725c3d45e22c1cab67c717ad1143ce55ceb2d5c6ff628b31d1ea763",
+    "browser-desktop.png": "b696be434a264e773a8524cf321c20a7c16a5377fe4437fc7615b2ac3aab9b7e",
+    "browser-mobile.png": "78abfa5e3b554cb92b1668946d1b4a4f7c895f688f198b3f31536d74c5067131"
+  },
+  "git": {
+    "head": "819b73b49a8aca76486173917d7abdb4518290ab",
+    "porcelainHashInicial": "09fe353705b2d5770412e55793b4f03d2c93a3f516a2c0e5fb64ec5a50e74643",
+    "porcelainHashFinal": "6b76e9e7cc883070d20c8f978928aae663793168e0057d844e0e94ba8dc1ebc9",
+    "commits": 0,
+    "pushes": 0
+  },
+  "verificacion": {
+    "bunRunCheck": "EXIT 0",
+    "pg07hCheck": "101/101",
+    "sidecarDotnet": "0 avisos / 0 errores",
+    "integrityCheck": "ok"
+  }
+}

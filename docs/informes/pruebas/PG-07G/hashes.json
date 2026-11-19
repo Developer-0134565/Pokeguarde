@@ -1,0 +1,53 @@
+{
+  "mision": "PG-07G",
+  "generado": "2026-11-19",
+  "estado": "VERIFICADO",
+  "produccion": {
+    "db": {
+      "path": "data/pokegotchi.db",
+      "sha256": "2fb9e76bc8b8bb820a77e21342abe7b079f687749503315e13c0cf95106675e0",
+      "integrity_check": "ok",
+      "modificada": false
+    },
+    "git": {
+      "head": "819b73b49a8aca76486173917d7abdb4518290ab",
+      "status_porcelain_sha256": "09fe353705b2d5770412e55793b4f03d2c93a3f516a2c0e5fb64ec5a50e74643",
+      "commits": 0,
+      "pushes": 0
+    }
+  },
+  "protegidos": {
+    "apps/server/src/db.ts": "fcd95b0c63c059c57228bd7c06b1121247c23f6f18178388d43148f9193fed7b",
+    "services/pkhex/pkhex.csproj": "b9abdb854c71bcddde1e72dad6342709aa1370e27f62a8c1d4a605ccd693a03d",
+    "apps/web/src/pet-engine.ts": "26955014098ea15f36b21a8a0e714fcccf4183a8e0988cbea801abf9cfd096bb",
+    "apps/web/src/sprite-runtime.ts": "9e25e9ecb8f9383294265706bedaefc3dda8dcc9c40fd4f2a08248fd9e8e9ac8",
+    "apps/web/src/sprite-render.ts": "92f43df3284153b4be0a75755f9e7984a78e1aad40064ff6fd8d94a675185f30",
+    "apps/web/assets/room/guarderia.png": "bcedbd6656113e43aca4f66cc932cd61b07fa02af4e7bb9a9ab26edaf56eb095"
+  },
+  "modificados_autorizados": {
+    "services/pkhex/Program.cs": "014a489b81b8225424e41332f27ab1d2f9bd2147195177e5a585b47a70f983fa",
+    "apps/server/src/index.ts": "f63e915cdb1d3869fafd0a6b7d33774b4c5b25e61a35fb1fbcd91a4e6826315e"
+  },
+  "fixtures": {
+    "FIXTURES.md": "15d63ad32c018f1060f24aa4a99b537cb73a75d4b39375f1731b0cba842433a1",
+    "gen1-blue-spain.srm": "d0b54f7d76b50f6e37f62112305c18925e550eeaa07ade81790ca833a78b9f7f",
+    "gen1-blue-usa.srm": "e361b6ea5b16ae1f8d200cc26ea5a40b613ec1a0413d10147147cdd3f2b6cce2",
+    "gen2-crystalclear-hack.srm": "734cc272a1cdd724d30500f16fbc469f7e8bd34524cb48a66ad10a59ce672f48",
+    "gen2-polished-hack.srm": "0bc6d242080b5ccb14d5537a04b78fe5a4a4cd5efbd0f18b0ff0eb4f08a62ea0",
+    "gen3-allin-hack.srm": "928c392597ef8f5e36ceade876d5c835a77811c252dff042740126d910cdea88",
+    "gen4-heartgold-spain.srm": "1c5e78d94ade25d4f91f8f09a683a8def724a7bb74b4d701331b9ad2275e0212",
+    "gen5-black-usa.srm": "0ddb7b1701b22fc935f4c0cb0ffce98a7078b8bdd5b824f03ea7bb44978f16be"
+  },
+  "artefactos": {
+    "PG-07G/apply-isolated-idempotent.json": "939a8b18ef5003f6f8b5972f8619e81757639333c5bdc006479d3e44bf67efb4",
+    "PG-07G/apply-isolated.json": "a9ad6b449bc140c21eef25ee3c9146228590a2822184419daeab47f802170578",
+    "PG-07G/comparison-isolated.json": "1c50ef0a934941dd6eb2839bf630138880a565af990a0689abfec190a5bf8c6a",
+    "PG-07G/dry-run-real-db.json": "106f129cf0e1caac1294bdc6d87b43074e0fae3f26f46958f03f9ec3968dc9dc",
+    "PG-07G/inventarios-candidatos.md": "a8e4897e2bbc9b598cc71a1b5fb15601b2e5d3bb3cee8b9840c4ac41a43b016e",
+    "PG-07G-BACKUP/20261119T094717Z/manifest.json": "36e2d0d239082b1fe36be56a29727b62c6fa145f3607b0b52565f37dc612e361",
+    "PG-07G-BACKUP/20261119T094717Z/pokegotchi.db": "42d8a3a105420c2edde14b000d24116c8f1be7675bc4d02e65f0ad7a7fa45d58",
+    "PG-07G-BACKUP/20261119T094717Z/pokegotchi.db.sha256": "644f82b5736a1d028ea55cba8c0a3de26b8b0488d7bd4a660c30794f6b10e16a",
+    "PG-07G-BACKUP/20261119T094717Z/pokegotchi.db-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "PG-07G-BACKUP/20261119T094717Z/pokegotchi.db-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "mode": "apply",
+  "startedAt": "2026-11-19T09:55:08.618Z",
+  "target": "/tmp/opencode/pg07g-sim-final.db",
+  "targetRealPath": "/tmp/opencode/pg07g-sim-final.db",
+  "ok": true,
+  "writePerformed": false,
+  "rolledBack": false,
+  "logicalSha256Before": "3c6fb19447b7f58441822006c7e422cb2744274a7817b3a8b9d9609d3001fb4a",
+  "logicalSha256After": "3c6fb19447b7f58441822006c7e422cb2744274a7817b3a8b9d9609d3001fb4a",
+  "before": {
+    "saves": 2,
+    "pokemon": 110,
+    "pets": 4,
+    "exports": 8,
+    "integrity": "ok"
+  },
+  "after": {
+    "saves": 2,
+    "pokemon": 110,
+    "pets": 4,
+    "exports": 8,
+    "integrity": "ok"
+  },
+  "counts": {
+    "rows": 2,
+    "byClassification": {
+      "ACTUALIZADO": 2
+    },
+    "selected": 0,
+    "applied": 0,
+    "skipped": 2
+  },
+  "applied": [],
+  "candidates": [
+    {
+      "id": 1,
+      "sha256": "1c5e78d94ade25d4f91f8f09a683a8def724a7bb74b4d701331b9ad2275e0212",
+      "filename": "gen4-heartgold-spain.srm",
+      "generation": 4,
+      "classification": "ACTUALIZADO",
+      "action": "none",
+      "reasons": [
+        "ya contiene inventory.storage"
+      ],
+      "source": {
+        "path": "/home/<usuario>/Proyectos/Pokeguarde/data/saves/1c5e78d94ade25d4f91f8f09a683a8def724a7bb74b4d701331b9ad2275e0212.srm",
+        "method": "production_hash_copy",
+        "shaMatches": true,
+        "attempts": [
+          "production_hash_copy:1c5e78d94ade25d4f91f8f09a683a8def724a7bb74b4d701331b9ad2275e0212.srm:ok"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "sha256": "e361b6ea5b16ae1f8d200cc26ea5a40b613ec1a0413d10147147cdd3f2b6cce2",
+      "filename": "gen1-blue-usa.srm",
+      "generation": 1,
+      "classification": "ACTUALIZADO",
+      "action": "none",
+      "reasons": [
+        "ya contiene inventory.storage"
+      ],
+      "source": {
+        "path": "/home/<usuario>/Proyectos/Pokeguarde/data/saves/e361b6ea5b16ae1f8d200cc26ea5a40b613ec1a0413d10147147cdd3f2b6cce2.srm",
+        "method": "production_hash_copy",
+        "shaMatches": true,
+        "attempts": [
+          "production_hash_copy:e361b6ea5b16ae1f8d200cc26ea5a40b613ec1a0413d10147147cdd3f2b6cce2.srm:ok"
+        ]
+      }
+    }
+  ]
+}

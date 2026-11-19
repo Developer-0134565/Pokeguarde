@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "mode": "verify-only",
+  "startedAt": "2026-11-19T10:24:05.915Z",
+  "production": "/home/<usuario>/Proyectos/Pokeguarde/data/pokegotchi.db",
+  "backup": {
+    "directory": "/home/<usuario>/Descargas/PG-07H-BACKUP/20261119T102213Z",
+    "manifest": {
+      "mision": "PG-07H",
+      "utc": "2026-11-19T10:22:13.965Z",
+      "source": "/home/<usuario>/Proyectos/Pokeguarde/data/pokegotchi.db",
+      "method": "bun:sqlite Database.serialize() sobre conexion readonly; incluye estado WAL",
+      "bytes": 274432,
+      "sha256": "42d8a3a105420c2edde14b000d24116c8f1be7675bc4d02e65f0ad7a7fa45d58",
+      "sourceIntegrity": "ok",
+      "backupIntegrity": "ok",
+      "saves": 2,
+      "inventories": 2,
+      "pokemon": 110,
+      "authorizedIds": [
+        1,
+        2
+      ],
+      "idsVerified": true,
+      "status": "VERIFIED"
+    },
+    "sha256": "42d8a3a105420c2edde14b000d24116c8f1be7675bc4d02e65f0ad7a7fa45d58",
+    "info": {
+      "saves": 2,
+      "inventories": 2,
+      "pokemon": 110,
+      "pets": 4,
+      "exports": 8,
+      "integrity": "ok"
+    }
+  },
+  "priorDryRun": {
+    "path": "/home/<usuario>/Descargas/PG-07H/dry-run-real-db.json",
+    "startedAt": "2026-11-19T10:22:51.638Z"
+  },
+  "authorizedIds": [
+    1,
+    2
+  ],
+  "before": {
+    "saves": 2,
+    "inventories": 2,
+    "pokemon": 110,
+    "pets": 4,
+    "exports": 8,
+    "integrity": "ok"
+  },
+  "after": {
+    "saves": 2,
+    "inventories": 2,
+    "pokemon": 110,
+    "pets": 4,
+    "exports": 8,
+    "integrity": "ok"
+  },
+  "counts": {
+    "authorized": 2,
+    "pending": 2,
+    "alreadyUpdated": 0,
+    "applied": 0,
+    "skipped": 2
+  },
+  "applied": [],
+  "writePerformed": false,
+  "rolledBack": false,
+  "live": {
+    "classifications": [
+      {
+        "id": 1,
+        "classification": "REANALIZABLE"
+      },
+      {
+        "id": 2,
+        "classification": "REANALIZABLE"
+      }
+    ]
+  }
+}
