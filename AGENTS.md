@@ -468,3 +468,18 @@ VERIFICADO en ejecución real:
 
 Pendiente de comprobar (no verificable aún): efecto visual del fundido nocturno, que
 requiere añadir `apps/web/assets/room/guarderia-night.png`.
+
+## Diseño Stitch (19-nov-2026) — reglas vigentes, aún SIN IMPLEMENTAR
+
+Checkpoint remoto anterior a Stitch: `checkpoint/pre-stitch-2026-11-19` (commit `52b8dd7161a9559023617d8f7e868066d470852e`). Los diseños están en fase de revisión: la interfaz real sigue siendo la de `nursery.ts`.
+
+- Navegación objetivo: GUARDERÍA, FICHA / DATOS, EQUIPO ACTIVO y BIBLIOTECA. No sustituir las pestañas actuales de Biblioteca accidentalmente.
+- GUARDERÍA: casi exclusivamente Tamagotchi; carcasa ovalada roja/blanca con tres botones físicos (izquierdo ciclar, central A/aceptar, derecho B/volver). El LCD interior sigue estilo pixel-art GBC/Pokémon Crystal, **no** estilo de la carcasa ni de la web.
+- CUIDADOS: icono pixel pequeño y texto simple COMER/JUGAR/LIMPIAR/ACARICIAR/REPRENDER/DORMIR-DESPERTAR. Nada de +%, EV ni cálculos visibles en menús. Diálogos y ventanas más grandes, temporales, con navegación por teclado/táctil y botones del dispositivo.
+- FICHA / DATOS: necesidades y valores, estado, EV/stat exp, guías, entrenamiento, exportación .sav y demás información técnica. Reutilizar API y lógica existente; no duplicar ni inventar mecánicas.
+- Conservar el Canvas lógico 160x144, fondo versionado `apps/web/assets/room/guarderia.png`, pixelación nearest-neighbor y coordenadas. No sustituir el fondo por uno generado sin comprobar el fichero exacto. No introducir React/Tailwind solo por Stitch.
+- Cacas: objeto independiente por encima del fondo y visualmente >= 2x de la escala del mockup. **No existe aprobación para frecuencia de aparición, penalizaciones, persistencia ni reglas de limpieza nuevas.**
+- Render de Pokémon, cacas, otros sprites, PNG, spritesheets, emojis y composición Canvas/HTML: **DECISIÓN PENDIENTE**. Hacer spike aislado antes de fijar arquitectura.
+- Mockups Stitch son demostrativos, NO autoridad de datos. Sus fichas muestran Gen II junto a 510 EV, incompatibles con el stat exp de Gen 1-2: nunca adaptar el motor a esos valores de ejemplo.
+- Prohibido alterar, recrear, renombrar o sobreescribir `data/pokegotchi.db`, partidas, fixtures y exportaciones existentes. El checkpoint Git NO incluye la base de datos local ignorada.
+- Referencias y procedimiento: `docs/STITCH_IMPLEMENTATION_PLAN.md`, `docs/stitch/README.md`, `scripts/import-stitch-references.sh`.
