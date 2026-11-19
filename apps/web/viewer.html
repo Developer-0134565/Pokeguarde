@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PG-06 · Visor aislado de sprites overworld</title>
+  <style>
+    :root {
+      --shell: #b51a21;
+      --shell-dark: #541111;
+      --lcd: #9bbc0f;
+      --ink: #0f380f;
+      --paper: #fff9f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--shell-dark);
+      color: var(--paper);
+      font: 13px/1.5 "Space Mono", ui-monospace, monospace;
+      padding: 16px;
+    }
+    h1 { font-size: 18px; margin: 0 0 4px; letter-spacing: .08em; }
+    h2 { font-size: 12px; margin: 0 0 8px; letter-spacing: .1em; text-transform: uppercase; }
+    .warn {
+      background: #1c1a1a; border-left: 4px solid #fbc02d; padding: 6px 10px;
+      margin-bottom: 12px; color: #ffe9a8;
+    }
+    .layout { display: grid; grid-template-columns: minmax(260px, 330px) minmax(320px, 1fr); gap: 16px; }
+    .panel {
+      background: var(--shell); border: 3px solid #1c1a1a;
+      box-shadow: 4px 4px 0 var(--shell-dark); padding: 12px; min-width: 0;
+    }
+    .panel + .panel { margin-top: 16px; }
+    label { display: block; margin: 8px 0 2px; }
+    select, input[type="range"] { width: 100%; }
+    select, button {
+      font: inherit; background: var(--paper); color: #1c1a1a;
+      border: 2px solid #1c1a1a; padding: 4px 6px; cursor: pointer;
+    }
+    button[aria-pressed="true"] { background: #1c1a1a; color: #fff9f0; }
+    .row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .row > button { flex: 1 1 auto; }
+    .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 10px; }
+    .checks label { margin: 2px 0; display: flex; gap: 6px; align-items: center; }
+    .stagewrap { display: grid; gap: 12px; }
+    .screenbox {
+      background: #323030; border: 6px solid #1c1a1a; padding: 10px;
+      box-shadow: inset 3px 3px 0 #1c1a1a, inset -3px -3px 0 #fff9f0;
+      width: max-content; max-width: 100%;
+    }
+    canvas#scene {
+      width: min(640px, 82vw); max-width: 100%; height: auto; aspect-ratio: 10 / 9;
+      image-rendering: pixelated; background: var(--lcd); display: block;
+    }
+    .readout {
+      background: #e0e8d0; color: #1c1a1a; border: 2px solid #1c1a1a;
+      padding: 8px; white-space: pre-wrap; min-height: 6em;
+    }
+    .sheet { display: grid; gap: 8px; justify-items: start; }
+    canvas#sheet { width: 320px; height: 320px; image-rendering: pixelated; background: #e0e8d0; border: 2px solid #1c1a1a; }
+    .compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+    figure { margin: 0; background: #323030; border: 3px solid #1c1a1a; padding: 8px; }
+    figure canvas { width: 100%; height: auto; image-rendering: pixelated; background: var(--lcd); }
+    figcaption { font-size: 11px; padding-top: 6px; }
+    .hidden { display: none !important; }
+    @media (max-width: 860px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+  </style>
+</head>
+<body>
+  <h1>PG-06 · VISOR OVERWORLD AISLADO</h1>
+  <div class="warn">
+    Prototipo técnico: sirve sprites desde /tmp y NO modifica la Guardería funcional,
+    el motor, la API, la BD ni los saves. Los sprites no están versionados.
+  </div>
+
+  <div class="layout">
+    <div>
+      <section class="panel">
+        <h2>Especie y variante</h2>
+        <label for="species">Pokémon</label>
+        <select id="species"></select>
+        <label class="checks"><input type="checkbox" id="shiny"> Variante shiny</label>
+        <div id="catalog-note" class="readout" style="min-height:auto"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Dirección y animación</h2>
+        <div class="row" id="dirs">
+          <button data-dir="0">Fila 0 · abajo</button>
+          <button data-dir="1">Fila 1 · izquierda</button>
+          <button data-dir="2">Fila 2 · derecha</button>
+          <button data-dir="3">Fila 3 · arriba</button>
+        </div>
+        <label for="frame">Fotograma global (0–15): <span id="frame-label">0</span></label>
+        <input type="range" id="frame" min="0" max="15" step="1" value="0">
+        <div class="row">
+          <button id="play" aria-pressed="false">▶ Animar</button>
+          <button id="stop">■ Parar</button>
+        </div>
+        <label for="speed">Velocidad (ms/frame): <span id="speed-label">280</span></label>
+        <input type="range" id="speed" min="60" max="800" step="20" value="280">
+      </section>
+
+      <section class="panel">
+        <h2>Escala y paleta</h2>
+        <div class="row" id="tiers">
+          <button data-tier="16">16 px</button>
+          <button data-tier="24">24 px</button>
+          <button data-tier="40">40 px</button>
+          <button data-tier="64">64 px</button>
+        </div>
+        <label for="palette">Paleta</label>
+        <select id="palette">
+          <option value="rgba">RGBA original (predeterminado)</option>
+          <option value="gbc4">GBC · 4 colores</option>
+          <option value="gbc16">GBC · 16 tonos derivados</option>
+        </select>
+        <div class="row">
+          <label class="checks"><input type="checkbox" id="bg" checked> Fondo guarderia.png</label>
+          <label class="checks"><input type="checkbox" id="anchor" checked> Ancla y caja</label>
+          <label class="checks"><input type="checkbox" id="grid"> Cuadrícula 16 px</label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Anclaje de pies</h2>
+        <label for="footx">X del pie: <span id="footx-label">75</span></label>
+        <input type="range" id="footx" min="0" max="159" step="1" value="75">
+        <label for="footy">Y del pie: <span id="footy-label">103</span></label>
+        <input type="range" id="footy" min="0" max="143" step="1" value="103">
+        <div class="row"><button id="resetpos">Restaurar 75 / 103</button></div>
+        <p style="font-size:11px">Arrastra sobre la pantalla para mover el pie.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Comparación</h2>
+        <div class="row">
+          <button id="compare-pets">4 mascotas</button>
+          <button id="compare-extremes">Extremos</button>
+          <button id="compare-shiny">Shiny actual</button>
+        </div>
+        <div class="checks" id="compare-list"></div>
+        <button id="compare-clear" style="margin-top:8px">Ocultar comparación</button>
+      </section>
+    </div>
+
+    <div class="stagewrap">
+      <section class="panel">
+        <div class="screenbox"><canvas id="scene" width="160" height="144"></canvas></div>
+        <div id="readout" class="readout" style="margin-top:10px">Cargando catálogo…</div>
+      </section>
+
+      <section class="panel sheet">
+        <div class="row">
+          <button id="sheet-toggle" aria-pressed="true">Ocultar hoja 4×4</button>
+          <span style="align-self:center;font-size:11px">Filas = dirección · Columnas = animación</span>
+        </div>
+        <canvas id="sheet" width="320" height="320"></canvas>
+      </section>
+
+      <section class="panel hidden" id="compare-panel">
+        <h2>Comparativa</h2>
+        <div class="compare" id="compare"></div>
+      </section>
+    </div>
+  </div>
+
+  <script type="module" src="/sprite-viewer.js"></script>
+</body>
+</html>
