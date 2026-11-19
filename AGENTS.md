@@ -483,3 +483,9 @@ Checkpoint remoto anterior a Stitch: `checkpoint/pre-stitch-2026-11-19` (commit 
 - Mockups Stitch son demostrativos, NO autoridad de datos. Sus fichas muestran Gen II junto a 510 EV, incompatibles con el stat exp de Gen 1-2: nunca adaptar el motor a esos valores de ejemplo.
 - Prohibido alterar, recrear, renombrar o sobreescribir `data/pokegotchi.db`, partidas, fixtures y exportaciones existentes. El checkpoint Git NO incluye la base de datos local ignorada.
 - Referencias y procedimiento: `docs/STITCH_IMPLEMENTATION_PLAN.md`, `docs/stitch/README.md`, `scripts/import-stitch-references.sh`.
+
+
+## Siguiente tarea asignada (19-nov-2026)
+
+**PG-06 — Auditoría de sprites overworld y spike de renderizado.**
+Leer `docs/PG-06_SPRITE_AUDIT_TASK.md` antes de actuar. El usuario dispone del archivo local `/home/missingn0/Descargas/Gen 1-7 OV SPrites.7z`: 2937 imágenes con 16 fotogramas por Pokémon (según el usuario), mayoritariamente PNG de 256×256 o 512×512. **No asumir cuadrícula 4×4** sin inspección. Categorías 16/24/40/64 píxeles propuestas según altura Pokédex, pendientes de validar con bounds de alfa, orientación y ancla. Primera respuesta de Sol: estado Git, auditoría READ-ONLY y plan, sin tocar motor, BD ni saves. No publicar sprites de terceros sin revisar licencia y autorización.
