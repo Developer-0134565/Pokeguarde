@@ -6,6 +6,13 @@ data/*
 !data/.gitkeep
 
 # Bases SQLite y diarios
+# PG-08B/PG-08C: bases de desarrollo aisladas; NUNCA deben versionarse.
+data/shared-pg08b.db
+data/shared-pg08b.db-wal
+data/shared-pg08b.db-shm
+data/shared-pg08c.db
+data/shared-pg08c.db-wal
+data/shared-pg08c.db-shm
 *.db
 *.db-wal
 *.db-shm

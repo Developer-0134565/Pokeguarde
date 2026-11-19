@@ -1,0 +1,14 @@
+{
+  "name": "@pokeguarde/core",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Contratos de dominio de Pokeguarde (PG-08A). Sin dependencias.",
+  "exports": {
+    "./shared-nurseries": "./src/shared-nurseries.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "license": "UNLICENSED"
+}

@@ -38,6 +38,35 @@ const WEB_DIR = join(import.meta.dir, "..", "..", "web");
 const ts = new Bun.Transpiler({ loader: "ts" });
 const ALLOWED_SIZES = new Set([32768, 65536, 131072, 262144, 524288]);
 
+/* PG-07F: ampliación aditiva del contrato de lectura; no altera persistencia ni legalidad. */
+type BoxPosition = {
+  slot: number;
+  occupied: boolean;
+  ref?: { location: string; box: number; slot: number };
+  pokemon?: any;
+};
+type BoxContract = {
+  index: number;
+  name: string;
+  nameAvailable?: boolean;
+  capacity?: number | null;
+  occupied?: number;
+  empty?: number | null;
+  positions?: BoxPosition[];
+  slots: any[];
+};
+type StorageContract = {
+  available: boolean;
+  availability: string;
+  boxCount?: number | null;
+  boxCountSource?: string | null;
+  slotCount?: number | null;
+  slotCountSource?: string | null;
+  boxDataSlots?: number | null;
+  namesAvailable?: boolean;
+  emptySlotsKnown?: boolean;
+  error?: string | null;
+};
 type Inventory = {
   detected: boolean;
   saveType: string | null;
@@ -51,7 +80,9 @@ type Inventory = {
     playTime: string | null;
   } | null;
   party: any[];
-  boxes: { index: number; name: string; slots: any[] }[];
+  boxes: BoxContract[];
+  storage?: StorageContract | null;
+  boxError?: string;
   roundTrip: { identical: boolean } | null;
 };
 
