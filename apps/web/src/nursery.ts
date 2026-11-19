@@ -19,6 +19,17 @@ import {
 } from "/pet-engine.js";
 import { NIGHT_CROSSFADE_MS, nightTarget, stepMix } from "/daynight.js";
 import { formatClock, t } from "/i18n.ts";
+import {
+  initOverworldSprites,
+  paletteMode,
+  paintOverworld,
+  renderMode,
+  setPaletteMode,
+  setRenderMode,
+  spriteStatus,
+  type PaletteMode,
+  type RenderMode,
+} from "/sprite-runtime.js";
 
 /* ------------------------------------------------------------------ */
 /* Tipos de la API                                                    */
@@ -268,6 +279,8 @@ export async function openNursery(host: HTMLElement, back: () => void, preferId?
   }
   paintShell();
   loadRoom();
+  // El catálogo es best-effort: si falla, el procedural sigue dibujando.
+  void initOverworldSprites().then(updateRenderStatus);
   startLoop();
 }
 
@@ -323,6 +336,24 @@ function paintShell() {
         </div>
         ${pet ? "" : `<p class="placeholder">${esc(t("nursery.empty"))}</p>`}
         <ul class="pet-list" id="pg-list">${pets.map(petRow).join("")}</ul>
+        <div class="pg-render" id="pg-render">
+          <div class="pg-render-row">
+            <label for="pg-mode">${esc(t("render.mode"))}</label>
+            <select id="pg-mode">
+              <option value="overworld"${renderMode() === "overworld" ? " selected" : ""}>${esc(t("render.mode.overworld"))}</option>
+              <option value="procedural"${renderMode() === "procedural" ? " selected" : ""}>${esc(t("render.mode.procedural"))}</option>
+            </select>
+          </div>
+          <div class="pg-render-row">
+            <label for="pg-palette">${esc(t("render.palette"))}</label>
+            <select id="pg-palette">
+              <option value="rgba"${paletteMode() === "rgba" ? " selected" : ""}>${esc(t("render.palette.rgba"))}</option>
+              <option value="gbc4"${paletteMode() === "gbc4" ? " selected" : ""}>${esc(t("render.palette.gbc4"))}</option>
+              <option value="gbc16"${paletteMode() === "gbc16" ? " selected" : ""}>${esc(t("render.palette.gbc16"))}</option>
+            </select>
+          </div>
+          <p class="muted tiny" id="pg-render-status"></p>
+        </div>
         <div id="pg-sheet">${pet ? petSheet(pet) : ""}</div>
         <p class="muted tiny">${esc(t("nursery.footer"))}</p>
       </aside>
@@ -356,9 +387,31 @@ function paintShell() {
   });
   root.querySelector<HTMLButtonElement>("#pg-activate")?.addEventListener("click", activate);
   root.querySelector<HTMLButtonElement>("#pg-release")?.addEventListener("click", release);
+  root.querySelector<HTMLSelectElement>("#pg-mode")?.addEventListener("change", (ev) => {
+    setRenderMode((ev.currentTarget as HTMLSelectElement).value as RenderMode);
+    updateRenderStatus();
+  });
+  root.querySelector<HTMLSelectElement>("#pg-palette")?.addEventListener("change", (ev) => {
+    setPaletteMode((ev.currentTarget as HTMLSelectElement).value as PaletteMode);
+    updateRenderStatus();
+  });
 
   paintControls();
+  updateRenderStatus();
   updateSheet();
+}
+
+/** Estado visible del selector: catálogo, carga y último fallo (si lo hay). */
+function updateRenderStatus() {
+  const el = root?.querySelector<HTMLElement>("#pg-render-status");
+  if (!el) return;
+  const s = spriteStatus();
+  const key = !s.entries || (s.error && s.loaded === 0)
+    ? "render.status.unavailable"
+    : s.mode === "procedural"
+        ? "render.status.procedural"
+        : "render.status.ready";
+  el.textContent = t(key, { n: s.entries, msg: s.error });
 }
 
 function petRow(p: Pet) {
@@ -522,6 +575,7 @@ function updateSheet() {
   root?.querySelector<HTMLElement>("#pg-notice") &&
     (root.querySelector<HTMLElement>("#pg-notice")!.textContent = notice);
   paintControls();
+  updateRenderStatus();
   root?.querySelector<HTMLButtonElement>("#pg-activate")?.addEventListener("click", activate);
   root?.querySelector<HTMLButtonElement>("#pg-release")?.addEventListener("click", release);
   root?.querySelector<HTMLButtonElement>("#pg-export")?.addEventListener("click", exportPreview);
@@ -969,25 +1023,49 @@ function drawRoom(g: G, pet: Pet, st: PetState, now: number) {
   // Capa 1: elementos interactivos.
   drawInteractive(g, st, frame);
 
-  // Capa 2: mascota.
+  // Capa 2: mascota. El sprite overworld es opcional: cualquier fallo vuelve
+  // al dibujo procedural original, que sigue siendo el fallback canónico.
   const pos = petPosition(pet, st, now);
   const pose = petPose(pet, st, now);
-  drawPet(g, shapeOf(pet.profile.species), pos.x, pos.y + (pose === "sleep" ? 1 : bob), pose, !!pet.profile.shiny, frame);
+  const feetX = pos.x + Math.floor(ROOM.sprite.w / 2);
+  const feetY = pos.y + ROOM.sprite.h;
+  const spriteBox = paintOverworld(
+    g,
+    pet.profile.species,
+    !!pet.profile.shiny,
+    pose,
+    feetX,
+    feetY,
+  );
+  if (!spriteBox) {
+    drawPet(
+      g,
+      shapeOf(pet.profile.species),
+      pos.x,
+      pos.y + (pose === "sleep" ? 1 : bob),
+      pose,
+      !!pet.profile.shiny,
+      frame,
+    );
+  }
+  // Los efectos se anclan al dibujo que esté visible (sprite o procedural).
+  const fx = spriteBox?.x ?? pos.x;
+  const fy = spriteBox?.y ?? pos.y;
 
   if (st.hygiene < 35) {
     for (let i = 0; i < 3; i++) {
       const phase = (now / 900 + i * 0.33) % 1;
-      px(g, pos.x + 20 + Math.sin(phase * 6) * 3, pos.y + 2 - phase * 10, 2, 2, 0);
+      px(g, fx + 20 + Math.sin(phase * 6) * 3, fy + 2 - phase * 10, 2, 2, 0);
     }
   }
   if (pose === "sleep") {
     const tick = Math.floor(now / 900) % 3;
-    text(g, "Z", pos.x + 18, pos.y - 4 - tick * 2, 0);
-    if (tick > 0) text(g, "Z", pos.x + 22, pos.y - 8 - tick, 0);
+    text(g, "Z", fx + 18, fy - 4 - tick * 2, 0);
+    if (tick > 0) text(g, "Z", fx + 22, fy - 8 - tick, 0);
   }
   if (pose === "happy" && Math.floor(now / 400) % 2 === 0) {
-    drawHeart(g, pos.x + 8, pos.y - 6);
-    drawHeart(g, pos.x + 24, pos.y - 10);
+    drawHeart(g, fx + 8, fy - 6);
+    drawHeart(g, fx + 24, fy - 10);
   }
 }
 

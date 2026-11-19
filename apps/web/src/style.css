@@ -312,6 +312,36 @@ dialog::backdrop { background: rgba(5, 8, 5, 0.72); }
 .pet-pick .chip { grid-row: 1 / span 2; align-self: center; }
 .pet-pick.on { border-color: var(--accent); box-shadow: inset 0 0 0 1px rgba(158, 224, 106, 0.25); }
 
+/* PG-07A: preferencias visuales (no forman parte de la mascota ni del save). */
+.pg-render {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel-2);
+}
+.pg-render-row {
+  display: grid;
+  grid-template-columns: minmax(72px, auto) minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+.pg-render-row label { font-size: 0.75rem; color: var(--muted); }
+.pg-render-row select {
+  min-width: 0;
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #0e150d;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.78rem;
+}
+#pg-render-status { margin: 0; }
+
 .needs { display: grid; gap: 4px; margin: 6px 0; }
 .need { display: grid; grid-template-columns: 62px 1fr 30px; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--muted); }
 .need .track { height: 6px; border-radius: 3px; background: #0e150d; border: 1px solid var(--line); overflow: hidden; }

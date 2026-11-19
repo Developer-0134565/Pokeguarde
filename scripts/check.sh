@@ -22,6 +22,10 @@ echo "== Traducciones =="
 bun run scripts/i18n-check.ts
 
 echo
+echo "== Integración de sprites overworld (PG-07A) =="
+bun run scripts/pg07a-integration-check.ts
+
+echo
 echo "== Sidecar PKHeX =="
 command -v dotnet >/dev/null 2>&1 || { echo "error: falta el SDK de .NET 10" >&2; exit 1; }
 dotnet build services/pkhex -c Release -v q --nologo

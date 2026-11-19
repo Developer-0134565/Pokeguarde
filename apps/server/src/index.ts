@@ -15,6 +15,7 @@ import {
   type SaveRow,
 } from "./db";
 import { exportPlan, inventory, sidecarVersion, type ExportReport } from "./sidecar";
+import { spriteCatalog, spritePath, SPRITE_DIR } from "./sprites";
 import {
   ACTION_INFO,
   TRAIN_GAMES,
@@ -54,10 +55,10 @@ type Inventory = {
   roundTrip: { identical: boolean } | null;
 };
 
-function json(body: unknown, status = 200) {
+function json(body: unknown, status = 200, headers: Record<string, string> = {}) {
   return new Response(JSON.stringify(body, null, 2), {
     status,
-    headers: { "content-type": "application/json; charset=utf-8" },
+    headers: { "content-type": "application/json; charset=utf-8", ...headers },
   });
 }
 
@@ -811,6 +812,37 @@ const server = Bun.serve({
       return json({ games: TRAIN_GAMES, actions: ACTION_INFO });
     }
 
+    /* -------- Sprites overworld (PG-07A): solo lectura, nunca rutas -------- */
+
+    if (path === "/api/sprites/catalog" && req.method === "GET") {
+      return json(
+        { available: SPRITE_DIR !== null, entries: await spriteCatalog() },
+        200,
+        { "cache-control": "no-store" },
+      );
+    }
+
+    const spriteReq = /^\/api\/sprites\/([^/]+)$/.exec(path);
+    if (spriteReq && req.method === "GET") {
+      let name: string;
+      try {
+        name = decodeURIComponent(spriteReq[1]);
+      } catch {
+        return json({ error: "nombre de sprite no válido" }, 400);
+      }
+      const full = spritePath(name);
+      if (!full) return json({ error: "nombre de sprite no válido" }, 400);
+      const file = Bun.file(full);
+      if (!(await file.exists())) return json({ error: "sprite no encontrado" }, 404);
+      return new Response(file, {
+        headers: {
+          "content-type": "image/png",
+          "x-content-type-options": "nosniff",
+          "cache-control": "public, max-age=3600",
+        },
+      });
+    }
+
     if (path === "/" || path === "/index.html") {
       return new Response(Bun.file(join(WEB_DIR, "index.html")), {
         headers: { "content-type": "text/html; charset=utf-8" },
@@ -846,6 +878,9 @@ const server = Bun.serve({
       "/i18n.js": "i18n.ts",
       "/daynight.ts": "daynight.ts",
       "/daynight.js": "daynight.ts",
+      // PG-07A: renderizador puro y adapter de la Guardería (sin viewer aislado).
+      "/sprite-render.js": "sprite-render.ts",
+      "/sprite-runtime.js": "sprite-runtime.ts",
     };
     const moduleFile = modules[path];
     if (moduleFile) {
