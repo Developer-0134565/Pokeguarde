@@ -35,7 +35,7 @@ import {
 /* Tipos de la API                                                    */
 /* ------------------------------------------------------------------ */
 
-type Pet = {
+export type Pet = {
   id: number;
   save: string | null;
   active: boolean;
@@ -122,6 +122,8 @@ const textWidth = (s: string) => Math.max(0, String(s).length * 4 - 1);
 
 let root: HTMLElement | null = null;
 let onBack: (() => void) | null = null;
+/** PG-07C: abre la FICHA / DATOS de la mascota activa sin tocar la partida. */
+let onDossier: ((pet: Pet) => void) | null = null;
 let canvas: HTMLCanvasElement | null = null;
 let g: G | null = null;
 let raf = 0;
@@ -136,6 +138,11 @@ let game: GameState | null = null;
 let busy = false;
 /** Última previsualización/exportación de la mascota activa (se limpia al cambiar). */
 let lastExport: ExportOutcome | null = null;
+
+/* PG-07B: foco virtual de la botonera del dispositivo. */
+let focusKey = "";
+let focusables: HTMLElement[] = [];
+let globalBound = false;
 
 /* ------------------------------------------------------------------ */
 /* Fondo de la habitación                                             */
@@ -242,6 +249,143 @@ function activePet(): Pet | null {
 }
 
 /* ------------------------------------------------------------------ */
+/* PG-07B: carcasa Tamagotchi y botonera A/B/C                         */
+/* ------------------------------------------------------------------ */
+
+/** Elementos alcanzables por la botonera, en orden visual. */
+function shellFocusables(): HTMLElement[] {
+  if (!root) return [];
+  const selector = [
+    ".pet-pick",
+    "#pg-controls button:not(:disabled)",
+    "#pg-render select",
+    "#pg-sheet button:not(:disabled)",
+  ].join(",");
+  return Array.from(root.querySelectorAll<HTMLElement>(selector)).filter(
+    (el) => el.getClientRects().length > 0,
+  );
+}
+
+/** Identificador estable entre repintados (la ficha y los controles se regeneran). */
+function focusKeyOf(el: HTMLElement): string {
+  return (
+    el.dataset.act ??
+    el.dataset.train ??
+    el.dataset.id ??
+    el.id ??
+    el.getAttribute("aria-label") ??
+    el.textContent?.trim().slice(0, 32) ??
+    ""
+  );
+}
+
+/** Recalcula la lista y reaplica el foco; lo llaman paintShell y updateSheet. */
+function shellRefreshFocus() {
+  focusables = shellFocusables();
+  if (!focusables.length) {
+    focusKey = "";
+    return;
+  }
+  let idx = focusKey ? focusables.findIndex((el) => focusKeyOf(el) === focusKey) : 0;
+  if (idx < 0) idx = 0;
+  focusKey = focusKeyOf(focusables[idx]);
+  focusables.forEach((el, i) => {
+    const on = i === idx;
+    el.classList.toggle("device-focus", on);
+    if (on) el.setAttribute("aria-current", "true");
+    else el.removeAttribute("aria-current");
+  });
+  const el = focusables[idx];
+  const label = el.getAttribute("aria-label") ?? el.textContent?.trim() ?? "";
+  const line = root?.querySelector<HTMLElement>("#pg-focus");
+  if (line) line.textContent = t("device.focus", { label: label.slice(0, 40) });
+}
+
+/** A: mueve la selección; B: confirma; C: cancela o retrocede. */
+function shellMove(delta: number) {
+  shellRefreshFocus();
+  if (!focusables.length) return;
+  const idx = focusables.findIndex((el) => focusKeyOf(el) === focusKey);
+  focusKey = focusKeyOf(focusables[(idx + delta + focusables.length) % focusables.length]);
+  shellRefreshFocus();
+  flashShellButton("a");
+}
+
+function shellAccept() {
+  shellRefreshFocus();
+  flashShellButton("b");
+  const el = focusables.find((x) => focusKeyOf(x) === focusKey);
+  // Los controles ya tienen sus propios listeners: un único click evita
+  // activaciones dobles y no añade ninguna acción de cuidado nueva.
+  el?.click();
+}
+
+function shellCancel() {
+  flashShellButton("c");
+  if (mode === "game" && game) {
+    // Abandona el minijuego sin conceder EV ni contactar con la API.
+    game = null;
+    mode = "room";
+    notice = t("device.cancelled");
+    updateSheet();
+    return;
+  }
+  focusKey = "";
+  shellRefreshFocus();
+  updateSheet();
+}
+
+function flashShellButton(which: "a" | "b" | "c") {
+  const btn = root?.querySelector<HTMLElement>(`[data-shell-btn="${which}"]`);
+  if (!btn) return;
+  btn.classList.add("pressed");
+  window.setTimeout(() => btn.classList.remove("pressed"), 140);
+}
+
+function onShellKey(ev: KeyboardEvent) {
+  if (ev.altKey || ev.ctrlKey || ev.metaKey) return;
+  const target = ev.target as HTMLElement | null;
+  if (target?.closest("input, select, textarea") || document.querySelector("dialog[open]")) return;
+  // Evitamos el click nativo de Enter/Espacio sobre un botón: B ya lo ejecuta.
+  switch (ev.key) {
+    case "ArrowRight":
+    case "ArrowDown":
+      ev.preventDefault();
+      shellMove(1);
+      break;
+    case "ArrowLeft":
+    case "ArrowUp":
+      ev.preventDefault();
+      shellMove(-1);
+      break;
+    case "Enter":
+    case " ":
+      ev.preventDefault();
+      shellAccept();
+      break;
+    case "Escape":
+      ev.preventDefault();
+      shellCancel();
+      break;
+  }
+}
+
+/** Listeners globales: se registran una sola vez por apertura de la Guardería. */
+function bindGlobalListeners() {
+  if (globalBound) return;
+  globalBound = true;
+  window.addEventListener("resize", applyScale);
+  window.addEventListener("keydown", onShellKey);
+}
+
+function unbindGlobalListeners() {
+  if (!globalBound) return;
+  globalBound = false;
+  window.removeEventListener("resize", applyScale);
+  window.removeEventListener("keydown", onShellKey);
+}
+
+/* ------------------------------------------------------------------ */
 /* Entrada pública                                                    */
 /* ------------------------------------------------------------------ */
 
@@ -263,9 +407,15 @@ export async function adoptPet(
   }
 }
 
-export async function openNursery(host: HTMLElement, back: () => void, preferId?: number) {
+export async function openNursery(
+  host: HTMLElement,
+  back: () => void,
+  preferId?: number,
+  dossier?: (pet: Pet) => void,
+) {
   root = host;
   onBack = back;
+  onDossier = dossier ?? null;
   host.innerHTML = `<div class="nursery-loading">${esc(t("nursery.loading"))}</div>`;
   try {
     await refreshPets();
@@ -278,6 +428,7 @@ export async function openNursery(host: HTMLElement, back: () => void, preferId?
     return;
   }
   paintShell();
+  bindGlobalListeners();
   loadRoom();
   // El catálogo es best-effort: si falla, el procedural sigue dibujando.
   void initOverworldSprites().then(updateRenderStatus);
@@ -285,6 +436,10 @@ export async function openNursery(host: HTMLElement, back: () => void, preferId?
 }
 
 export function closeNursery() {
+  unbindGlobalListeners();
+  onDossier = null;
+  focusKey = "";
+  focusables = [];
   cancelAnimationFrame(raf);
   raf = 0;
   mode = "room";
@@ -322,12 +477,31 @@ function paintShell() {
   root.innerHTML = `
     <div class="nursery">
       <div class="nursery-main">
-        <div class="screen-frame">
-          <canvas id="pg-canvas" width="160" height="144"></canvas>
+        <div class="device-shell">
+          <div class="device-ring" aria-hidden="true"></div>
+          <div class="device-brand" aria-hidden="true">
+            <span>${esc(t("device.brand"))}</span>
+            <small>${esc(t("device.model"))}</small>
+          </div>
+          <div class="screen-frame">
+            <canvas id="pg-canvas" width="160" height="144"></canvas>
+          </div>
+          <div class="pg-hud" id="pg-hud"></div>
+          <div class="nursery-controls" id="pg-controls"></div>
+          <p class="nursery-notice" id="pg-notice">${esc(notice)}</p>
+          <p class="device-focus-line" id="pg-focus" aria-live="polite"></p>
+          <div class="device-buttons" role="group" aria-label="${esc(t("device.buttons.label"))}">
+            <button type="button" class="device-button" data-shell-btn="a" aria-label="${esc(t("device.btn.a"))}">
+              <span class="device-key">A</span><small>${esc(t("device.btn.a"))}</small>
+            </button>
+            <button type="button" class="device-button" data-shell-btn="b" aria-label="${esc(t("device.btn.b"))}">
+              <span class="device-key">B</span><small>${esc(t("device.btn.b"))}</small>
+            </button>
+            <button type="button" class="device-button" data-shell-btn="c" aria-label="${esc(t("device.btn.c"))}">
+              <span class="device-key">C</span><small>${esc(t("device.btn.c"))}</small>
+            </button>
+          </div>
         </div>
-        <div class="pg-hud" id="pg-hud"></div>
-        <div class="nursery-controls" id="pg-controls"></div>
-        <p class="nursery-notice" id="pg-notice">${esc(notice)}</p>
       </div>
       <aside class="nursery-side">
         <div class="panel-head">
@@ -365,9 +539,19 @@ function paintShell() {
     g = canvas.getContext("2d");
     if (g) g.imageSmoothingEnabled = false;
     canvas.addEventListener("pointerdown", onPointer);
+    // El listener de resize se registra una sola vez en bindGlobalListeners():
+    // paintShell se ejecuta tras cada adopción/cambio de mascota.
     applyScale();
-    window.addEventListener("resize", applyScale);
   }
+
+  root.querySelectorAll<HTMLButtonElement>("[data-shell-btn]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const which = btn.dataset.shellBtn;
+      if (which === "a") shellMove(1);
+      else if (which === "b") shellAccept();
+      else if (which === "c") shellCancel();
+    });
+  });
 
   root.querySelector<HTMLButtonElement>("#pg-back")?.addEventListener("click", () => onBack?.());
   root.querySelectorAll<HTMLElement>(".pet-pick").forEach((el) => {
@@ -387,6 +571,7 @@ function paintShell() {
   });
   root.querySelector<HTMLButtonElement>("#pg-activate")?.addEventListener("click", activate);
   root.querySelector<HTMLButtonElement>("#pg-release")?.addEventListener("click", release);
+  bindDossierButton();
   root.querySelector<HTMLSelectElement>("#pg-mode")?.addEventListener("change", (ev) => {
     setRenderMode((ev.currentTarget as HTMLSelectElement).value as RenderMode);
     updateRenderStatus();
@@ -416,7 +601,7 @@ function updateRenderStatus() {
 
 function petRow(p: Pet) {
   const on = p.id === activeId;
-  return `<li class="pet-pick ${on ? "on" : ""}" data-id="${p.id}">
+  return `<li class="pet-pick ${on ? "on" : ""}" data-id="${p.id}" role="button" tabindex="0" aria-label="${esc(p.profile.nickname)}">
     <b>${esc(p.profile.nickname)}</b>
     <span class="muted">${esc(t("pet.level", { n: p.profile.level }))} · ${esc(p.profile.speciesName)}</span>
     <span class="chip ${on ? "good" : ""}">${esc(moodLabel(p.mood))}</span>
@@ -523,6 +708,7 @@ function petSheet(p: Pet) {
     <h3>${esc(t("sheet.export"))}</h3>
     ${exportBlock(p)}
     <div class="sheet-actions">
+      <button id="pg-dossier" class="ghost">${esc(t("nav.sheet"))} →</button>
       ${p.active ? "" : `<button id="pg-activate" class="ghost">${esc(t("sheet.activate"))}</button>`}
       <button id="pg-release" class="ghost danger">${esc(t("sheet.release"))}</button>
     </div>
@@ -567,6 +753,16 @@ function paintControls() {
   );
 }
 
+/** Enlaza la entrada a FICHA / DATOS tras cada repintado del panel. */
+function bindDossierButton() {
+  const btn = root?.querySelector<HTMLButtonElement>("#pg-dossier");
+  if (!btn) return;
+  btn.onclick = () => {
+    const pet = activePet();
+    if (pet) onDossier?.(pet);
+  };
+}
+
 function updateSheet() {
   const pet = activePet();
   const sheet = root?.querySelector<HTMLElement>("#pg-sheet");
@@ -578,6 +774,7 @@ function updateSheet() {
   updateRenderStatus();
   root?.querySelector<HTMLButtonElement>("#pg-activate")?.addEventListener("click", activate);
   root?.querySelector<HTMLButtonElement>("#pg-release")?.addEventListener("click", release);
+  bindDossierButton();
   root?.querySelector<HTMLButtonElement>("#pg-export")?.addEventListener("click", exportPreview);
   root?.querySelector<HTMLButtonElement>("#pg-export-write")?.addEventListener("click", exportWrite);
   root?.querySelectorAll<HTMLElement>(".pet-pick").forEach((el) => {
@@ -589,6 +786,8 @@ function updateSheet() {
       paintShell();
     };
   });
+  // La ficha y los controles se han regenerado: reaplica el foco del dispositivo.
+  shellRefreshFocus();
 }
 
 /**

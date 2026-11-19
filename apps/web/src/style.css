@@ -255,7 +255,11 @@ dialog::backdrop { background: rgba(5, 8, 5, 0.72); }
 }
 .nursery-loading, .nursery .placeholder { color: var(--muted); }
 
-.nursery-main { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+/* `#nursery` también lleva la clase `.nursery`: sin esto el grid se aplica
+   dos veces y la LCD se sale de la carcasa al usar escalas grandes. */
+#nursery.nursery { display: block; padding: 0; border: 0; background: none; }
+
+.nursery-main { display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; min-width: 0; }
 .screen-frame {
   padding: 10px;
   border-radius: 10px;
@@ -270,6 +274,106 @@ dialog::backdrop { background: rgba(5, 8, 5, 0.72); }
   image-rendering: crisp-edges;
   background: #0f380f;
   cursor: pointer;
+}
+
+/* ---------- PG-07B: carcasa Tamagotchi (Pocket Tech 1999) ---------- */
+/* La LCD sigue siendo el canvas 160x144 intacto; la carcasa es solo HTML/CSS. */
+.device-shell {
+  --shell-red: #D93636;
+  --shell-dark: #B51A21;
+  --shell-shadow: #541111;
+  --shell-cream: #FFF9F0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 20px 26px 24px;
+  border: 2px solid var(--shell-shadow);
+  border-radius: 46% 46% 30% 30% / 22% 22% 18% 18%;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(255, 249, 240, 0.32), transparent 55%),
+    linear-gradient(160deg, var(--shell-red) 0%, var(--shell-dark) 100%);
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 249, 240, 0.65),
+    inset -3px -3px 0 rgba(84, 17, 17, 0.5),
+    4px 4px 0 var(--shell-shadow),
+    0 14px 34px rgba(0, 0, 0, 0.45);
+}
+.device-ring {
+  width: 58px;
+  height: 10px;
+  border-radius: 999px;
+  border: 2px solid var(--shell-shadow);
+  background: linear-gradient(180deg, #f7e9e0, #c9b3ac);
+  box-shadow: inset 0 2px 0 #fff, 0 2px 0 rgba(84, 17, 17, 0.5);
+}
+.device-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+  color: var(--shell-cream);
+  text-shadow: 1px 1px 0 var(--shell-shadow);
+}
+.device-brand span { font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; }
+.device-brand small { font-size: 0.6rem; letter-spacing: 1px; opacity: 0.9; }
+.device-shell .screen-frame {
+  padding: 8px;
+  border: 3px solid var(--shell-shadow);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f8f2f2, #ded3d3);
+  box-shadow: inset 3px 3px 0 #1c1a1a, inset -3px -3px 0 var(--shell-cream);
+}
+.device-shell .nursery-notice { color: var(--shell-cream); }
+.device-focus-line {
+  margin: 0;
+  min-height: 1em;
+  max-width: 100%;
+  color: var(--shell-cream);
+  font-size: 0.72rem;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.device-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.device-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 58px;
+  min-height: 52px;
+  padding: 6px 10px;
+  border: 2px solid var(--shell-shadow);
+  border-radius: 50%;
+  background: linear-gradient(180deg, #fff9f0, #e7ded6);
+  color: var(--shell-shadow);
+  box-shadow: 0 4px 0 #1c1a1a, inset 0 2px 0 #fff;
+  font: inherit;
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+.device-button .device-key { font-size: 1.05rem; font-weight: 800; line-height: 1; }
+.device-button small { font-size: 0.6rem; letter-spacing: 0.3px; }
+.device-button:hover { filter: brightness(1.04); }
+.device-button:active,
+.device-button.pressed {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #1c1a1a, inset 0 2px 0 #fff;
+}
+.device-button:focus-visible { outline: 3px solid var(--shell-cream); outline-offset: 3px; }
+.device-focus {
+  outline: 2px solid var(--shell-cream) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(84, 17, 17, 0.55) !important;
 }
 
 .nursery-controls {
@@ -393,8 +497,12 @@ button.primary:disabled { opacity: 0.45; cursor: not-allowed; }
   .brand { flex: 1 1 100%; }
   .health { margin-left: auto; }
   .layout { padding: 12px 14px 32px; }
-  .nursery { padding: 10px; gap: 12px; }
-  .screen-frame { padding: 6px; }
+  .nursery { padding: 4px; gap: 10px; }
+  .device-shell { padding: 10px 8px 14px; gap: 8px; border-radius: 34% 34% 24% 24% / 16% 16% 14% 14%; }
+  .device-shell .screen-frame { padding: 2px; border-width: 2px; border-radius: 8px; }
+  .device-buttons { gap: 8px; }
+  .device-button { min-width: 46px; min-height: 44px; padding: 4px 6px; }
+  .device-button small { font-size: 0.55rem; }
 }
 
 /* ---------- HUD de la guardería (fuera del lienzo) ---------- */
@@ -424,4 +532,482 @@ button.primary:disabled { opacity: 0.45; cursor: not-allowed; }
 @keyframes hudBlink {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0.35; }
+}
+
+/* ---------- FICHA / DATOS (PG-07C) ---------- */
+.dossier {
+  display: grid;
+  justify-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px;
+}
+.dossier-device {
+  width: 100%;
+  max-width: 940px;
+  padding: 22px 24px 26px;
+  gap: 14px;
+}
+.dossier-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px 16px;
+  border: 2px solid #541111;
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 3px #fff9f0, 0 4px 0 var(--red-dark);
+  color: var(--ink);
+}
+.dossier-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed var(--line);
+}
+.dossier-kicker {
+  margin: 0;
+  color: var(--red-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.dossier-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.dossier-tabs button { min-height: 36px; }
+.dossier-body { display: grid; gap: 12px; padding-top: 12px; }
+.dossier-head {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: #fffdf7;
+}
+.dossier-sprite {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 6px;
+  border: 2px solid #541111;
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--lcd), var(--green));
+}
+.dossier-sprite canvas {
+  display: block;
+  width: 160px;
+  height: 144px;
+  image-rendering: pixelated;
+}
+.dossier-sprite p { margin: 0; text-align: center; }
+.dossier-ident { min-width: 0; }
+.dossier-ident h2 { margin: 2px 0; font-size: 1.35rem; word-break: break-word; }
+.dossier-ident > p.muted { margin: 0 0 6px; }
+.dossier-verdict { margin: 6px 0; font-size: 0.82rem; }
+.dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 14px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: #fffdf7;
+}
+.dossier-row {
+  display: grid;
+  grid-template-columns: minmax(86px, auto) minmax(0, 1fr);
+  gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--line);
+  font-size: 0.82rem;
+}
+.dossier-row dt { color: var(--muted); }
+.dossier-row dd { margin: 0; font-weight: 700; word-break: break-word; }
+.dossier-body h3 {
+  margin: 0 0 6px;
+  padding-left: 8px;
+  border-left: 4px solid var(--red);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+.dossier-moves { display: grid; gap: 4px; margin: 0; padding-left: 22px; font-size: 0.82rem; }
+.dossier-moves li { padding: 5px 8px; border: 1px solid var(--line); background: #f8f4ea; }
+.dossier-issues { margin: 0; padding-left: 20px; font-size: 0.8rem; }
+.dossier-report {
+  max-height: 180px;
+  overflow: auto;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: #1c241a;
+  color: #e0e8d0;
+  font-size: 0.72rem;
+  white-space: pre-wrap;
+}
+.dossier-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 2px dashed var(--line);
+}
+.dossier-actions button { min-height: 38px; }
+.dossier-empty { padding: 28px 12px; text-align: center; }
+
+@media (max-width: 1100px) {
+  .dossier { padding: 12px; }
+  .dossier-device { padding: 18px 14px 20px; }
+  .dossier-head { grid-template-columns: 130px minmax(0, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .dossier { padding: 10px 12px 28px; }
+  .dossier-device { padding: 14px 10px 18px; }
+  .dossier-card { padding: 10px 10px 12px; }
+  .dossier-title { align-items: flex-start; }
+  .dossier-tabs { width: 100%; }
+  .dossier-tabs button { flex: 1 1 0; }
+  .dossier-head { grid-template-columns: 1fr; justify-items: center; }
+  .dossier-grid { grid-template-columns: 1fr; }
+  .dossier-actions button { flex: 1 1 120px; }
+}
+
+/* ---------- EQUIPO ACTIVO (PG-07D) ---------- */
+.team-panel { display: grid; gap: 10px; }
+.team-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.team-title {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+}
+.team-head p { margin: 2px 0 0; }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.team-slot {
+  position: relative;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-height: 108px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel-2);
+  color: var(--ink);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.team-slot:hover { border-color: var(--accent); }
+.team-slot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.team-slot.selected {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 2px var(--accent);
+  background: #22301f;
+}
+.team-slot.empty {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: center;
+  gap: 4px;
+  border-style: dashed;
+  color: var(--muted);
+  cursor: default;
+}
+.team-empty-num { font-size: 1.35rem; }
+.team-empty-label { font-size: 11px; }
+.team-selected-tag {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #10160f;
+  font-size: 9px;
+  font-weight: 700;
+}
+.team-sprite-wrap {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  min-width: 0;
+}
+.team-sprite {
+  width: 76px;
+  height: 76px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #10160f;
+  image-rendering: pixelated;
+}
+.team-sprite-note {
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.1;
+  text-align: center;
+}
+.team-info {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.team-index { color: var(--accent); font-size: 10px; letter-spacing: 0.04em; }
+.team-info strong { font-size: 12px; overflow-wrap: anywhere; }
+.team-species { color: var(--muted); font-size: 10px; overflow-wrap: anywhere; }
+.team-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-height: 16px;
+  font-size: 11px;
+}
+.team-hp {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+}
+.team-hp.muted { display: block; }
+.team-hp-track {
+  height: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #10160f;
+  overflow: hidden;
+}
+.team-hp-track > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #6fae4d, var(--accent));
+}
+.team-hp b { font-weight: 600; white-space: nowrap; }
+.team-status { color: var(--warn); font-size: 10px; overflow-wrap: anywhere; }
+
+@media (max-width: 900px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .team-grid { grid-template-columns: minmax(0, 1fr); }
+  .team-slot { min-height: 88px; }
+  .team-sprite { width: 64px; height: 64px; }
+  .team-head p { line-height: 1.5; }
+}
+
+/* ---------- CAJAS DE PC (PG-07E) ---------- */
+.pc-panel { display: grid; gap: 10px; min-width: 0; }
+.pc-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px 14px;
+}
+.pc-head-main { min-width: 0; }
+.pc-title {
+  margin: 0;
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+.pc-head p { margin: 3px 0 0; }
+.pc-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.pc-position {
+  min-width: 48px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+}
+.pc-identity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid #2d3b4d;
+  background: #0f1824;
+}
+.pc-identity > div { display: flex; flex-direction: column; min-width: 0; }
+.pc-box-name {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.pc-box-index { color: var(--muted); font-size: 10px; }
+.pc-storage, .pc-contract, .pc-error { margin: 0; }
+.pc-error { color: var(--bad, #d97070); font-size: 12px; overflow-wrap: anywhere; }
+.pc-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+}
+.pc-filters { display: flex; flex-wrap: wrap; gap: 4px; }
+.pc-filter {
+  padding: 7px 9px;
+  border: 1px solid #2d3b4d;
+  border-radius: 0;
+  background: #101a27;
+  color: var(--muted);
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.pc-filter b { color: inherit; margin-left: 2px; }
+.pc-filter.active {
+  border-color: var(--accent);
+  background: #1b2a3a;
+  color: #e6f2ff;
+}
+.pc-search { display: flex; flex-direction: column; gap: 4px; min-width: 190px; flex: 1 1 210px; }
+.pc-search span { color: var(--muted); font-size: 10px; }
+.pc-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #2d3b4d;
+  border-radius: 0;
+  background: #0b121c;
+  color: #e6f2ff;
+  font: inherit;
+  font-size: 12px;
+}
+.pc-match { margin: 0; }
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  min-width: 0;
+  overflow-x: hidden;
+}
+.pc-slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+  min-height: 118px;
+  padding: 7px 4px;
+  border: 1px solid #2d3b4d;
+  border-radius: 0;
+  background: linear-gradient(180deg, #101a27, #0a111a);
+  color: #e6f2ff;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+.pc-slot:hover { border-color: var(--accent); }
+.pc-slot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.pc-slot.selected {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.pc-slot.filtered { opacity: 0.24; filter: saturate(0.2); }
+.pc-slot.empty { justify-content: center; border-style: dashed; color: var(--muted); }
+.pc-slot-num {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
+.pc-selected-tag {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  padding: 1px 3px;
+  background: var(--accent);
+  color: #071018;
+  font-size: 8px;
+  font-weight: 700;
+}
+.pc-sprite-wrap { position: relative; line-height: 0; margin-top: 12px; }
+.pc-sprite {
+  width: 56px;
+  height: 56px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.pc-sprite-note {
+  position: absolute;
+  inset: auto 0 -2px;
+  color: var(--muted);
+  font-size: 7px;
+  line-height: 1.1;
+  text-align: center;
+}
+.pc-slot strong, .pc-species, .pc-slot-meta { max-width: 100%; overflow-wrap: anywhere; }
+.pc-slot strong { font-size: 11px; }
+.pc-species { color: var(--muted); font-size: 9px; }
+.pc-slot-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+  color: var(--muted);
+  font-size: 9px;
+}
+.pc-empty-label { font-size: 10px; }
+.pc-info {
+  min-height: 52px;
+  padding: 8px 10px;
+  border: 1px solid #2d3b4d;
+  background: #0d1621;
+}
+.pc-context {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.pc-context > div { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; min-width: 0; }
+.pc-context strong { font-size: 13px; }
+
+@media (max-width: 900px) {
+  .pc-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .pc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pc-slot { min-height: 108px; padding-inline: 2px; }
+  .pc-sprite { width: 48px; height: 48px; }
+  .pc-head p { line-height: 1.5; }
+  .pc-search { min-width: 100%; }
+  .pc-context > div { width: 100%; }
 }

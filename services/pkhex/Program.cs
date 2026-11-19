@@ -118,36 +118,110 @@ if (cmd == "inventory")
     catch (Exception ex) { inv["partyError"] = ex.Message; }
     inv["party"] = partyList;
 
+    /* PG-07F:storage-contract:start */
+    // Contrato ampliado de almacenamiento (PG-07F). Se conservan los campos
+    // antiguos: boxes[].slots solo contiene Pokémon ocupados. La nueva lista
+    // boxes[].positions describe TODAS las ranuras reales, incluidas las vacías.
+    // Todo lo desconocido se publica como null o con un estado explícito.
     var boxes = new List<Dictionary<string, object?>>();
+    var storage = new Dictionary<string, object?>
+    {
+        ["available"] = false,
+        ["availability"] = "unavailable",
+        ["boxCount"] = null,
+        ["boxCountSource"] = null,
+        ["slotCount"] = null,
+        ["slotCountSource"] = null,
+        ["boxDataSlots"] = null,
+        ["namesAvailable"] = false,
+        ["emptySlotsKnown"] = false,
+        ["error"] = null,
+    };
     try
     {
-        var boxAll = isav.BoxData.ToArray();
+        bool hasStorage = isav.HasBox;
+        int declaredBoxes = isav.BoxCount;
         int per = isav.BoxSlotCount;
-        if (per <= 0) per = 30;
-        for (int b = 0; b * per < boxAll.Length; b++)
+        var boxAll = hasStorage ? isav.BoxData.ToArray() : Array.Empty<PKM>();
+        int dataSlots = boxAll.Length;
+        int derivedBoxes = per > 0 && dataSlots > 0 ? (dataSlots + per - 1) / per : 0;
+        int boxCount = declaredBoxes > 0 ? declaredBoxes : derivedBoxes;
+        bool namesAvailable = false;
+
+        storage["boxCount"] = boxCount > 0 ? boxCount : null;
+        storage["boxCountSource"] = declaredBoxes > 0 ? "SaveFile.BoxCount" : derivedBoxes > 0 ? "derived-from-BoxData" : null;
+        storage["slotCount"] = per > 0 ? per : null;
+        storage["slotCountSource"] = per > 0 ? "SaveFile.BoxSlotCount" : null;
+        storage["boxDataSlots"] = dataSlots;
+        storage["emptySlotsKnown"] = per > 0 && dataSlots > 0;
+
+        for (int b = 0; b < boxCount; b++)
         {
             var slots = new List<Dictionary<string, object?>>();
+            var positions = new List<Dictionary<string, object?>>();
+            string? boxName = null;
+            try { boxName = TryCallString(isav, "GetBoxName", b); }
+            catch { boxName = null; }
+            if (boxName is not null) namesAvailable = true;
+
             for (int j = 0; j < per; j++)
             {
                 int k = b * per + j;
-                if (k >= boxAll.Length) break;
-                var pkm = boxAll[k];
-                if (pkm.Species == 0) continue;
-                var d = PkmJson(pkm, strings);
-                d["slot"] = j + 1;
-                slots.Add(d);
+                PKM? pkm = k >= 0 && k < dataSlots ? boxAll[k] : null;
+                bool occupied = pkm is not null && pkm.Species != 0;
+                var reference = new Dictionary<string, object?>
+                {
+                    ["location"] = "box",
+                    ["box"] = b + 1,
+                    ["slot"] = j + 1,
+                };
+                var position = new Dictionary<string, object?>
+                {
+                    ["slot"] = j + 1,
+                    ["occupied"] = occupied,
+                    ["ref"] = reference,
+                };
+                if (occupied)
+                {
+                    var d = PkmJson(pkm!, strings);
+                    d["slot"] = j + 1;
+                    d["box"] = b + 1;
+                    d["ref"] = reference;
+                    slots.Add(d);
+                    position["pokemon"] = d;
+                }
+                positions.Add(position);
             }
-            if (slots.Count == 0) continue;
+
             boxes.Add(new Dictionary<string, object?>
             {
                 ["index"] = b + 1,
-                ["name"] = TryCallString(isav, "GetBoxName", b),
+                ["name"] = boxName ?? "",
+                ["nameAvailable"] = boxName is not null,
+                ["capacity"] = per > 0 ? per : null,
+                ["occupied"] = slots.Count,
+                ["empty"] = per > 0 ? per - slots.Count : null,
+                ["positions"] = positions,
                 ["slots"] = slots,
             });
         }
+
+        storage["namesAvailable"] = namesAvailable;
+        bool canMap = hasStorage && boxCount > 0 && per > 0;
+        storage["available"] = canMap && dataSlots > 0;
+        storage["availability"] = canMap
+            ? (dataSlots > 0 ? "available" : "partial")
+            : (boxCount > 0 || dataSlots > 0 ? "partial" : "unavailable");
     }
-    catch (Exception ex) { inv["boxError"] = ex.Message; }
+    catch (Exception ex)
+    {
+        inv["boxError"] = ex.Message;
+        storage["error"] = ex.GetType().Name + ": " + ex.Message;
+        storage["availability"] = "error";
+    }
+    inv["storage"] = storage;
     inv["boxes"] = boxes;
+    /* PG-07F:storage-contract:end */
 
     var bag = new List<Dictionary<string, object?>>();
     try
