@@ -1,0 +1,68 @@
+# ---------------------------------------------------------------------------
+# Datos locales: NUNCA se publican.
+# La base de las mascotas, los saves importados y las exportaciones viven aquí.
+# ---------------------------------------------------------------------------
+data/*
+!data/.gitkeep
+
+# Bases SQLite y diarios
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Partidas y volcados de cartucho (solo los fixtures revisados)
+*.srm
+*.sav
+*.dsv
+*.bin
+!fixtures/*.srm
+
+# Credenciales y secretos
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+*.secret
+secrets/
+credentials/
+
+# Node / Bun
+node_modules/
+dist/
+.vite/
+.cache/
+.bun/
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Logs, temporales y respaldos
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.rej
+*.pre-rotacion.*
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Capturas de trabajo (las de documentación viven en /tmp o docs/stitch)
+capturas/
+screenshots/

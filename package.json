@@ -1,0 +1,11 @@
+{
+  "name": "pokeguarde",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Biblioteca local de partidas Pokémon con Guardería tamagotchi",
+  "scripts": {
+    "dev": "bash scripts/dev.sh",
+    "check": "bash scripts/check.sh"
+  }
+}

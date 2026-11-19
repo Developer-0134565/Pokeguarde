@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="app.title">Pokeguarde · Biblioteca de partidas</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1 data-i18n="app.brand">Pokeguarde</h1>
+      <span class="tag" data-i18n="app.tagline">Biblioteca de partidas</span>
+    </div>
+    <nav class="nav">
+      <button id="nav-library" class="ghost active" data-i18n="nav.library">Biblioteca</button>
+      <button id="nav-nursery" class="ghost" data-i18n="nav.nursery">Guardería</button>
+    </nav>
+    <div id="health" class="health" data-i18n="health.checking">comprobando…</div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel saves">
+      <div class="panel-head">
+        <h2 data-i18n="saves.heading">Partidas</h2>
+        <button id="refresh" class="ghost" data-i18n-title="saves.refresh" title="Recargar">↻</button>
+      </div>
+      <div id="drop" class="drop">
+        <strong data-i18n="drop.title">Arrastra un save</strong>
+        <span data-i18n="drop.hint">.srm · .sav · .dsv (32 KB – 512 KB)</span>
+        <label class="pick"><span data-i18n="drop.pick">o elige un archivo</span><input id="file" type="file" accept=".srm,.sav,.dsv,.bin" hidden></label>
+      </div>
+      <ul id="saves" class="save-list"></ul>
+      <p id="status" class="status"></p>
+    </aside>
+
+    <section id="detail" class="panel detail empty">
+      <p class="placeholder" data-i18n="detail.placeholder">Selecciona una partida para ver el inventario.</p>
+    </section>
+  </main>
+
+  <section id="nursery" class="panel nursery hidden"></section>
+
+  <dialog id="mon">
+    <form method="dialog"><button class="close" data-i18n-aria="dialog.close" aria-label="Cerrar">×</button></form>
+    <div id="mon-body"></div>
+  </dialog>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
