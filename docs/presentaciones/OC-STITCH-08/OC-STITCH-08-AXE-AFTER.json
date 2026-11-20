@@ -1,0 +1,180 @@
+{
+  "mission": "OC-STITCH-08",
+  "phase": "K-FINAL",
+  "generatedAt": "2026-11-20T20:18:14.072533+00:00",
+  "tool": "axe-core embebido en agent-browser (sin CDN)",
+  "axeVersion": "4.12.1",
+  "routesAudited": 8,
+  "totalViolations": 0,
+  "routes": [
+    {
+      "route": "/",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 58,
+        "incomplete": 2,
+        "passes": 31,
+        "violations": 0
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 10
+        }
+      ]
+    },
+    {
+      "route": "/crianza",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 58,
+        "incomplete": 2,
+        "passes": 31,
+        "violations": 0
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "route": "/emulation/rooms/03",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 52,
+        "incomplete": 2,
+        "passes": 37,
+        "violations": 0
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ]
+    },
+    {
+      "route": "/studio/marketing/analytics",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 53,
+        "incomplete": 2,
+        "passes": 36,
+        "violations": 0
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "route": "/studio/marketing/brand",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 52,
+        "incomplete": 2,
+        "passes": 37,
+        "violations": 0
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "route": "/studio/marketing/campaigns",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 53,
+        "incomplete": 2,
+        "passes": 36,
+        "violations": 0
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ]
+    },
+    {
+      "route": "/studio/shell",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 64,
+        "incomplete": 2,
+        "passes": 25,
+        "violations": 0
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "route": "/studio/theme",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 62,
+        "incomplete": 2,
+        "passes": 27,
+        "violations": 0
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ]
+    }
+  ],
+  "note": "Auditoría final del hilo principal sobre 8 rutas representativas tras corregir aria-allowed-role, landmark-one-main y los puntos de contraste pendientes. El informe original de Terra se conserva en OC-STITCH-08-AXE-AFTER-STITCHK.json."
+}

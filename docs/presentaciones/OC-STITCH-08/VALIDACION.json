@@ -1,0 +1,36 @@
+{
+  "mision": "OC-STITCH-08",
+  "titulo": "OC-STITCH-08 — Informe ejecutivo y final",
+  "fecha": "2026-11-20T20:26:09+00:00",
+  "ok": true,
+  "errores": [],
+  "pendientes": [
+    "Apertura desde la GUI de Base NO comprobada: el bridge UNO aborta en este equipo (DisposedException); las 9 tablas SÍ se consultaron con el motor HSQLDB embebido que usa Base"
+  ],
+  "entregables": {
+    "OC-STITCH-08-INFORME.md": 6596,
+    "OC-STITCH-08-PRESENTACION.odp": 31345,
+    "OC-STITCH-08-DIAGRAMA.odg": 18818,
+    "OC-STITCH-08-INFORME.pdf": 44401,
+    "OC-STITCH-08-PRESENTACION.pdf": 41772
+  },
+  "registro_base": {
+    "mision_registrada": true,
+    "duplicados": [],
+    "faltan_en_manifest": [],
+    "tablas_consultables": true,
+    "tablas": {
+      "misiones": 20,
+      "fuentes": 166,
+      "roms": 168,
+      "saves": 11,
+      "pokemon": 34,
+      "entrenadores": 6,
+      "punteros": 2,
+      "sprites": 2946,
+      "scraping_pendiente": 12
+    },
+    "motor_verificacion": "HSQLDB JDBC",
+    "error_verificacion": null
+  }
+}

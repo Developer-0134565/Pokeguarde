@@ -1,0 +1,282 @@
+{
+  "mission": "OC-SYNC-09",
+  "phase": "Fase 5 (regresión) + Fase 6 (integridad)",
+  "generatedAt": "2026-11-20T20:56:52+00:00",
+  "repository": "/home/missingn0/Proyectos/Pokeguarde",
+  "scope": {
+    "server": "Bun preexistente en http://127.0.0.1:8787; NO iniciado ni detenido",
+    "browser": "agent-browser, sesión propia sync09astra-957274a7fcad; cerrada al terminar",
+    "constraints": "Sin commits, pushes, cambios de código fuente, BD, fixtures, ROMs, saves ni motores",
+    "logs": "/tmp/opencode/oc-sync-09/logs/*.log"
+  },
+  "summary": {
+    "commandsExecuted": 22,
+    "pass": 22,
+    "fail": 0,
+    "notExecuted": 10
+  },
+  "results": [
+    {
+      "id": "00-bun-run-check",
+      "command": "bun run check",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:33+01:00",
+      "endedAt": "2026-11-20T21:54:42+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/00-bun-run-check.log",
+      "summary": "Todo correcto."
+    },
+    {
+      "id": "01-pet-check",
+      "command": "bun run scripts/pet-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:42+01:00",
+      "endedAt": "2026-11-20T21:54:43+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/01-pet-check.log",
+      "summary": "Motor OK: todas las comprobaciones pasan"
+    },
+    {
+      "id": "02-night-check",
+      "command": "bun run scripts/night-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:43+01:00",
+      "endedAt": "2026-11-20T21:54:43+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/02-night-check.log",
+      "summary": "Día/noche OK: todas las comprobaciones pasan."
+    },
+    {
+      "id": "03-i18n-check",
+      "command": "bun run scripts/i18n-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:43+01:00",
+      "endedAt": "2026-11-20T21:54:43+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/03-i18n-check.log",
+      "summary": "Traducciones OK: todas las comprobaciones pasan."
+    },
+    {
+      "id": "04-stitch05-check",
+      "command": "bun run scripts/stitch05-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:43+01:00",
+      "endedAt": "2026-11-20T21:54:43+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/04-stitch05-check.log",
+      "summary": "OC-STITCH-05: todas las comprobaciones correctas."
+    },
+    {
+      "id": "05-ov-gen12-check",
+      "command": "bun run scripts/ov-gen12-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:43+01:00",
+      "endedAt": "2026-11-20T21:54:43+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/05-ov-gen12-check.log",
+      "summary": "OV-GEN12 check: 23 comprobaciones correctas."
+    },
+    {
+      "id": "06-pg06-viewer-check",
+      "command": "bun run scripts/pg06-viewer-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:43+01:00",
+      "endedAt": "2026-11-20T21:54:43+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/06-pg06-viewer-check.log",
+      "summary": "PG-06 viewer-check: 36 comprobaciones correctas."
+    },
+    {
+      "id": "07-pg07a-integration-check",
+      "command": "bun run scripts/pg07a-integration-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:43+01:00",
+      "endedAt": "2026-11-20T21:54:44+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/07-pg07a-integration-check.log",
+      "summary": "PG-07A integration-check: 54 comprobaciones correctas."
+    },
+    {
+      "id": "08-pg07b-check",
+      "command": "bun run scripts/pg07b-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:44+01:00",
+      "endedAt": "2026-11-20T21:54:44+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/08-pg07b-check.log",
+      "summary": "PG-07B OK: todas las comprobaciones pasan."
+    },
+    {
+      "id": "09-pg07c-check",
+      "command": "bun run scripts/pg07c-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:44+01:00",
+      "endedAt": "2026-11-20T21:54:44+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/09-pg07c-check.log",
+      "summary": "PG-07C OK: todas las comprobaciones pasan."
+    },
+    {
+      "id": "10-pg07d-check",
+      "command": "bun run scripts/pg07d-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:44+01:00",
+      "endedAt": "2026-11-20T21:54:44+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/10-pg07d-check.log",
+      "summary": "PG-07D OK: todas las comprobaciones pasan."
+    },
+    {
+      "id": "11-pg07e-check",
+      "command": "bun run scripts/pg07e-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:44+01:00",
+      "endedAt": "2026-11-20T21:54:44+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/11-pg07e-check.log",
+      "summary": "PG-07E OK: todas las comprobaciones pasan."
+    },
+    {
+      "id": "12-pg07f-check",
+      "command": "bun run scripts/pg07f-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:44+01:00",
+      "endedAt": "2026-11-20T21:54:47+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/12-pg07f-check.log",
+      "summary": "PG-07F OK: 132 comprobaciones correctas."
+    },
+    {
+      "id": "13-pg07g-check",
+      "command": "bun run scripts/pg07g-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:47+01:00",
+      "endedAt": "2026-11-20T21:54:49+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/13-pg07g-check.log",
+      "summary": "PG-07G: 69/69 comprobaciones correctas."
+    },
+    {
+      "id": "14-pg07h-check",
+      "command": "bun run scripts/pg07h-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:49+01:00",
+      "endedAt": "2026-11-20T21:54:51+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/14-pg07h-check.log",
+      "summary": "PG-07H: 101/101 comprobaciones correctas."
+    },
+    {
+      "id": "15-pg08a-check",
+      "command": "bun run scripts/pg08a-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:51+01:00",
+      "endedAt": "2026-11-20T21:54:51+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/15-pg08a-check.log",
+      "summary": "PG-08A: 284/284 comprobaciones correctas."
+    },
+    {
+      "id": "16-pg08b-check",
+      "command": "bun run scripts/pg08b-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:51+01:00",
+      "endedAt": "2026-11-20T21:54:51+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/16-pg08b-check.log",
+      "summary": "PG-08B: 22/22 comprobaciones correctas."
+    },
+    {
+      "id": "17-pg08c-check",
+      "command": "bun run scripts/pg08c-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:51+01:00",
+      "endedAt": "2026-11-20T21:54:51+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/17-pg08c-check.log",
+      "summary": "PG-08C: 33/33 comprobaciones correctas."
+    },
+    {
+      "id": "18-pg08d-check",
+      "command": "bun run scripts/pg08d-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:51+01:00",
+      "endedAt": "2026-11-20T21:54:52+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/18-pg08d-check.log",
+      "summary": "Todo correcto."
+    },
+    {
+      "id": "19-pg08e-check",
+      "command": "bun run scripts/pg08e-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:52+01:00",
+      "endedAt": "2026-11-20T21:54:52+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/19-pg08e-check.log",
+      "summary": "PG-08E — 48 casos correctos, 0 fallidos."
+    },
+    {
+      "id": "20-pg08f-check",
+      "command": "bun run scripts/pg08f-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:52+01:00",
+      "endedAt": "2026-11-20T21:54:52+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/20-pg08f-check.log",
+      "summary": "Todo correcto."
+    },
+    {
+      "id": "21-pg08g3-check",
+      "command": "bun run scripts/pg08g3-check.ts",
+      "exitCode": 0,
+      "status": "PASS",
+      "startedAt": "2026-11-20T21:54:52+01:00",
+      "endedAt": "2026-11-20T21:54:52+01:00",
+      "log": "/tmp/opencode/oc-sync-09/logs/21-pg08g3-check.log",
+      "summary": "pg08g3-check: 28/28 OK"
+    }
+  ],
+  "notExecuted": [
+    {
+      "command": "bash scripts/dev.sh",
+      "reason": "Inicia el servidor Bun; estaba preexistente en 127.0.0.1:8787 y NO debía iniciarse ni detenerse."
+    },
+    {
+      "command": "bash scripts/spike.sh",
+      "reason": "Spike de sidecar; no es una suite de regresión y puede recompilar artefactos fuera del alcance."
+    },
+    {
+      "command": "bash scripts/pg06-extract.sh",
+      "reason": "Extrae recursos de ROMs; prohibido extraer/copiar ROMs en esta misión."
+    },
+    {
+      "command": "bash scripts/import-stitch-references.sh",
+      "reason": "Copia referencias al repositorio; no es una suite de tests y no se autorizó."
+    },
+    {
+      "command": "bun run scripts/pg07g-reanalyze.ts",
+      "reason": "Herramienta con capacidad de escritura (--apply/--target); no es una suite de verificación."
+    },
+    {
+      "command": "bun run scripts/pg07h-apply.ts",
+      "reason": "Ejecutor con --execute capaz de escribir en producción; la comprobación segura verify-only sí se ejecutó dentro de pg07h-check."
+    },
+    {
+      "command": "bun run scripts/pg06-viewer.ts",
+      "reason": "Visor/servidor auxiliar, no una suite de tests; no se iniciaron servidores nuevos."
+    },
+    {
+      "command": "python3 scripts/pg_doc_01_generator.py",
+      "reason": "Generador de documentos, no una suite de tests."
+    },
+    {
+      "command": "python3 scripts/oc_stitch07_visual_compare.py / python3 scripts/oc_stitch08_visual_compare.py",
+      "reason": "Comparadores visuales dependientes de capturas previas; la evidencia visual/responsive se reutilizó de OC-STITCH-08 y se re-midió en navegador."
+    },
+    {
+      "command": "bun prototypes/pg-ip-02/check.ts / bun prototypes/pg-ip-03/check.ts / bun prototypes/pg-ip-04/check.ts / bun prototypes/pg-ip-04/check-gen2.ts",
+      "reason": "Suites de prototipos fuera de scripts/ y ajenas a router/Command Bus/Guardería/responsive; no se autorizó su ejecución con ROMs/fixtures en esta misión."
+    }
+  ]
+}

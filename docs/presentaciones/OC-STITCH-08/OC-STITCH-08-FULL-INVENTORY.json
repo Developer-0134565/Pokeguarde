@@ -1,0 +1,2939 @@
+{
+  "mission": "OC-STITCH-08",
+  "sourceProject": "projects/11971189356527444727",
+  "sourceMethod": "Stitch MCP list_screens + get_project + download_file (HTML)",
+  "totalElements": 89,
+  "classificationCounts": {
+    "DOCUMENT": 12,
+    "WEB_PAGE": 60,
+    "IMAGE_ASSET": 4,
+    "WEB_COMPONENT": 2,
+    "WEB_VARIANT": 7,
+    "WEB_FLOW": 4
+  },
+  "domainCounts": {
+    "core/other": 10,
+    "marketing": 15,
+    "core/breeding": 5,
+    "core/nursery": 2,
+    "emulation": 27,
+    "creator/theme": 11,
+    "creator/habitat": 3,
+    "core/economy": 1,
+    "core/forensics": 5,
+    "core/pokemon": 1,
+    "creator/shell": 3,
+    "core/library": 2,
+    "core/shell": 3,
+    "core/social": 1
+  },
+  "inspected": 85,
+  "uninspectable": [
+    "761b467f59404580adc53b45e7f1804f",
+    "75460234d32246ddaca967485cba26ef",
+    "16184830575926918797",
+    "98e4e080724d4570a64b18d4f6d186df"
+  ],
+  "duplicateGroupNote": "Los 4 elementos IMAGE no tienen HTML; su hash vacío no es un duplicado real.",
+  "items": [
+    {
+      "id": "175f67f6363048de975a7efcc439b5f6",
+      "title": "Pokéguarde — PRD Exportable (.json)",
+      "declaredType": "DOCUMENT",
+      "deviceType": "DESKTOP",
+      "resolution": "0x0",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 9164,
+        "htmlSha256": "3601b9a6d0f8cc4a78a9d3bba059f65f136c6697a57c4ffaab00b99acf0bcb9f",
+        "screenshotAvailable": false,
+        "textChars": 7460,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "5e303f4db15444a4b08628dbcb8478b3",
+      "title": "Marketing Studio — Módulo 02: Social Media Studio",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3450",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 53092,
+        "htmlSha256": "ff03d231a5a618fcd172ed45f094139917d9492bcfacd497db9b9dec08d6d914",
+        "screenshotAvailable": true,
+        "textChars": 4183,
+        "headings": [],
+        "sampleButtons": [
+          "POKÉGUARDEOS Ver. 2.44 EXPESTADO NAVEGACIÓNGuardería01",
+          "Ficha / Datos02",
+          "Equipo Activo03",
+          "Jugadores04",
+          "Crianza &amp; Huevos05",
+          "Biblioteca06"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "761b467f59404580adc53b45e7f1804f",
+      "title": "Wide 16:9 digital advertising banner for 'POKEGUARDE — Sistema Perpetuo de Preservación & Crianza Pokémon (1996-2012)'. On the left side, bold retro-tech typography with badges: 'GUARDA, CRÍA Y ENTRENA TUS POKÉMON CLÁSICOS', '100% MODO LOCAL OFFLINE', 'SOPORTE .SAV .SRM .DSV', and a prominent red call-to-action button 'PLAY NOW — DEMO INSTANTÁNEA'. On the right side, the iconic glossy red-and-white Pokéball handheld Tamagotchi console with glowing LCD screen displaying 16-bit pixel art room. Cream warm background (#fff9ec) with subtle engineering dot-matrix grid, crisp industrial layout, late 90s handheld gaming hardware aesthetic.",
+      "declaredType": "IMAGE",
+      "deviceType": null,
+      "resolution": "1376x768",
+      "classification": "IMAGE_ASSET",
+      "secondaryTags": [
+        "MARKETING_ASSET"
+      ],
+      "domain": "core/breeding",
+      "evidence": {
+        "reason": "Recurso gráfico sin HTML (screenType=IMAGE)",
+        "htmlAvailable": false,
+        "htmlBytes": 0,
+        "htmlSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "screenshotAvailable": true,
+        "textChars": 0,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Conservar como recurso; no crear ruta",
+      "inspection": "UNINSPECTABLE_NO_HTML"
+    },
+    {
+      "id": "fa83a4be7f4342cfbf5f6d99739d1487",
+      "title": "Marketing Studio — Módulo 05: Roadmap & Anuncios",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3544",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 47423,
+        "htmlSha256": "51d84af6ddfa4381a84b85bc898532c3aff70884c62ff240f1566083e50e1bee",
+        "screenshotAvailable": true,
+        "textChars": 5158,
+        "headings": [
+          "developer_board\n            Roadmap Público &amp; Gestor de Comunicados"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEOS Ver. 2.44 EXPESTADO NAVEGACIÓNGuardería01",
+          "Ficha / Datos02",
+          "Equipo Activo03",
+          "Jugadores04",
+          "Crianza &amp; Huevos05",
+          "Biblioteca06"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "25d1b91e4ab54bb9af2371a1c9d9cb05",
+      "title": "Directorio de Jugadores & Guarderías Compartidas",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2318",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/nursery",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 44063,
+        "htmlSha256": "e0102afe2109ba8a8989c8852df36f39561e2eba3f0fdb3eb01320cee4f77f3a",
+        "screenshotAvailable": true,
+        "textChars": 3779,
+        "headings": [
+          "DIRECTORIO DE GUARDERÍAS EN RED",
+          "REFUGIO JOHTO",
+          "CUEVA CELESTE",
+          "BOSQUE VERDE"
+        ],
+        "sampleButtons": [
+          "COMMAND DECK▼ PKGeggGuardería",
+          "query_statsFicha / Datos",
+          "shieldEquipo Activo",
+          "groupJugadoresNET",
+          "inventory_2Biblioteca",
+          "backpackInventario & Tienda"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "60e12a2b211948cc98c6e13aa93df96b",
+      "title": "PG EMULATION — QUICK SWITCHER DOMINIO",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2864",
+      "classification": "WEB_COMPONENT",
+      "secondaryTags": [
+        "NAVIGATION"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Componente de navegación reutilizable (Command Bus / selector de dominios)",
+        "htmlAvailable": true,
+        "htmlBytes": 43904,
+        "htmlSha256": "d19442234e1acaf88bbc4b43bc7894fc8b3ea1bacca4b2d75286259a1298d135",
+        "screenshotAvailable": true,
+        "textChars": 4031,
+        "headings": [
+          "DETALLE DE CAPA: PG EMULATION — ROOM EXPLORER (:emu explorer)"
+        ],
+        "sampleButtons": [
+          "SYS DOMCORE DOMAINS01 GUARDERÍA",
+          "02 HABITAT",
+          "03 MARKETING",
+          "04 THEMES",
+          "05 FORENSICS",
+          "06 PG EMULACT"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar en biblioteca UI y shell",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "9ab8330fc2d3471696a98d75d9794621",
+      "title": "Pokéguarde — Project Requirements Document (PRD) & Brief Maestro",
+      "declaredType": "DOCUMENT",
+      "deviceType": "DESKTOP",
+      "resolution": "0x0",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 13988,
+        "htmlSha256": "75ef1c072c478eba3d8b05edc33367c1ba94fe2ef894e8029f4d072ffa1588b3",
+        "screenshotAvailable": false,
+        "textChars": 11796,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "193db1ef62514a769e3e6a499044c98b",
+      "title": "PG EMULATION ROOM — 03 DUAL VIEWPORT",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x5306",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 62171,
+        "htmlSha256": "cb03ce0dac6eea6118ce4993b59f0d0c4a2b6aa0a3536cacad27e954c590df40",
+        "screenshotAvailable": true,
+        "textChars": 4088,
+        "headings": [
+          "BUS SERIAL Y PROTOCOLO",
+          "CHAT &amp; AUDITORÍA ESPECTADORES",
+          "INTEGRIDAD .SAV &amp; PKHEX"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEv2.1 SILVER 01 :: Core SystemeggGuardería",
+          "badgeFicha",
+          "groupsEquipo",
+          "inventory_2Cajas",
+          "backpackMochila",
+          "forestBiomas"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "8bf4dfb7d4d048cc8d602b8d666e4320",
+      "title": "PG ROOM SUITE STUDIO — 03 LIVE MONITOR",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3814",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 47685,
+        "htmlSha256": "8081b1258955de25f907f6f180c84caa30da9dada29e6d5220b3cb53a7ee22fa",
+        "screenshotAvailable": true,
+        "textChars": 3524,
+        "headings": [],
+        "sampleButtons": [
+          "SYSTEM DOMAINS01 CORE (GUARDERÍA &amp; SAV)",
+          "02 HABITAT STUDIO",
+          "03 MARKETING SUITE",
+          "04 THEME STUDIO",
+          "05 FORENSICS &amp; LEGALIDAD",
+          "06 PG EMULATIONACTIVE"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "e729a99365b54edd94ff31d3dd3825f0",
+      "title": "Marketing Studio — Módulo 12: Analytics (Métricas & Embudo)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3642",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 55057,
+        "htmlSha256": "6803d47a4429026cca17d515292a70abb766f2be89f945bbfd476f494d433ee1",
+        "screenshotAvailable": true,
+        "textChars": 3770,
+        "headings": [
+          "Telemetría &amp; Métricas Internas",
+          "Tendencia de Tráfico &amp; Actividad Diaria",
+          "Embudo de Conversión Telemetría (Funnel)",
+          "Desglose de Tráfico por Canal &amp; Campaña"
+        ],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESGuar",
+          "Ficha / Datos",
+          "Equipo Activo",
+          "Jugadores",
+          "Crianza &amp; Huevos",
+          "Biblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "348106f7781d4d06a4743c375be457cb",
+      "title": "PG EMULATION ROOM — 01 UN JUGADOR",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2924",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 45760,
+        "htmlSha256": "ed5d657f30a15f1abbb5bfc52e9b5dd6707459d95c7baf6e720b57108c2083d0",
+        "screenshotAvailable": true,
+        "textChars": 3219,
+        "headings": [],
+        "sampleButtons": [
+          "PKG-02 ARCHITECTUREPWRPOKÉGUARDE PGEMU CORE ARCHITECTURE V2.4memoryCore: Guarder",
+          "paletteHabitat Studio",
+          "campaignMarketing Suite",
+          "devicesTheme Studio",
+          "verifiedForensics &amp; Legalidad",
+          "▶Room 01 — Un Jugador"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "947d28089510489487967548e5f13286",
+      "title": "PG ROOM SUITE STUDIO — 06 SESSION LOGS",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3580",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 62687,
+        "htmlSha256": "8051086d3a81c4d134404efbf277e915c6413f69fb9c0c74be6e35a2c0d87cbd",
+        "screenshotAvailable": true,
+        "textChars": 4663,
+        "headings": [
+          "REGISTRO DE SESIONES &amp; TELEMETRÍA DE RED"
+        ],
+        "sampleButtons": [
+          "PG ROOM SUITE'99PRIMARY CHASSISSYS.0101 CORE (SAV)[01]",
+          "02 HABITAT (TILES)[02]",
+          "03 MARKETING (DAM)[03]",
+          "04 THEME (TOKENS)[04]",
+          "05 FORENSICS/LAW[05]",
+          "06 PG EMULATION"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "15d5c374ea1d4352a4c298b467b43b99",
+      "title": "Theme Studio — Módulo 03: Spacing & Density Editor",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2696",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 57136,
+        "htmlSha256": "cc0e35bff2f7679af8e91fd845e4d344bf85f59f36eacc36cec7a3e40663475f",
+        "screenshotAvailable": true,
+        "textChars": 3679,
+        "headings": [],
+        "sampleButtons": [
+          "PKG-02 SILVER4.19 MHzPWR: 100% [DC-IN]ONLINE LINKTRAINER REGREDWALLET450 GPCORE ",
+          "badgeFicha / Datos",
+          "swordsEquipo Activo",
+          "groupJugadores",
+          "eggCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "670ec1e657354994b61003123550371c",
+      "title": "Habitat Studio — Tamagotchi Device Preview & Chassis Simulator",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2048",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/habitat",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 50017,
+        "htmlSha256": "6d21dc10b0e80159f6f42970239e03062669c19369898dc5629b177eb6f406dc",
+        "screenshotAvailable": true,
+        "textChars": 2050,
+        "headings": [],
+        "sampleButtons": [
+          "POKEGUARDESTUDIO CHASSIS v2.4CARTRIDGE BUSgrid_viewDashboard",
+          "shelvesHabitat Library",
+          "architectureHabitat Editor",
+          "categoryAsset Library",
+          "local_fire_departmentElemental Presets",
+          "smart_toyPreview &amp; Testing"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "234d533523914394875f4dba7e447a67",
+      "title": "Theme Studio — Módulo 07: Token Manager & Bindings",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3722",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 53887,
+        "htmlSha256": "48ac8a6bf54342a7f8616fcbb6ddc80ffee9c19e37730f831ce8e3b0aee660e3",
+        "screenshotAvailable": true,
+        "textChars": 4141,
+        "headings": [
+          "THEME 01 // POKÉGUARDE CLASSIC (CANÓNICO)",
+          "BLOQUE A // MATRIZ CENTRAL DE TOKENS &amp; INSPECCIÓN DE VALORES",
+          "BLOQUE B // GRAPH DE DEPENDENCIAS &amp; CADENA DE ALIAS",
+          "PANEL C // MOTOR DE BINDINGS"
+        ],
+        "sampleButtons": [
+          "PokéguardeOS v2.4 // SilverCOM[ Core Modules ]07eggGuardería",
+          "badgeFicha / Datos",
+          "20mpEquipo Activo",
+          "groupJugadores",
+          "nest_multi_roomCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "c5dfb1e9fc8642128b398be5741be3d6",
+      "title": "PG ROOM SUITE STUDIO — 02 ROOM MANAGER",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3240",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 49596,
+        "htmlSha256": "fc40101ee420a6245794252f98b4863af0a3a9b2e20202a53207896cf1f951eb",
+        "screenshotAvailable": true,
+        "textChars": 3663,
+        "headings": [
+          "Panel de Control de Salas",
+          "Inspector de Sala"
+        ],
+        "sampleButtons": [
+          "System DomainsHARDWARE BUS ARCH01 CORE (GUARDERÍA &amp; SAV)",
+          "02 HABITAT STUDIO (TILES)",
+          "03 MARKETING SUITE (DAM)",
+          "04 THEME STUDIO (TOKENS)",
+          "05 FORENSICS &amp; LEGALIDAD",
+          "06 PG EMULATION"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "1c4e250da1d74a79adc9f7e4545c8099",
+      "title": "Habitat Studio — Habitat Library & Environmental Presets",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3256",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/habitat",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 56986,
+        "htmlSha256": "3278080d6b9bec7fc0459270bdffa52cbb26ba19411590a3e7c394324b510a93",
+        "screenshotAvailable": true,
+        "textChars": 3416,
+        "headings": [
+          "HABITAT LIBRARY",
+          "Classic Bedroom",
+          "Fire Chamber",
+          "Aquatic Sanctuary"
+        ],
+        "sampleButtons": [
+          "POKEGUARDECREATOR SUITEHABITAT V-ENGINEREV 2.1grid_viewDashboard",
+          "shelvesHabitat Library",
+          "handymanHabitat Editor",
+          "perm_mediaAsset Library",
+          "nest_farsight_weatherElemental Presets",
+          "smart_toyPreview &amp; Testing"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "d42705a4e9274de88653206f27c2e2ed",
+      "title": "PG TRADE ROOM — LINK CABLE",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4802",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 55178,
+        "htmlSha256": "df1ad37f842cd49e7a152394f1cc7316428c64df892e52330cbcf5d583a739c2",
+        "screenshotAvailable": true,
+        "textChars": 5806,
+        "headings": [
+          "PG TRADE ROOM // PROTOCOLO DE INTERCAMBIO POR CABLE LINK VIRTUAL [SIMULADO]",
+          "MOTOR DE REGLAS // MATRIZ DE COMPATIBILIDAD &amp; INTEGRIDAD PRE-SWAP",
+          "CAJA DE CONTROL DE DESCONEXIÓN Y RECUPERACIÓN (FAIL-SAFE DRILL)"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEPG-EMU CLUSTER V2.4 // 1999 ED// SYSTEM DOMAINS01 CORE (GUARDERÍA &amp",
+          "02 HABITAT STUDIO (TILES)",
+          "03 MARKETING SUITE (DAM)",
+          "04 THEME STUDIO (TOKENS)",
+          "05 FORENSICS &amp; LEGALIDAD",
+          "LIVE WALL (MURAL EN VIVO)"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "ba30ae2e56854a08826d0849afd45bd3",
+      "title": "Tienda de Guardipuntos (GP) & Editor de Decoración",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3272",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/economy",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 69532,
+        "htmlSha256": "d4a9f1e2463825428fcc6dd7ce5d4f518d7fa3076fe663ae8b9b9d0731582ca0",
+        "screenshotAvailable": true,
+        "textChars": 5501,
+        "headings": [
+          "Carcasa Carmesí 1999 (Original)",
+          "Carcasa 'Atomic Purple' Translúcida",
+          "Carcasa Oro 'Arcoíris Sagrado'",
+          "Carcasa Plata 'Islas Remolino'"
+        ],
+        "sampleButtons": [
+          "SISTEMA D-PADeggGUARDERÍA",
+          "badgeFICHA / DATOS",
+          "20mpEQUIPO ACTIVO",
+          "groupJUGADORES",
+          "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+          "menu_bookBIBLIOTECA"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "83cce8b75bf44459b992a515cd727781",
+      "title": "Theme Studio — Módulo 05: Layout Manager & Grid Geometry",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4770",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 61211,
+        "htmlSha256": "7e985585699853a5872e1c33c615db15c2417988195e7214c8d6f93777dd01bb",
+        "screenshotAvailable": true,
+        "textChars": 4280,
+        "headings": [],
+        "sampleButtons": [
+          "PokéguardeOS v2.4 // SilverCOM[ Core Modules ]07eggGuardería",
+          "badgeFicha / Datos",
+          "20mpEquipo Activo",
+          "groupJugadores",
+          "nest_multi_roomCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "729f886a0ef245f6b4870ffed247c3f1",
+      "title": "PG EMULATION — RESPONSIVE MÓVIL",
+      "declaredType": "DESIGN",
+      "deviceType": "MOBILE",
+      "resolution": "780x3380",
+      "classification": "WEB_VARIANT",
+      "secondaryTags": [
+        "RESPONSIVE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Interfaz web de una página ya identificada: cambio de viewport, estado o duplicado visual",
+        "htmlAvailable": true,
+        "htmlBytes": 33727,
+        "htmlSha256": "127cf30f33b2dd437d43bb8db8b041444e9a72448afb0f33804b44cfdab6df46",
+        "screenshotAvailable": true,
+        "textChars": 2057,
+        "headings": [
+          "Emulation Hub",
+          "PANEL DOMINIOS [6/6]",
+          "TORNEO JOHTO SILVER CUP",
+          "BITÁCORA &amp; CHAT [184 OBS]"
+        ],
+        "sampleButtons": [
+          "tune",
+          "EXPANDIR\nexpand_more",
+          "01 CORE (GUARDERÍA &amp; SAV)\nSTANDBY",
+          "02 HABITAT STUDIO\nIDLE",
+          "03 MARKETING SUITE\nOFF",
+          "04 THEME STUDIO\nREADY"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar como variante/estado de su página principal",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "7bbd1a83ad1f49059076ad47ed9d4075",
+      "title": "PG ROOM SUITE STUDIO — 05 PERMISSIONS",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4088",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 48035,
+        "htmlSha256": "b0e2def1e3d5166619c06b9dae1ba79305a383723f21e40e71698dfea2e4a498",
+        "screenshotAvailable": true,
+        "textChars": 4692,
+        "headings": [
+          "MATRIZ DE PERMISOS &amp; CONTROL DE ACCESO DE SALA",
+          "BLOQUE A // SELECTOR DE SALA OBJETIVO &amp; REGLAS DE ENTRADA",
+          "BLOQUE B // MATRIZ DE CAPACIDADES POR ROL (PER-ROLE ACCESS MATRIX)",
+          "BLOQUE C // LOG AUDITABLE DE EVENTOS &amp; MODERACIÓN (LOOP BUFFER 128 KB)"
+        ],
+        "sampleButtons": [
+          "SYSTEM DOMAINS // HARDWARE BUS ARCH01 CORE (GUARDERÍA &amp; SAV)",
+          "02 HABITAT STUDIO (TILES)",
+          "03 MARKETING SUITE (DAM)",
+          "04 THEME STUDIO (TOKENS)",
+          "05 FORENSICS &amp; LEGALIDAD",
+          "06 PG EMULATION[BUS 06]"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "bd45903df0cb4a77b77c7d004d875a91",
+      "title": "Inspección Forense — Detalle de Legalidad PKHeX (Celebi GS-Ball)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2916",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/forensics",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 36361,
+        "htmlSha256": "2261890d3ed9922d940456eec67e091bc2b932a78278828ae26c4fb0d9f2729c",
+        "screenshotAvailable": true,
+        "textChars": 3763,
+        "headings": [
+          "ESPECIE #251: CELEBI (CORRUPTO / GAMESHARK INJECT)"
+        ],
+        "sampleButtons": [
+          "CHASSIS BUSSYS·LINK GBCD-PAD SHORTCUTS▲EQUIPO[01]",
+          "▶GUARDERÍA[02]",
+          "▼BIBLIOTECA[03]",
+          "◀TIENDA[04]",
+          "Guardería",
+          "Ficha / Datos"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "71ad15543a264619921742dcc20e3a9a",
+      "title": "Theme Studio — Módulo 02: Typography Studio & Heading Scale",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3524",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 47437,
+        "htmlSha256": "4d77d4f2d5bf58408484824771231c0ec729e1fe887bb79d837760360758d15e",
+        "screenshotAvailable": true,
+        "textChars": 4566,
+        "headings": [
+          "Chikorita — Crianza Avanzada",
+          "Sinergia en Guardería: +12 GP/Hora"
+        ],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESGuar",
+          "Ficha / Datos",
+          "Equipo Activo",
+          "Jugadores",
+          "Crianza &amp; Huevos",
+          "Biblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "59535af42e6e45cda8399bf0df447f92",
+      "title": "Pokeguarde — Resumen Final y Checklist de Desarrollo",
+      "declaredType": "DOCUMENT",
+      "deviceType": "DESKTOP",
+      "resolution": "0x0",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 9102,
+        "htmlSha256": "35df46ed262740b573246e186d4821635597344d44fe1ee8923df46a943184fb",
+        "screenshotAvailable": false,
+        "textChars": 8875,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "75460234d32246ddaca967485cba26ef",
+      "title": "Wide 16:9 newsletter and email header banner for 'POKEGUARDE'. Clean tactile retro-digital design. Top bar featuring 'POKEGUARDE // BOLETÍN OFICIAL & SISTEMA DE ACTUALIZACIONES' with green status indicator 'KERNEL ONLINE · LOCALHOST'. Center displays the glossy Pokéball pocket pet hardware flanked by data chips: 'AUDITORÍA FORENSE PKHEX', 'SRAM SINCRONIZADA', 'COMPATIBILIDAD GEN I - V'. Warm ivory cream surface background, bold red header stripe (#b51a21), crisp black technical outlines, retro Game Boy Color nostalgic yet modern editorial finish.",
+      "declaredType": "IMAGE",
+      "deviceType": null,
+      "resolution": "1376x768",
+      "classification": "IMAGE_ASSET",
+      "secondaryTags": [
+        "MARKETING_ASSET"
+      ],
+      "domain": "core/forensics",
+      "evidence": {
+        "reason": "Recurso gráfico sin HTML (screenType=IMAGE)",
+        "htmlAvailable": false,
+        "htmlBytes": 0,
+        "htmlSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "screenshotAvailable": true,
+        "textChars": 0,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Conservar como recurso; no crear ruta",
+      "inspection": "UNINSPECTABLE_NO_HTML"
+    },
+    {
+      "id": "27103c1c412643f189472faa33166698",
+      "title": "Guardería (2/2 Pokémon) — Escritorio",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2254",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/nursery",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 37118,
+        "htmlSha256": "9750680f3e31b14e8ec4374e322d3741ad0649c8eb227bf82debec49b88b7009",
+        "screenshotAvailable": true,
+        "textChars": 1859,
+        "headings": [],
+        "sampleButtons": [
+          "COMMAND DECK▼ PKGeggGuardería",
+          "query_statsFicha / Datos",
+          "shieldEquipo Activo",
+          "groupJugadoresNET",
+          "inventory_2Biblioteca",
+          "backpackInventario & Tienda"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "21e0a77821a149f08e75ecc65a6f8bab",
+      "title": "Theme Studio — Módulo 04: Component Studio & Atomic Catalog",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3836",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 50144,
+        "htmlSha256": "f5506796bfe936bc1b7d8b4f7ce989ab361027c2b1a299639a4c8d3c804923c4",
+        "screenshotAvailable": true,
+        "textChars": 3694,
+        "headings": [],
+        "sampleButtons": [
+          "PokéguardeOS v2.4 // SilverCOM[ Core Modules ]07eggGuardería",
+          "badgeFicha / Datos",
+          "20mpEquipo Activo",
+          "groupJugadores",
+          "nest_multi_roomCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "e5eaddbd77c04e3b8bed11938292568a",
+      "title": "Theme Studio — Overview & Visual Theme Gallery",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4068",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 54348,
+        "htmlSha256": "f8dc570a73f50e3771d40d883062bbe8f56f3c41821d5bbd4a236319a2b7aac6",
+        "screenshotAvailable": true,
+        "textChars": 4052,
+        "headings": [
+          "Theme Studio",
+          "PREDEFINED THEME GALLERY",
+          "POKÉGUARDE CLASSIC",
+          "POKÉGUARDE DARK"
+        ],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESGuar",
+          "Ficha / Datos",
+          "Equipo Activo",
+          "Jugadores",
+          "Crianza &amp; Huevos",
+          "Biblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "c9b329e285e140ada55e4e130e2ca1f0",
+      "title": "Inspección Forense — Protocolo Time Capsule (Gen I ↔ Gen II)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4068",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/forensics",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 54009,
+        "htmlSha256": "47c56485a72a88a5dec1a2fb7438e11076cfc4c8bad894a5e8acc0ca3655c0a0",
+        "screenshotAvailable": true,
+        "textChars": 7039,
+        "headings": [],
+        "sampleButtons": [
+          "CHASSIS BUSSYS·LINK GBCD-PAD SHORTCUTS▲EQUIPO[01]",
+          "▶GUARDERÍA[02]",
+          "▼BIBLIOTECA[03]",
+          "◀TIENDA[04]",
+          "Guardería",
+          "Ficha / Datos"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "3a99d39123d84b649ff36c5268b82c3c",
+      "title": "Ficha / Datos — Manaphy Visitante & Permisos",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2424",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/pokemon",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 37653,
+        "htmlSha256": "f5fc023eb8a25ac8952ab435bc65f65abae0197d45a09eb12f6a4f1ee491326a",
+        "screenshotAvailable": true,
+        "textChars": 3989,
+        "headings": [],
+        "sampleButtons": [
+          "COMMAND DECK▼ PKGeggGuardería",
+          "query_statsFicha / Datos",
+          "shieldEquipo Activo",
+          "groupJugadoresNET",
+          "inventory_2Biblioteca",
+          "backpackInventario &amp; Tienda"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "93854f7301f74bca97d506d15ac0a673",
+      "title": "PG CREATE ROOM — ASISTENTE 9 PASOS",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3540",
+      "classification": "WEB_FLOW",
+      "secondaryTags": [
+        "PROTOTYPE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Prototipo multipantalla/secuencia con transiciones entre estados",
+        "htmlAvailable": true,
+        "htmlBytes": 38420,
+        "htmlSha256": "1a12c0d275f05842e3dc675f02da10705140c71d84bd3696a21c417a7680ce4a",
+        "screenshotAvailable": true,
+        "textChars": 3783,
+        "headings": [
+          "PG CREATE ROOM — ASISTENTE DE CONFIGURACIÓN V2.4",
+          "troubleshoot\n              MATRIZ DE VALIDACIÓN TRI-ESTADO",
+          "PARÁMETROS LINK"
+        ],
+        "sampleButtons": [
+          "PokéguardeEMU ENGINE v1.99PKG-02Chassis Modulesmemory01 CORE (SAV)",
+          "grid_view02 HABITAT (TILES)",
+          "perm_media03 MARKETING (DAM)",
+          "palette04 THEME (TOKENS)",
+          "gavel05 FORENSICS",
+          "▶LIVE WALL"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Descomponer en página + estados; sin backend real",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "8ffd2ff3f78e42618726ac04e924093b",
+      "title": "Marketing Studio — Módulo 06: Campaign Studio & Newsletter",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3418",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 45894,
+        "htmlSha256": "dc2e869cb8bbdeb467ad3f311b0028e47106ed9ed7001f5a79fb44c3516e858d",
+        "screenshotAvailable": true,
+        "textChars": 4525,
+        "headings": [
+          "LANZAMIENTO v2.45: JOHTO DAYCARE OVERHAUL",
+          "EVENTO COMUNITARIO: ECLOSIÓN DEL HUEVO MANAPHY",
+          "BOLETÍN MENSUAL: RETRO ARCHAEOLOGY #04",
+          "CAMPAÑA PRESERVACIÓN: DRY-RUN SRAM AUDIT"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEOS Ver. 2.44 EXPESTADO NAVEGACIÓNGuardería01",
+          "Ficha / Datos02",
+          "Equipo Activo03",
+          "Jugadores04",
+          "Crianza &amp; Huevos05",
+          "Biblioteca06"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "4d1139dd9df14d3abc62b13c753152d5",
+      "title": "PG ROOM SUITE STUDIO — 08 EMULATOR ADAPTERS",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x5366",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 47822,
+        "htmlSha256": "7333ad104cc84e21b92509d0d747d625d1860c22c99407f69a0aeb48a036b2ab",
+        "screenshotAvailable": true,
+        "textChars": 5272,
+        "headings": [
+          "CATÁLOGO DE ADAPTADORES &amp; INTERFACES NEUTRAS"
+        ],
+        "sampleButtons": [
+          "PRIMARY HARDWARE DOMAINS01 CORE (SAV)ROM",
+          "02 HABITAT STUDIOMAP",
+          "03 MARKETING SUITEDAM",
+          "04 THEME STUDIOPAL",
+          "05 FORENSICS/LAWSEC",
+          "06 PG EMULATION"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "c7f3d646e76c4660b58f409b6458d8fc",
+      "title": "MANIFEST.json",
+      "declaredType": "DOCUMENT",
+      "deviceType": "DESKTOP",
+      "resolution": "0x0",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 15665,
+        "htmlSha256": "30db3356468991bd4d1c2929d5dbd841786cc252852e3b870f160cea3960ef0a",
+        "screenshotAvailable": false,
+        "textChars": 13700,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "3808388484839190587",
+      "title": "Marketing Kit.md",
+      "declaredType": "DOCUMENT",
+      "deviceType": null,
+      "resolution": "780x1768",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 5363,
+        "htmlSha256": "2bad1a11811617c12516b57d61cfefb5818d92420b1a976224ce508d9c6d12a9",
+        "screenshotAvailable": false,
+        "textChars": 5233,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "16184830575926918797",
+      "title": "a_clean_png_style_isolated_graphic_of_the_same_pok.png",
+      "declaredType": "IMAGE",
+      "deviceType": null,
+      "resolution": "1312x1199",
+      "classification": "IMAGE_ASSET",
+      "secondaryTags": [
+        "GRAPHIC"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Recurso gráfico sin HTML (screenType=IMAGE)",
+        "htmlAvailable": false,
+        "htmlBytes": 0,
+        "htmlSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "screenshotAvailable": true,
+        "textChars": 0,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Conservar como recurso; no crear ruta",
+      "inspection": "UNINSPECTABLE_NO_HTML"
+    },
+    {
+      "id": "fa47a8c2c6ec4d958a1f67422779d0b6",
+      "title": "Shell Studio — Workspace Principal Tri-Panel & Editor de Carcasas",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2408",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/shell",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 52414,
+        "htmlSha256": "7a36e34b6efe1a3e6631aac7b0739c57ab23faa068c4dcac281750bf6d21d775",
+        "screenshotAvailable": true,
+        "textChars": 2998,
+        "headings": [],
+        "sampleButtons": [
+          "POKEGUARDESTUDIO CHASSIS v2.4CARTRIDGE BUSgrid_viewDashboard",
+          "shelvesHabitat Library",
+          "architectureHabitat Editor",
+          "categoryAsset Library",
+          "local_fire_departmentElemental Presets",
+          "smart_toyPreview &amp; Testing"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "cd4b8b86e61f48bbb002dfe6e2508b19",
+      "title": "Biblioteca — Cajas de PC (1-14) & Filtros de Legalidad",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2594",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/library",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 50855,
+        "htmlSha256": "0345bb716978b3522da93528a2f729ec700383b1dc0e8a50d3417f11d09f6823",
+        "screenshotAvailable": true,
+        "textChars": 3055,
+        "headings": [],
+        "sampleButtons": [
+          "CHASSIS BUSSYS·LINK GBCD-PAD SHORTCUTS▲EQUIPO[01]",
+          "▶GUARDERÍA[02]",
+          "▼BIBLIOTECA[03]",
+          "◀TIENDA[04]",
+          "Guardería",
+          "Ficha / Datos"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "4b835dcc78664efba319d0281be2b1a2",
+      "title": "PG EMULATION — LIVE WALL",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4778",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 56180,
+        "htmlSha256": "e205deabe63ec5347d28d90035e3e5b5838a65c9a62dfd03b8e0925f7464b976",
+        "screenshotAvailable": true,
+        "textChars": 4537,
+        "headings": [
+          "SALA JOHTO-NORTH (01)"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEPG EMULATION // 1999HW:V2SYSTEM BUS NAVIGATION01 CORE UNITS1. Core: Gu",
+          "2. Habitat Studio",
+          "3. Marketing Suite",
+          "4. Theme Studio",
+          "5. Forensics &amp; Legalidad",
+          "Live Wall▶"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "2934c8ca176d4020ae9368364b0c0537",
+      "title": "Theme Studio — Módulo 06: Live Preview Multipantalla & Matrix Studio",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2746",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 50928,
+        "htmlSha256": "2d95e645569d1c7bab68ee3864fed2251468b132df19bcd5ce852ed6a76270c7",
+        "screenshotAvailable": true,
+        "textChars": 3143,
+        "headings": [],
+        "sampleButtons": [
+          "PokéguardeOS v2.4 // SilverCOM[ Core Modules ]07eggGuardería",
+          "badgeFicha / Datos",
+          "20mpEquipo Activo",
+          "groupJugadores",
+          "nest_multi_roomCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "e390b05b3c2d42729527c9f24b0b20ad",
+      "title": "Crianza & Huevos — Selección de Pareja & Validación Biológica",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3652",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/breeding",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 42083,
+        "htmlSha256": "dfb4fa5b0eb43173fe66d255ada17578aa9e4f2d0f14a6fb746b47d45fc2c3cc",
+        "screenshotAvailable": true,
+        "textChars": 4539,
+        "headings": [
+          "PROTOCOLO DE EMPAREJAMIENTO &amp; EVALUACIÓN BIOLÓGICA"
+        ],
+        "sampleButtons": [
+          "SISTEMA D-PADeggGUARDERÍA",
+          "badgeFICHA / DATOS",
+          "20mpEQUIPO ACTIVO",
+          "groupJUGADORES",
+          "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+          "menu_bookBIBLIOTECA"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "2792aede64e244ccb8d195e85357a20d",
+      "title": "Marketing Studio — Módulo 03: Banner & Creative Canvas (Editor Tri-Panel) [Corregido]",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2424",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 56580,
+        "htmlSha256": "e7459c4b8b243077d9d4e4d3c232f6baef52993befae0aeb734c5d36f33aa341",
+        "screenshotAvailable": true,
+        "textChars": 3544,
+        "headings": [
+          "ESTUDIO DE COMPOSICIÓN GRÁFICA // 1999 ENGINE",
+          "GUARDA, CRÍA Y ENTRENA TUS POKÉMON CLÁSICOS"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEOS Ver. 2.44 EXPESTADO NAVEGACIÓNGuardería01",
+          "Ficha / Datos02",
+          "Equipo Activo03",
+          "Jugadores04",
+          "Crianza &amp; Huevos05",
+          "Biblioteca06"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "37fd513f83c44730bff71ea3683eb2c2",
+      "title": "Crianza & Huevos — Secuencia de Eclosión Phione",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3620",
+      "classification": "WEB_FLOW",
+      "secondaryTags": [
+        "PROTOTYPE"
+      ],
+      "domain": "core/breeding",
+      "evidence": {
+        "reason": "Prototipo multipantalla/secuencia con transiciones entre estados",
+        "htmlAvailable": true,
+        "htmlBytes": 44904,
+        "htmlSha256": "95512e88a525a5a2e7e46eedf1ac160564c5b60d233600e6dc74c7cdea03e2d4",
+        "screenshotAvailable": true,
+        "textChars": 3599,
+        "headings": [],
+        "sampleButtons": [
+          "SISTEMA D-PADeggGUARDERÍA",
+          "badgeFICHA / DATOS",
+          "20mpEQUIPO ACTIVO",
+          "groupJUGADORES",
+          "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+          "menu_bookBIBLIOTECA"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Descomponer en página + estados; sin backend real",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "98e4e080724d4570a64b18d4f6d186df",
+      "title": "Square 1:1 social media marketing card for the app 'Pokeguarde' (Pocket Tech 1999 aesthetic). In the center, a tactile retro-digital 90s handheld virtual pet device styled like a glossy red and white Pokéball with an LCD screen showing pixel-art Game Boy Color graphics. Surrounding it are retro technical badges, clean monospaced labels 'POKEGUARDE OS Ver 2.44', '160x144 LCD PIXEL-ART', 'PKHeX AUDITORIA FORENSE', and 'GUARDERÍA TAMAGOTCHI'. Clean cream background with subtle dot grid, bold primary red accents (#d93636), dark charcoal industrial borders, high-contrast typography in Space Mono. Professional social graphic for Twitter/Instagram.",
+      "declaredType": "IMAGE",
+      "deviceType": null,
+      "resolution": "1024x1024",
+      "classification": "IMAGE_ASSET",
+      "secondaryTags": [
+        "MARKETING_ASSET"
+      ],
+      "domain": "core/forensics",
+      "evidence": {
+        "reason": "Recurso gráfico sin HTML (screenType=IMAGE)",
+        "htmlAvailable": false,
+        "htmlBytes": 0,
+        "htmlSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "screenshotAvailable": true,
+        "textChars": 0,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Conservar como recurso; no crear ruta",
+      "inspection": "UNINSPECTABLE_NO_HTML"
+    },
+    {
+      "id": "7873749354a8485a84eef80c62d8559f",
+      "title": "PG EMULATION ROOM — 05 PANTALLA COMPLETA",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2048",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 34428,
+        "htmlSha256": "b422b82bc8dc2e84aba4f3664933572b82977947dc152b1c40e3848c41778e3a",
+        "screenshotAvailable": true,
+        "textChars": 1886,
+        "headings": [],
+        "sampleButtons": [
+          "POKÉGUARDEPWRSYS VER. 1999.02ROM OK// SYSTEM DOMAINS01 CORE (GUARDERÍA &amp; SAV",
+          "02 HABITAT STUDIO (TILES)[MAP]",
+          "03 MARKETING SUITE (DAM)[DAM]",
+          "04 THEME STUDIO (TOKENS)[CSS]",
+          "05 FORENSICS &amp; LEGALIDAD[CHK]",
+          "LIVE WALL"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "173af7a28b2742ae81e3082d72044408",
+      "title": "Marketing Studio — Módulo 07: AI Copywriter & Redacción Contextual",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4540",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 46539,
+        "htmlSha256": "c1daf3b7465b48d91c47ac9c549d8ddc4ce702c77580d3da4eee37ff5feec13e",
+        "screenshotAvailable": true,
+        "textChars": 4948,
+        "headings": [],
+        "sampleButtons": [
+          "POKÉGUARDEOS Ver. 2.44 EXPESTADO NAVEGACIÓNGuardería01",
+          "Ficha / Datos02",
+          "Equipo Activo03",
+          "Jugadores04",
+          "Crianza &amp; Huevos05",
+          "Biblioteca06"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "8f6ac61df382438aae6b37dbe85efce8",
+      "title": "Pokéguarde — Validador de Conformidad PRD (Bun/TypeScript)",
+      "declaredType": "DOCUMENT",
+      "deviceType": "DESKTOP",
+      "resolution": "0x0",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 20959,
+        "htmlSha256": "9a8a76ffd2d7bfb7ca318c1622bc689c702d3035458d83734cc33efb82c2b989",
+        "screenshotAvailable": false,
+        "textChars": 16968,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "9acbc3f5614a438aba6b0c3ee58df6c8",
+      "title": "Marketing Studio — Módulo 13: Export Center (Centro de Exportación & Empaquetado)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2650",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 46423,
+        "htmlSha256": "bedfc1632c4549c0a946dd399fd0d8f63749f6eebf62b3044fb607e680a94d28",
+        "screenshotAvailable": true,
+        "textChars": 3645,
+        "headings": [
+          "PRESET BUNDLES // PACKS CERTIFICADOS JOHTO-1999",
+          "SOCIAL MEDIA LAUNCH PACK",
+          "PRESS KIT &amp; MEDIA OUTLETS",
+          "BRAND &amp; ASSET VAULT"
+        ],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESGuar",
+          "Ficha / Datos",
+          "Equipo Activo",
+          "Jugadores",
+          "Crianza &amp; Huevos",
+          "Biblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "6bb51da32c704f1c80d9c0ff72b72dc9",
+      "title": "PG EMULATION — ROOM EXPLORER / LIVE WALL",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x5510",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 67827,
+        "htmlSha256": "e75b7e3ce8516e7864f7db4ae2cb30848308370fd7f5d4124f841d622c64a69e",
+        "screenshotAvailable": true,
+        "textChars": 5155,
+        "headings": [
+          "Pokéguarde",
+          "PG Emulation — Room Explorer &amp; Live Wall",
+          "Mural en Vivo (Prioritary Live Wall)\n                6 CELDAS DE MONITORIZACIÓN",
+          "Torneo Johto Silver Cup • Ronda 4"
+        ],
+        "sampleButtons": [
+          "PKG-02 SILVER\n              Pokéguarde\n              VIRTUAL HARDWARE 1999\n     ",
+          "Habitat Studio (Tiles)\n            \n            02",
+          "Marketing Suite (DAM)\n            \n            03",
+          "Theme Studio (Tokens)\n            \n            04",
+          "Forensics &amp; Legalidad\n            \n            05",
+          "▶\n            Live Wall (6 Salas)"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "2f5fca5fcf10440589033e84cb3e418c",
+      "title": "MANIFEST.md",
+      "declaredType": "DOCUMENT",
+      "deviceType": "DESKTOP",
+      "resolution": "0x0",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 5393,
+        "htmlSha256": "c17211d2a766d1c65a093702fcc40f401e51131023f22455dc06b960d091b18b",
+        "screenshotAvailable": false,
+        "textChars": 5262,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "e74c36201d3e4b169548d62363312934",
+      "title": "PG ROOM SUITE STUDIO — 07 ANALYTICS",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3866",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 57200,
+        "htmlSha256": "abe0011f564be917c7a15e03cb51d5f312f1a94e435626a4e6a75c4182cce7bb",
+        "screenshotAvailable": true,
+        "textChars": 3917,
+        "headings": [
+          "PANEL DE ANALÍTICA &amp; MÉTRICAS DE ENLACE SERIAL",
+          "ACTIVIDAD POR FRANJA HORARIA (24H UTC)",
+          "DURACIÓN Y CONEXIÓN POR MODALIDAD",
+          "OSCILOSCOPIO SERIAL 8192 HZ"
+        ],
+        "sampleButtons": [
+          "COM-0",
+          "RESET",
+          "DOMAINSmemory01 CORE",
+          "grid_view02 HAB",
+          "folder_special03 MKT",
+          "palette04 THM"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "1d780d729c334451bb76a66d32e5b40c",
+      "title": "Crianza & Huevos — Animación Interactiva de Eclosión Phione",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3866",
+      "classification": "WEB_FLOW",
+      "secondaryTags": [
+        "PROTOTYPE"
+      ],
+      "domain": "core/breeding",
+      "evidence": {
+        "reason": "Prototipo multipantalla/secuencia con transiciones entre estados",
+        "htmlAvailable": true,
+        "htmlBytes": 60822,
+        "htmlSha256": "0d0543f77126aef6298bb2feb0bcbf17b3bb929f6e235a4c28ed1aef67cae468",
+        "screenshotAvailable": true,
+        "textChars": 4170,
+        "headings": [],
+        "sampleButtons": [
+          "SISTEMA D-PADeggGUARDERÍA",
+          "badgeFICHA / DATOS",
+          "20mpEQUIPO ACTIVO",
+          "groupJUGADORES",
+          "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+          "menu_bookBIBLIOTECA"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Descomponer en página + estados; sin backend real",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "fedf5d38b1f2451dbd97c1c1adc91792",
+      "title": "Theme Studio — Módulo 08: DESIGN.md Sync & Repository Pipeline",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3516",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 52435,
+        "htmlSha256": "3c83ea35b501dc62ac8ffb0c0098a3115d823ab5e011e311eca1321d5084824b",
+        "screenshotAvailable": true,
+        "textChars": 4109,
+        "headings": [
+          "THEME 01 // POKÉGUARDE CLASSIC",
+          "SECTIONS VALIDATOR &amp; AST NODES TREE",
+          "GIT STAGING &amp; DEPLOYMENT",
+          "REVISION SNAPSHOTS"
+        ],
+        "sampleButtons": [
+          "PokéguardeOS v2.4 // SilverCOM[ Core Modules ]07Guardería",
+          "Ficha / Datos",
+          "Equipo Activo",
+          "Jugadores",
+          "Crianza &amp; Huevos",
+          "Biblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "b6af4fd14f6b42898c54e5a8e99d6b98",
+      "title": "Marketing Studio — Módulo 10: Content Calendar (Calendario Editorial)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2876",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 56155,
+        "htmlSha256": "d82fcfe5a9bebf254d644ac8daa259c306d50adad7c4dc402f2db6dab2535962",
+        "screenshotAvailable": true,
+        "textChars": 3310,
+        "headings": [],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESeggG",
+          "badgeFicha / Datos",
+          "swordsEquipo Activo",
+          "groupsJugadores",
+          "nest_cam_indoorCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "c9b400bc5cbe43e39b5c7572f376c2e7",
+      "title": "Pokéguarde — Mapa Visual & Árbol de Navegación General",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x6212",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/shell",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 69980,
+        "htmlSha256": "c9f37dbf9351378bb975c7ca02c0cf926bb27e4f3bf53399e844fc188d18137e",
+        "screenshotAvailable": true,
+        "textChars": 7226,
+        "headings": [
+          "POKÉGUARDE — MAPA VISUAL &amp; ÁRBOL DE NAVEGACIÓN ARQUITECTÓNICO",
+          "Núcleo Local &amp; Jugador",
+          "Shell Studio (Carcasas)",
+          "Habitat Studio (Ambientes)"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDESYS CHASSIS // PKG-02SYSTEM COREVisual Map",
+          "Architecture Tree",
+          "Core Specs",
+          "Theme Studio",
+          "Habitat Studio",
+          "Shell Studio"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "3c94a67bb527421295250d707bb25612",
+      "title": "PG EMULATION ROOM — 04 VISTA DE ESPECTADOR",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2982",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 37971,
+        "htmlSha256": "90444e977aaa6610162ea03fdbd9de8d50c72950406c0baf4f78c7efb8e963ac",
+        "screenshotAvailable": true,
+        "textChars": 3289,
+        "headings": [],
+        "sampleButtons": [
+          "Pokéguardev1.99.2-SLVROM// SYSTEM DOMAINS01CORE (GUARDERÍA &amp; SAV)",
+          "02HABITAT STUDIO (TILES)",
+          "03MARKETING SUITE (DAM)",
+          "04THEME STUDIO (TOKENS)",
+          "05FORENSICS &amp; LEGALIDAD",
+          "LIVE WALL"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "066528fc7d8d4674b51eb5eeaf86674a",
+      "title": "PG EMULATION — RESPONSIVE 1920x1080",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2932",
+      "classification": "WEB_VARIANT",
+      "secondaryTags": [
+        "RESPONSIVE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Interfaz web de una página ya identificada: cambio de viewport, estado o duplicado visual",
+        "htmlAvailable": true,
+        "htmlBytes": 53154,
+        "htmlSha256": "b8175197df526b394cfcf145e8457a94dce62fcc86a3bf95bb6dbd87b3cdcc99",
+        "screenshotAvailable": true,
+        "textChars": 3446,
+        "headings": [
+          "01 JOHTO SILVER",
+          "02 TIME CAPSULE LINK",
+          "03 GUARDERÍA CO-OP",
+          "04 AZALEA LAB SYNC"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDESYS 1999SYSTEM DOMAINS01 CORE (GUARDERÍA)SAV",
+          "02 HABITAT STUDIOTILE",
+          "03 MARKETING SUITEDAM",
+          "04 THEME STUDIOTKN",
+          "05 FORENSICS &amp; LEGALSEC",
+          "06 PG EMULATIONACT"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar como variante/estado de su página principal",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "d2c4941d67024e2a8c8b8ad23d5c94e8",
+      "title": "Pokeguarde — Kit de Marketing: Copy & Email Template",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2864",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 5604,
+        "htmlSha256": "4f86aedefaeec0f6ce248679bfdb8feb1c3a2c8ebdbe31f0929941659dc53b07",
+        "screenshotAvailable": true,
+        "textChars": 1357,
+        "headings": [
+          "Guarda, cría y entrena tus Pokémon clásicos en un entorno perpetuo."
+        ],
+        "sampleButtons": [
+          "▶ PLAY NOW — DEMO INSTANTÁNEA"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "5927cdbb6bd44402936cb492fe2c0cbe",
+      "title": "PG BATTLE ROOM — LINK CABLE",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3104",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 40060,
+        "htmlSha256": "9b268e77d8db703a56929b18dab5c16b876dd4fc75989fe6c99fa213480a65fa",
+        "screenshotAvailable": true,
+        "textChars": 3802,
+        "headings": [
+          "TRAINER RED [SIMULADO]",
+          "TRAINER BLUE [SIMULADO]"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDESYS-OS 1999 // V2.4SILVERCHASSIS MODULESterminal01CORE (GUARDERÍA &amp",
+          "02HABITAT STUDIO (TILES)",
+          "03MARKETING SUITE (DAM)",
+          "04THEME STUDIO (TOKENS)",
+          "05FORENSICS &amp; LEGALIDAD",
+          "06PG EMULATIONACTIVE [LIVE WALL]"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "81a27d39785945579beba5fb3feecb0c",
+      "title": "Pokéguarde — Quick Switcher Global & Command Bus",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2472",
+      "classification": "WEB_COMPONENT",
+      "secondaryTags": [
+        "NAVIGATION"
+      ],
+      "domain": "core/shell",
+      "evidence": {
+        "reason": "Componente de navegación reutilizable (Command Bus / selector de dominios)",
+        "htmlAvailable": true,
+        "htmlBytes": 59264,
+        "htmlSha256": "a074e8ae5b21b9aaf7164866c22703bac5773c5fcfe04d0cb0a6a5d3be07c66a",
+        "screenshotAvailable": true,
+        "textChars": 2630,
+        "headings": [
+          "Guardería Pokémon"
+        ],
+        "sampleButtons": [
+          "POKEGUARDESTUDIO CHASSIS v2.4CARTRIDGE BUSgrid_viewDashboard",
+          "shelvesHabitat Library",
+          "architectureHabitat Editor",
+          "categoryAsset Library",
+          "local_fire_departmentElemental Presets",
+          "smart_toyPreview &amp; Testing"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar en biblioteca UI y shell",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "f68a97f509634676b096f88118199cd6",
+      "title": "Pokéguarde — PRD Exportable (.md)",
+      "declaredType": "DOCUMENT",
+      "deviceType": "DESKTOP",
+      "resolution": "0x0",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 12543,
+        "htmlSha256": "32dec2d6d454e26c64ef37eedba034c19c2330c3835a95389d12269a6d75f10f",
+        "screenshotAvailable": false,
+        "textChars": 10676,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "bbc3237c72d544cf8c82f2dc65895ab4",
+      "title": "PG EMULATION — ROOM EXPLORER / LIVE WALL",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4376",
+      "classification": "WEB_VARIANT",
+      "secondaryTags": [
+        "STATE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Interfaz web de una página ya identificada: cambio de viewport, estado o duplicado visual",
+        "htmlAvailable": true,
+        "htmlBytes": 56491,
+        "htmlSha256": "8cca01a324091f1e8c9ddbb3ec70c21b65b674c29679416dcaaa26e878d5d567",
+        "screenshotAvailable": true,
+        "textChars": 4385,
+        "headings": [
+          "PG EMULATION — ROOM EXPLORER &amp; LIVE WALL",
+          "MATRIZ DE EMULACIÓN // 6 TRANSMISIONES PRIORITARIAS",
+          "Torneo Johto Silver Cup • Ronda 4",
+          "Intercambio Canónico Johto ↔ Kanto"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEPOCKET TECH 1999SYS.V2// ROM CARTRIDGE BUS v4.801 Core (Guardería &amp",
+          "02 Habitat Studio (Tiles)[CH2]",
+          "03 Marketing Suite (DAM)[CH3]",
+          "04 Theme Studio (Tokens)[CH4]",
+          "05 Forensics &amp; Legalidad[CH5]",
+          "▶Live Wall (6 Salas)"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar como variante/estado de su página principal",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "11579739075026819776",
+      "title": "LEEME_STITCH.md",
+      "declaredType": "DOCUMENT",
+      "deviceType": null,
+      "resolution": "780x1768",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "core/other",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 9092,
+        "htmlSha256": "9fc71a0f0030420447e3b44c51cde071e2520eadba16aa6596a6d9148a57158e",
+        "screenshotAvailable": false,
+        "textChars": 8890,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "b00aff1f60664e15af53b1631fc5240b",
+      "title": "PG EMULATION — RESPONSIVE 1440x900",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3508",
+      "classification": "WEB_VARIANT",
+      "secondaryTags": [
+        "RESPONSIVE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Interfaz web de una página ya identificada: cambio de viewport, estado o duplicado visual",
+        "htmlAvailable": true,
+        "htmlBytes": 41793,
+        "htmlSha256": "6f3eab0468e1cfad66a1da6d9e9f022d69429cbd6d44e099e39b0b8a1d6c8747",
+        "screenshotAvailable": true,
+        "textChars": 3164,
+        "headings": [],
+        "sampleButtons": [
+          "POKÉGUARDEv1999SYS // DOMAIN SELECT01CORE",
+          "02HABITAT",
+          "03MARKETING",
+          "04THEMES",
+          "05FORENSICS",
+          "06PG EMULATION"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar como variante/estado de su página principal",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "89f2ed24e8a246c998a58a9d28d95389",
+      "title": "PG ROOM SUITE STUDIO — 01 OVERVIEW",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3720",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 45252,
+        "htmlSha256": "4e8b8f6589ec9bc4ccdc827d0d0d6024c59c408ecc82a4f750fceccc0921cbd3",
+        "screenshotAvailable": true,
+        "textChars": 4098,
+        "headings": [
+          "PG ROOM SUITE STUDIO // OVERVIEW MAESTRA",
+          "MATRIZ DE SALAS EN EJECUCIÓN (LIVE CLUSTER)",
+          "HISTORIAL &amp; LOG DE ACTIVIDAD DEL ENLACE SERIAL",
+          "LATENCIA Y ESTABILIDAD DEL BUS DE RELOJ (PROCEDURAL)"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEPKG-02HARDWARE DOMAINSCH-06 RUNNING01 CORE (GUARDERÍA &amp; SAV)memory",
+          "02 HABITAT STUDIOgrid_view",
+          "03 MARKETING SUITE (DAM)photo_library",
+          "04 THEME STUDIOpalette",
+          "05 FORENSICS &amp; LEGALIDADverified_user",
+          "06 EMULATION CLUSTERsports_esports"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "df59d4f97ebc44ea973c93b55174ceaf",
+      "title": "Marketing Studio — Módulo 09: Media Library & Asset Manager (DAM)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2770",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 54514,
+        "htmlSha256": "bec497ec57f36943de97f7e7df3810463e4a8ca3eab1b2d029aa2ad99158bad6",
+        "screenshotAvailable": true,
+        "textChars": 3390,
+        "headings": [
+          "Pokeguarde Shell Master",
+          "Banner Campaña 16:9",
+          "Habitación Guardería GBC",
+          "Chikorita Overworld Sheet"
+        ],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESeggG",
+          "badgeFicha / Datos",
+          "swordsEquipo Activo",
+          "groupsJugadores",
+          "nest_cam_indoorCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "ad7dddf3c06b44f7b46f2bf77a6a2c41",
+      "title": "Habitat Editor — Primary Workspace",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2048",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/habitat",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 45214,
+        "htmlSha256": "b273d7867c93aacf2ff2b9d857e3e2018c52728851f15e5a19f673ac9a0a7185",
+        "screenshotAvailable": true,
+        "textChars": 2351,
+        "headings": [],
+        "sampleButtons": [
+          "POKEGUARDECREATOR SUITEHABITAT V-ENGINEREV 2.1grid_viewDashboard",
+          "shelvesHabitat Library",
+          "handymanHabitat Editor",
+          "perm_mediaAsset Library",
+          "nest_farsight_weatherElemental Presets",
+          "smart_toyPreview &amp; Testing"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "85db2f6666d64917bd941ab44f2db25f",
+      "title": "Marketing Studio — Módulo 11: Community Hub (Discord & Recursos)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3538",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 55326,
+        "htmlSha256": "1b93d11a7c8edfc16594543727d420772b1a99e85e1882b0cda1a9ae2ecdf080",
+        "screenshotAvailable": true,
+        "textChars": 5309,
+        "headings": [
+          "hub\n          COMMUNITY HUB &amp; DISCORD RESOURCE CENTER",
+          "TORNEO DE CRIANZA JOHTO: SEMANA DEL HUEVO PHIONE",
+          "📢 ¡La Guardería Johto v2.45 ya está disponible!"
+        ],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESeggG",
+          "badgeFicha / Datos",
+          "swordsEquipo Activo",
+          "groupsJugadores",
+          "nest_cam_indoorCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "73cdd1fd6c6b4e95bbb8c32200211d02",
+      "title": "Theme Studio — Global Color Editor & Token Palette",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4036",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 71165,
+        "htmlSha256": "60a2e464ead0dd637cd668ea3c41a7b66d6eb211dda1774f349fdb729fac20a9",
+        "screenshotAvailable": true,
+        "textChars": 4549,
+        "headings": [],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESGuar",
+          "Ficha / Datos",
+          "Equipo Activo",
+          "Jugadores",
+          "Crianza &amp; Huevos",
+          "Biblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "e580437cd19343eb9bb9ec70720f1b06",
+      "title": "Inspección Forense — Checklist de Legalidad PKHeX (Gen II)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3000",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/forensics",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 40105,
+        "htmlSha256": "bfb363d469ccdb0a18ed41317aeac447638779ad18eadecddcc30df41358d2d0",
+        "screenshotAvailable": true,
+        "textChars": 4312,
+        "headings": [
+          "AUDITORÍA &amp; CHECKLIST DE LEGALIDAD PKHEX // GENERACIÓN II"
+        ],
+        "sampleButtons": [
+          "CHASSIS BUSSYS·LINK GBCD-PAD SHORTCUTS▲EQUIPO[01]",
+          "▶GUARDERÍA[02]",
+          "▼BIBLIOTECA[03]",
+          "◀TIENDA[04]",
+          "Guardería",
+          "Ficha / Datos"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "d8bee907486a42a39beaa658ced48825",
+      "title": "Marketing Studio — Overview (Pantalla Maestra)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4128",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 59050,
+        "htmlSha256": "7ec8aa60eb71da836f11ad2a00f026c2c21c06903bd6e0bb35928629e3b60888",
+        "screenshotAvailable": true,
+        "textChars": 5200,
+        "headings": [
+          "Marketing Studio",
+          "Proyectos Recientes",
+          "Lanzamiento Oficial Pokeguarde 1999",
+          "Social Post — Gen II Daycare Reveal"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEOS Ver. 2.44 EXPESTADO NAVEGACIÓNGuardería01",
+          "Ficha / Datos02",
+          "Equipo Activo03",
+          "Jugadores04",
+          "Crianza &amp; Huevos05",
+          "Biblioteca06"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "314244b46ca74443a1f6ff6b2195ee5c",
+      "title": "Marketing Studio — Módulo 04: Press Kit & Dossier de Prensa",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x7036",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 46252,
+        "htmlSha256": "94152cc94e0236f456b04b6cc0f807b9a0af2660ac2ec817716434117eb88ac9",
+        "screenshotAvailable": true,
+        "textChars": 6667,
+        "headings": [
+          "01 // FICHA TÉCNICA (FACTSHEET OFICIAL)",
+          "02 // TEXTOS EDITORIALES Y DESCRIPCIONES (BOILERPLATES)",
+          "03 // PREGUNTAS FRECUENTES PARA PERIODISTAS (Q&amp;A EDITORIAL)",
+          "04 // CLÁUSULA LEGAL &amp; TRADEMARK NOTICE"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEOS Ver. 2.44 EXPESTADO NAVEGACIÓNGuardería01",
+          "Ficha / Datos02",
+          "Equipo Activo03",
+          "Jugadores04",
+          "Crianza &amp; Huevos05",
+          "Biblioteca06"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "44464441f20242b0aec53f914e564835",
+      "title": "Pokeguarde — Homepage Oficial & Shell Definitivo (Registro)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2134",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/shell",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 21193,
+        "htmlSha256": "ea8e45043cd7595c707e73d882aa0e322926d12193ab7699aefa0d9edea2a862",
+        "screenshotAvailable": true,
+        "textChars": 1792,
+        "headings": [
+          "SISTEMA PERPETUO DE PRESERVACIÓN &amp; CRIANZA DE ESPECÍMENES POKÉMON (1996–2012)",
+          "ESPECIFICACIONES DEL SUBSISTEMA",
+          "01. Guardería Tamagotchi 160×144",
+          "02. Crianza &amp; Guarderías Compartidas"
+        ],
+        "sampleButtons": [
+          "POKEGUARDE\nEST. 1999 • ARCHIVE NET",
+          "Características",
+          "Guardería",
+          "Compatibilidad Gen I-V",
+          "Comunidad",
+          "Iniciar Sesión"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "60f8b75cee31477b94ad6d4f09376aa9",
+      "title": "Shell Studio — Export Center (WebP Mask & JSON Manifest)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2232",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/shell",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 38401,
+        "htmlSha256": "8f7191759925859007148458ee6e515e0b074601a3685dde1afc8fe38c31dfcc",
+        "screenshotAvailable": true,
+        "textChars": 2878,
+        "headings": [
+          "PAQUETE &amp; MOLDES",
+          "INSPECTOR ÓPTICO // ALFA 100%",
+          "SHELL-MANIFEST.JSON"
+        ],
+        "sampleButtons": [
+          "POKEGUARDESTUDIO CHASSIS v2.4CARTRIDGE BUSgrid_viewDashboard",
+          "shelvesHabitat Library",
+          "architectureHabitat Editor",
+          "categoryAsset Library",
+          "local_fire_departmentElemental Presets",
+          "smart_toyPreview &amp; Testing"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "9c029d80f66542e094db39311df9d81e",
+      "title": "PG EMULATION — MAPA DE FLUJOS 01-06",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x6068",
+      "classification": "WEB_FLOW",
+      "secondaryTags": [
+        "PROTOTYPE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Prototipo multipantalla/secuencia con transiciones entre estados",
+        "htmlAvailable": true,
+        "htmlBytes": 62435,
+        "htmlSha256": "8d54a1038c3a40606078e1401b6e524c3e869d3b876a5d8666f7d94e2dbed431",
+        "screenshotAvailable": true,
+        "textChars": 6361,
+        "headings": [
+          "MAPA MAESTRO DE FLUJOS DE NAVEGACIÓN &amp; ESTADOS FINITOS (01–06)",
+          "ARQUITECTURA DE FLUJOS INTERCONECTADOS (01 A 06)",
+          "OBSERVAR PARTIDA",
+          "CREAR BATALLA"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDE1999SYSTEM CONTROL OS v2.4// SYSTEM DOMAINS01 CORE (GUARDERÍA &amp; SA",
+          "02 HABITAT STUDIO (TILES)",
+          "03 MARKETING SUITE (DAM)",
+          "04 THEME STUDIO (TOKENS)",
+          "05 FORENSICS &amp; LEGALIDAD",
+          "06 PG EMULATION"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Descomponer en página + estados; sin backend real",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "49de641566e147b7afb70fd9f5b38fdb",
+      "title": "Marketing Studio — Módulo 08: Localización & Glosario Protegido",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2640",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 46629,
+        "htmlSha256": "24c501a25b2e8cc861ff2225edae1559409720b40c9f561d2ca34f3e79a0240e",
+        "screenshotAvailable": true,
+        "textChars": 3996,
+        "headings": [],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESeggG",
+          "badgeFicha / Datos",
+          "swordsEquipo Activo",
+          "groupsJugadores",
+          "nest_cam_indoorCrianza &amp; Huevos",
+          "menu_bookBiblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "8d10ad1d2610466da8daaaa48f1e0d30",
+      "title": "Crianza & Huevos — Entrega de 2 Huevos & Incubación con GP",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2624",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/breeding",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 32084,
+        "htmlSha256": "ef3c9af954fb96352fd6b91b61bcdab4f92f7f6e9d064c23d0b9ff3b347d86df",
+        "screenshotAvailable": true,
+        "textChars": 3268,
+        "headings": [
+          "CMD-10 CICLO COMPLETADO // ENTREGA SIMÉTRICA &amp; CÁMARA DE INCUBACIÓN",
+          "CÁMARA DE INCUBACIÓN",
+          "ACELERACIÓN GP"
+        ],
+        "sampleButtons": [
+          "SISTEMA D-PADeggGUARDERÍA",
+          "badgeFICHA / DATOS",
+          "20mpEQUIPO ACTIVO",
+          "groupJUGADORES",
+          "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+          "menu_bookBIBLIOTECA"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "a77831e5893d4c47ba500e70e8e926ce",
+      "title": "POKEGUARDE — THEME STUDIO V1 Especificación y Roadmap",
+      "declaredType": "DOCUMENT",
+      "deviceType": "DESKTOP",
+      "resolution": "0x0",
+      "classification": "DOCUMENT",
+      "secondaryTags": [
+        "REFERENCE"
+      ],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Contenido textual/especificación: sin interfaz operativa; campo screenType=DOCUMENT o copy/árbol documental",
+        "htmlAvailable": true,
+        "htmlBytes": 2889,
+        "htmlSha256": "59fa77f519f31c97cf623318e169fe2793626b010f3a23b145d6163c75eda09f",
+        "screenshotAvailable": false,
+        "textChars": 2805,
+        "headings": [],
+        "sampleButtons": [],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Consultar como referencia; no crear ruta",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "688083253b054f4f889b9571a0a25151",
+      "title": "PG EMULATION ROOM — 02 DOS JUGADORES",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2908",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 46208,
+        "htmlSha256": "07194917678f348e52af38875cdbc6636d2d8e44a14e478ef8ce70ea76e0ffb5",
+        "screenshotAvailable": true,
+        "textChars": 3961,
+        "headings": [],
+        "sampleButtons": [
+          "CHASSIS LINK ACTIVEHW: 1999videogame_assetPOKÉGUARDEPG-EMU CLUSTER v2.4DOMINIOS ",
+          "02 HABITAT STUDIO (TILES)",
+          "03 MARKETING SUITE (DAM)",
+          "04 THEME STUDIO (TOKENS)",
+          "05 FORENSICS &amp; LEGALIDAD",
+          "• LIVE WALL (MURAL EN VIVO)60FPS"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "757ca63c66234011b64be17e3ca8131d",
+      "title": "Perfil de Jugador, Notificaciones & Privacidad",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4158",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/social",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 48882,
+        "htmlSha256": "0b74bb5ed6d4f11ee63815cab401f7f28343e48c41b463bbf8b327ecf646b0f2",
+        "screenshotAvailable": true,
+        "textChars": 3852,
+        "headings": [
+          "BANDEJA DE EVENTOS",
+          "CONMUTADORES RFC",
+          "GARANTÍA INMUTABLE",
+          "GESTIÓN SOCIAL &amp; ENLACE BILATERAL"
+        ],
+        "sampleButtons": [
+          "SISTEMA D-PADeggGUARDERÍA",
+          "badgeFICHA / DATOS",
+          "20mpEQUIPO ACTIVO",
+          "groupJUGADORES",
+          "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+          "menu_bookBIBLIOTECA"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "7300c5b9955643ea8f5ae95bb5bf37c4",
+      "title": "Theme Studio — Editor Tri-Panel & Live Preview Multipantalla",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2472",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/theme",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 48588,
+        "htmlSha256": "f7c6ddbbf9008af5d5313de62ad865354823293be5d05c3015e5bcd7f0e2232d",
+        "screenshotAvailable": true,
+        "textChars": 2926,
+        "headings": [],
+        "sampleButtons": [
+          "SYSTEM OK // PKG-02STN-LCD20mpPOKEGUARDEADMIN SUITE v2.8b SILVERCORE MODULESGuar",
+          "Ficha / Datos",
+          "Equipo Activo",
+          "Jugadores",
+          "Crianza &amp; Huevos",
+          "Biblioteca"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "5ad82a46cabe4bf4a482cd1aff8c57f8",
+      "title": "PG EMULATION — CONEXIÓN INTERRUMPIDA",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2214",
+      "classification": "WEB_VARIANT",
+      "secondaryTags": [
+        "STATE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Interfaz web de una página ya identificada: cambio de viewport, estado o duplicado visual",
+        "htmlAvailable": true,
+        "htmlBytes": 29520,
+        "htmlSha256": "75b05a2bef87a73f59bba798514aae8c84b364bbed1b33c4d1df739ecdcb1fe9",
+        "screenshotAvailable": true,
+        "textChars": 2270,
+        "headings": [],
+        "sampleButtons": [
+          "POKÉGUARDE PGEMU ARCHITECTURE v2.4CORE MODULES20mpCore: Guardería &amp; SAV",
+          "landscapeHabitat Studio",
+          "campaignMarketing Suite",
+          "paletteTheme Studio",
+          "policyForensics &amp; Legalidad",
+          "▶Live Wall"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar como variante/estado de su página principal",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "d31014d6779a49b5a835b56f20325a7a",
+      "title": "Marketing Studio — Módulo 01: Brand Kit & Bóveda de Marca",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x5128",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "marketing",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 59487,
+        "htmlSha256": "8d1da6c347e41ac2b077e326ff4eea6dc9c0325ad9db838f950f15602069f0af",
+        "screenshotAvailable": true,
+        "textChars": 5727,
+        "headings": [
+          "BRAND KIT",
+          "Logo Primario Canónico",
+          "Logotipo Horizontal Completo",
+          "Emblema Hardware / Favicon"
+        ],
+        "sampleButtons": [
+          "POKÉGUARDEOS Ver. 2.44 EXPESTADO NAVEGACIÓNGuardería01",
+          "Ficha / Datos02",
+          "Equipo Activo03",
+          "Jugadores04",
+          "Crianza &amp; Huevos05",
+          "Biblioteca06"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "875af41abc094d09815dc96e31506abb",
+      "title": "PG ROOM SUITE STUDIO — 04 LINK MANAGER",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x4282",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 54996,
+        "htmlSha256": "b35990ee3d21b87955f330e6a3f77f2a4f2972c595ca14a2f67e04c46a508659",
+        "screenshotAvailable": true,
+        "textChars": 5637,
+        "headings": [],
+        "sampleButtons": [
+          "PG::SUITEHW 1999 R2DOMAINS01 CORE",
+          "02 HABITAT",
+          "03 MARKET",
+          "04 THEMES",
+          "05 FORENSIC",
+          "06 EMULATION"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "3be980052ab944649cd96f48d18f9981",
+      "title": "PG EMULATION — RESPONSIVE TABLET",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3748",
+      "classification": "WEB_VARIANT",
+      "secondaryTags": [
+        "RESPONSIVE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Interfaz web de una página ya identificada: cambio de viewport, estado o duplicado visual",
+        "htmlAvailable": true,
+        "htmlBytes": 44534,
+        "htmlSha256": "1787ea03cbc30dfa8b270f4b7e3da28b52531938121e791705c93a4119aefa26",
+        "screenshotAvailable": true,
+        "textChars": 2760,
+        "headings": [
+          "CANAL 01: JOHTO CANONICAL LINK",
+          "CANAL 02: TIME CAPSULE BRIDGE",
+          "CANAL 03: GUARDERÍA CO-OP LIVE",
+          "CANAL 04: TORNEO COPA PLATA"
+        ],
+        "sampleButtons": [
+          "DOMAIN SELECTSYS.OK01 CORE",
+          "02 HABITAT",
+          "03 MARKETING",
+          "04 THEMES",
+          "05 FORENSICS",
+          "06 PG EMULATION"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar como variante/estado de su página principal",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "b62752700f894385a3616b6985cbd548",
+      "title": "Shell Studio — Device Preview Multi-Ángulo (Frente, 3/4 y Dorso)",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x3404",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "creator/shell",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 51048,
+        "htmlSha256": "ddd1bf0d40102d2e46c3b0be02e86f1341ebf879ac8ebcb5b0830a2934a81697",
+        "screenshotAvailable": true,
+        "textChars": 2555,
+        "headings": [],
+        "sampleButtons": [
+          "POKEGUARDESTUDIO CHASSIS v2.4CARTRIDGE BUSgrid_viewDashboard",
+          "shelvesHabitat Library",
+          "architectureHabitat Editor",
+          "categoryAsset Library",
+          "local_fire_departmentElemental Presets",
+          "smart_toyPreview &amp; Testing"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "db2fd3f1eafd442a860d9431d550e97b",
+      "title": "Biblioteca — Equipo Activo & Mochila",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x2306",
+      "classification": "WEB_PAGE",
+      "secondaryTags": [],
+      "domain": "core/library",
+      "evidence": {
+        "reason": "Pantalla DESIGN con HTML propio, secciones y controles: interfaz web funcional o de prototipo",
+        "htmlAvailable": true,
+        "htmlBytes": 56336,
+        "htmlSha256": "297948e0fd619992294865e059c22e127d9586ef99b93fc61f47fd17e45bd257",
+        "screenshotAvailable": true,
+        "textChars": 3252,
+        "headings": [],
+        "sampleButtons": [
+          "CHASSIS BUSSYS·LINK GBCD-PAD SHORTCUTS▲EQUIPO[01]",
+          "▶GUARDERÍA[02]",
+          "▼BIBLIOTECA[03]",
+          "◀TIENDA[04]",
+          "Guardería",
+          "Ficha / Datos"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Reconstruir como página y conectar ruta/navegación",
+      "inspection": "INSPECTED"
+    },
+    {
+      "id": "3c615a78c666454db4a0ccb7307b2e43",
+      "title": "PG EMULATION — ESTADOS DE INTERFAZ",
+      "declaredType": "DESIGN",
+      "deviceType": "DESKTOP",
+      "resolution": "2560x7624",
+      "classification": "WEB_VARIANT",
+      "secondaryTags": [
+        "STATE"
+      ],
+      "domain": "emulation",
+      "evidence": {
+        "reason": "Interfaz web de una página ya identificada: cambio de viewport, estado o duplicado visual",
+        "htmlAvailable": true,
+        "htmlBytes": 55311,
+        "htmlSha256": "de10b813b2381c005c0e06d276423a7cd0d3f13d7f7da485d47bd3b4923d9596",
+        "screenshotAvailable": true,
+        "textChars": 6047,
+        "headings": [
+          "CATÁLOGO DE ESTADOS DE INTERFAZ &amp; RESILIENCIA",
+          "NO HAY SALAS DE EMULACIÓN ACTIVAS EN EL CLÚSTER LOCAL",
+          "ACCESO DENEGADO // PROTOCOLO PRIVADO PROTEGIDO"
+        ],
+        "sampleButtons": [
+          "POKEGUARDEV2.4CHASSIS REF: 1999-STNHARDWARE DOMAINS01 CORE (SAV)ROM",
+          "02 HABITAT STUDIOMAP",
+          "03 MARKETING SUITEPR",
+          "04 THEME STUDIOPAL",
+          "05 FORENSICSHEX",
+          "06 PG EMULATION"
+        ],
+        "inOcStitch07Inventory": true
+      },
+      "confidence": "HIGH",
+      "action": "Integrar como variante/estado de su página principal",
+      "inspection": "INSPECTED"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "mission": "OC-STITCH-08",
+  "unknown": [],
+  "uninsected": [
+    "761b467f59404580adc53b45e7f1804f",
+    "75460234d32246ddaca967485cba26ef",
+    "16184830575926918797",
+    "98e4e080724d4570a64b18d4f6d186df"
+  ],
+  "notes": [
+    "Ningún elemento queda sin clasificar principal.",
+    "Los 4 elementos IMAGE carecen de HTML por diseño (screenType=IMAGE); se inspeccionó su screenshot y metadatos.",
+    "Las variantes responsive y de estado se asocian a páginas canónicas existentes en la Fase D."
+  ]
+}

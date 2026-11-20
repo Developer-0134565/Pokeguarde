@@ -1,0 +1,2608 @@
+{
+  "mission": "OC-SYNC-09",
+  "kind": "RAW_AXE_58_ROUTES",
+  "generatedAt": "2026-11-20T20:59:21Z",
+  "status": "VERIFICADO (58/58 rutas evaluadas; 7 violaciones en 5 rutas)",
+  "routeSource": "docs/presentaciones/OC-STITCH-08/OC-STITCH-08-ROUTE-MAP.json (58 rutas; pages[].route)",
+  "tool": {
+    "name": "agent-browser a11y (axe-core embebido en el binario, sin CDN y sin inyección en producción)",
+    "axeVersion": "4.12.1",
+    "session": "sync09luna-957274a7fcad",
+    "browser": "HeadlessChrome/158.0.0.0 (Linux)",
+    "viewport": {
+      "innerWidth": 1280,
+      "innerHeight": 577,
+      "devicePixelRatio": 1
+    },
+    "commandPattern": "agent-browser --session sync09luna-957274a7fcad a11y \"http://127.0.0.1:8787/#<route>\" --json"
+  },
+  "policy": {
+    "scope": "Una auditoría por ruta sobre el estado por defecto renderizado; sin cambios en código, BD, fixtures, ROMs ni saves.",
+    "noCdn": "No se descargó ni inyectó axe desde CDN: se usó el motor axe-core 4.12.1 vendored en agent-browser.",
+    "noCertification": "Este JSON es evidencia de ejecución, no una certificación WCAG plena: no cubre diálogos, estados seleccionados, hover/focus ni otros viewports."
+  },
+  "summary": {
+    "routesInCatalog": 58,
+    "routesAudited": 58,
+    "routesOk": 58,
+    "routesLimited": 0,
+    "totalViolations": 7,
+    "routesWithViolations": [
+      "/guarderia",
+      "/biblioteca",
+      "/biblioteca/equipo",
+      "/studio/marketing/creative",
+      "/emulation/create"
+    ],
+    "violationIds": [
+      "aria-allowed-role",
+      "color-contrast",
+      "heading-order",
+      "list"
+    ],
+    "violationImpacts": [
+      "minor",
+      "moderate",
+      "serious"
+    ],
+    "supplementalRouteNotIn58": {
+      "route": "/",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 58,
+        "incomplete": 2,
+        "passes": 31,
+        "violations": 0
+      },
+      "note": "Alias canónico usado por OC-STITCH-08; se auditó aparte para contrastar con /home. No cuenta dentro de las 58 rutas."
+    }
+  },
+  "limitations": [
+    "El alcance es el estado inicial de cada ruta. No se abrieron fichas de Pokémon, diálogos (Ctrl+K, #mon), pestañas internas ni estados de error; el informe OC-STITCH-08 ya documentó el foco tras cerrar el switcher.",
+    "Las violaciones de /biblioteca y /biblioteca/equipo dependen de los 2 saves presentes en la BD local; con otra BD el número de nodos puede variar. /guarderia depende de las 4 mascotas persistidas.",
+    "No se pueden atribuir las 7 violaciones a un único componente sin editar código: este subagente tiene prohibido modificar fuentes.",
+    "El diagnóstico de chips de OC-STITCH-08 es de las 21:08; el bundle CSS servido actualmente tiene mtime 21:17 y SHA-256 3c738dd8c5f3ed89d150086db45ce9adc9c945188cfd8f467df0db6dad669344. No se conservó la versión anterior en el repo (archivo sin seguimiento), por lo que la causa histórica exacta no es verificable desde aquí."
+  ],
+  "routes": [
+    {
+      "index": 1,
+      "route": "/home",
+      "url": "http://127.0.0.1:8787/#/home",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 57,
+        "incomplete": 2,
+        "passes": 32,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 10
+        }
+      ],
+      "domVerification": {
+        "hash": "#/home",
+        "page": "SISTEMA PERPETUO DE PRESERVACIÓN & CRIANZA DE ESPECÍMENES POKÉMON (1996–2012)\n\nAUTÉNTICO KERNEL VINTAGE\nBIT-RATE: 8-BIT ",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 2,
+      "route": "/guarderia",
+      "url": "http://127.0.0.1:8787/#/guarderia",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 1,
+        "passes": 37,
+        "violations": 3
+      },
+      "violationCount": 3,
+      "violations": [
+        {
+          "help": "ARIA role should be appropriate for the element",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/aria-allowed-role?application=axeAPI",
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4,
+          "nodes": [
+            {
+              "failureSummary": "Fix any of the following:\n  ARIA role button is not allowed for given element",
+              "html": "<li class=\"pet-pick on\" data-id=\"2\" role=\"button\" tabindex=\"0\" aria-label=\"ELECTRODE\">\n    <b>ELECTRODE</b>\n    <span class=\"muted\">Nv 67 · Electrode</span>\n    <span class=\"chip good\">con hambre</span>\n  </li>",
+              "target": [
+                ".on"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  ARIA role button is not allowed for given element",
+              "html": "<li class=\"pet-pick \" data-id=\"1\" role=\"button\" tabindex=\"0\" aria-label=\"MANAPHY\">\n    <b>MANAPHY</b>\n    <span class=\"muted\">Nv 36 · Manaphy</span>\n    <span class=\"chip \">con hambre</span>\n  </li>",
+              "target": [
+                "li[data-id=\"1\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  ARIA role button is not allowed for given element",
+              "html": "<li class=\"pet-pick \" data-id=\"3\" role=\"button\" tabindex=\"0\" aria-label=\"NIDOKING\">\n    <b>NIDOKING</b>\n    <span class=\"muted\">Nv 72 · Nidoking</span>\n    <span class=\"chip \">con hambre</span>\n  </li>",
+              "target": [
+                "li[data-id=\"3\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  ARIA role button is not allowed for given element",
+              "html": "<li class=\"pet-pick \" data-id=\"4\" role=\"button\" tabindex=\"0\" aria-label=\"MAGNEMITE\">\n    <b>MAGNEMITE</b>\n    <span class=\"muted\">Nv 16 · Magnemite</span>\n    <span class=\"chip \">durmiendo</span>\n  </li>",
+              "target": [
+                "li[data-id=\"4\"]"
+              ]
+            }
+          ],
+          "tags": [
+            "cat.aria",
+            "best-practice"
+          ]
+        },
+        {
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 10,
+          "nodes": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.37 (foreground color: #9ee06a, background color: #efefef, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button data-train=\"0\" class=\"train\">Carrera</button>",
+              "target": [
+                "button[data-train=\"0\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.37 (foreground color: #9ee06a, background color: #efefef, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button data-train=\"1\" class=\"train\">Empuje</button>",
+              "target": [
+                "button[data-train=\"1\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.37 (foreground color: #9ee06a, background color: #efefef, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button data-train=\"2\" class=\"train\">Muro</button>",
+              "target": [
+                "button[data-train=\"2\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.37 (foreground color: #9ee06a, background color: #efefef, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button data-train=\"3\" class=\"train\">Chispa</button>",
+              "target": [
+                "button[data-train=\"3\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.37 (foreground color: #9ee06a, background color: #efefef, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button data-train=\"4\" class=\"train\">Calma</button>",
+              "target": [
+                "button[data-train=\"4\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.37 (foreground color: #9ee06a, background color: #efefef, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button data-train=\"5\" class=\"train\">Reflejos</button>",
+              "target": [
+                "button[data-train=\"5\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #1d1b1b, background color: #212a21, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "html": "<b>ELECTRODE</b>",
+              "target": [
+                ".on > b"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #1d1b1b, background color: #212a21, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "html": "<b>MANAPHY</b>",
+              "target": [
+                "li[data-id=\"1\"] > b"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #1d1b1b, background color: #212a21, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "html": "<b>NIDOKING</b>",
+              "target": [
+                "li[data-id=\"3\"] > b"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #1d1b1b, background color: #212a21, font size: 10.2pt (13.6px), font weight: bold). Expected contrast ratio of 4.5:1",
+              "html": "<b>MAGNEMITE</b>",
+              "target": [
+                "li[data-id=\"4\"] > b"
+              ]
+            }
+          ],
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ]
+        },
+        {
+          "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/list?application=axeAPI",
+          "id": "list",
+          "impact": "serious",
+          "nodeCount": 1,
+          "nodes": [
+            {
+              "failureSummary": "Fix all of the following:\n  List element has direct children that are not allowed: [role=button]",
+              "html": "<ul class=\"pet-list\" id=\"pg-list\">",
+              "target": [
+                "#pg-list"
+              ]
+            }
+          ],
+          "tags": [
+            "cat.structure",
+            "wcag2a",
+            "wcag131",
+            "EN-301-549",
+            "EN-9.1.3.1",
+            "RGAAv4",
+            "RGAA-9.3.1"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 60
+        }
+      ],
+      "domVerification": {
+        "hash": "#/guarderia",
+        "page": "HABITACIÓN DÚPLEX // MÓDULO GUARDE-NET V2\nOCUPACIÓN: 1 / 2 MAX\nMODO: LOCAL\nPOKEGUARDE\nPKG-02 · GUARDERÍA\nELECTRODE\ncon h",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 3,
+      "route": "/biblioteca",
+      "url": "http://127.0.0.1:8787/#/biblioteca",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 2,
+        "passes": 30,
+        "violations": 1
+      },
+      "violationCount": 1,
+      "violations": [
+        {
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 5,
+          "nodes": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #93a58c, background color: #fff9ec, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span data-i18n=\"drop.hint\">.srm · .sav · .dsv (32 KB – 512 KB)</span>",
+              "target": [
+                "span[data-i18n=\"drop.hint\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #93a58c, background color: #fff9ec, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span data-i18n=\"drop.pick\">o elige un archivo</span>",
+              "target": [
+                "span[data-i18n=\"drop.pick\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #1d1b1b, background color: #212a21, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<div class=\"save-title\">gen1-blue-usa.srm</div>",
+              "target": [
+                ".save:nth-child(1) > .save-title"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #1d1b1b, background color: #212a21, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<div class=\"save-title\">gen4-heartgold-spain.srm</div>",
+              "target": [
+                ".save:nth-child(2) > .save-title"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #93a58c, background color: #fff9ec, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<p class=\"placeholder\" data-i18n=\"detail.placeholder\">Selecciona una partida para ver el inventario.</p>",
+              "target": [
+                ".placeholder"
+              ]
+            }
+          ],
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/biblioteca",
+        "page": "PARTIDAS\n↻\nArrastra un save\n.srm · .sav · .dsv (32 KB – 512 KB)\no elige un archivo\ngen1-blue-usa.srm\nGen 1\nRB\nOT Alex\n0✔",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 4,
+      "route": "/biblioteca/equipo",
+      "url": "http://127.0.0.1:8787/#/biblioteca/equipo",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 2,
+        "passes": 30,
+        "violations": 1
+      },
+      "violationCount": 1,
+      "violations": [
+        {
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 5,
+          "nodes": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #93a58c, background color: #fff9ec, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span data-i18n=\"drop.hint\">.srm · .sav · .dsv (32 KB – 512 KB)</span>",
+              "target": [
+                "span[data-i18n=\"drop.hint\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #93a58c, background color: #fff9ec, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<span data-i18n=\"drop.pick\">o elige un archivo</span>",
+              "target": [
+                "span[data-i18n=\"drop.pick\"]"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #1d1b1b, background color: #212a21, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<div class=\"save-title\">gen1-blue-usa.srm</div>",
+              "target": [
+                ".save:nth-child(1) > .save-title"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.15 (foreground color: #1d1b1b, background color: #212a21, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<div class=\"save-title\">gen4-heartgold-spain.srm</div>",
+              "target": [
+                ".save:nth-child(2) > .save-title"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #93a58c, background color: #fff9ec, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<p class=\"placeholder\" data-i18n=\"detail.placeholder\">Selecciona una partida para ver el inventario.</p>",
+              "target": [
+                ".placeholder"
+              ]
+            }
+          ],
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/biblioteca/equipo",
+        "page": "PARTIDAS\n↻\nArrastra un save\n.srm · .sav · .dsv (32 KB – 512 KB)\no elige un archivo\ngen1-blue-usa.srm\nGen 1\nRB\nOT Alex\n0✔",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 5,
+      "route": "/ficha",
+      "url": "http://127.0.0.1:8787/#/ficha",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 2,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/ficha",
+        "page": "FICHA TÉCNICA · POCKET TECH 1999\n\nSelecciona un Pokémon de la Biblioteca o de la Guardería para ver su ficha.\n\n← VOLVER\n",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 6,
+      "route": "/crianza",
+      "url": "http://127.0.0.1:8787/#/crianza",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 55,
+        "incomplete": 3,
+        "passes": 34,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/crianza",
+        "page": "CORE\nPROTOTIPO UI · SIN BACKEND\nCRIANZA Y HUEVOS\nINICIO\n/\nCrianza y Huevos\n\nCuatro pantallas de un mismo flujo: selecció",
+        "chipCount": 12
+      },
+      "error": null
+    },
+    {
+      "index": 7,
+      "route": "/perfil",
+      "url": "http://127.0.0.1:8787/#/perfil",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/perfil",
+        "page": "CORE\nPROTOTIPO UI · SIN BACKEND\nPERFIL, NOTIFICACIONES Y PRIVACIDAD\nINICIO\n/\nPerfil, Notificaciones y Privacidad\n\nDatos ",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 8,
+      "route": "/jugadores",
+      "url": "http://127.0.0.1:8787/#/jugadores",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 56,
+        "incomplete": 3,
+        "passes": 33,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/jugadores",
+        "page": "CORE\nPROTOTIPO UI · SIN BACKEND\nDIRECTORIO DE JUGADORES Y GUARDERÍAS\nINICIO\n/\nDirectorio de Jugadores y Guarderías\n\nCont",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 9,
+      "route": "/tienda",
+      "url": "http://127.0.0.1:8787/#/tienda",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 56,
+        "incomplete": 3,
+        "passes": 33,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/tienda",
+        "page": "CORE\nPROTOTIPO UI · SIN BACKEND\nTIENDA DE GUARDIPUNTOS\nINICIO\n/\nTienda de Guardipuntos\n\nEconomía no implementada: catálo",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 10,
+      "route": "/forensics",
+      "url": "http://127.0.0.1:8787/#/forensics",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 52,
+        "incomplete": 2,
+        "passes": 37,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/forensics",
+        "page": "FORENSICS\nPARCIAL · DATOS REALES DISPONIBLES\nINSPECCIÓN FORENSE PKHEX\nINICIO\n/\nInspección Forense PKHeX\n\nTres paneles: d",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 11,
+      "route": "/studio/theme",
+      "url": "http://127.0.0.1:8787/#/studio/theme",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 3,
+        "passes": 30,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — GALERÍA\nINICIO\n/\nTheme Studio — Galería\n\nOverview del estudio; tokens de",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 12,
+      "route": "/studio/theme/colors",
+      "url": "http://127.0.0.1:8787/#/studio/theme/colors",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/colors",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — COLOR\nINICIO\n/\nTheme Studio — Color\n\nMódulo de paleta; edición persisten",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 13,
+      "route": "/studio/theme/typography",
+      "url": "http://127.0.0.1:8787/#/studio/theme/typography",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 3,
+        "passes": 30,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/typography",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — TIPOGRAFÍA\nINICIO\n/\nTheme Studio — Tipografía\n\nEscala de encabezados. In",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 14,
+      "route": "/studio/theme/spacing",
+      "url": "http://127.0.0.1:8787/#/studio/theme/spacing",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/spacing",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — ESPACIADO\nINICIO\n/\nTheme Studio — Espaciado\n\nDensidad y espaciado. Inter",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 15,
+      "route": "/studio/theme/components",
+      "url": "http://127.0.0.1:8787/#/studio/theme/components",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/components",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — COMPONENTES\nINICIO\n/\nTheme Studio — Componentes\n\nCatálogo atómico. Inter",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 16,
+      "route": "/studio/theme/layout",
+      "url": "http://127.0.0.1:8787/#/studio/theme/layout",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/layout",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — LAYOUT\nINICIO\n/\nTheme Studio — Layout\n\nGeometría de rejilla. Interfaz de",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 17,
+      "route": "/studio/theme/preview",
+      "url": "http://127.0.0.1:8787/#/studio/theme/preview",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/preview",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — VISTA PREVIA\nINICIO\n/\nTheme Studio — Vista previa\n\nMatriz multipantalla.",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 18,
+      "route": "/studio/theme/tokens",
+      "url": "http://127.0.0.1:8787/#/studio/theme/tokens",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 3,
+        "passes": 30,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/tokens",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — TOKENS\nINICIO\n/\nTheme Studio — Tokens\n\nGestor de tokens y bindings. Inte",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 19,
+      "route": "/studio/theme/designmd",
+      "url": "http://127.0.0.1:8787/#/studio/theme/designmd",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 3,
+        "passes": 30,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/designmd",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — DESIGN.MD\nINICIO\n/\nTheme Studio — DESIGN.md\n\nSincronización documental; ",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 20,
+      "route": "/studio/theme/tripanel",
+      "url": "http://127.0.0.1:8787/#/studio/theme/tripanel",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/theme/tripanel",
+        "page": "THEME\nPROTOTIPO UI · SIN BACKEND\nTHEME STUDIO — EDITOR TRI-PANEL\nINICIO\n/\nTheme Studio — Editor tri-panel\n\nWorkspace com",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 21,
+      "route": "/studio/shell",
+      "url": "http://127.0.0.1:8787/#/studio/shell",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/shell",
+        "page": "CREATOR_SHELL\nPROTOTIPO UI · SIN BACKEND\nSHELL STUDIO — WORKSPACE\nINICIO\n/\nShell Studio — Workspace\n\nEditor tri-panel de",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 22,
+      "route": "/studio/shell/export",
+      "url": "http://127.0.0.1:8787/#/studio/shell/export",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 3,
+        "passes": 30,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/shell/export",
+        "page": "CREATOR_SHELL\nPROTOTIPO UI · SIN BACKEND\nSHELL STUDIO — EXPORT CENTER\nINICIO\n/\nShell Studio — Export Center\n\nMáscara Web",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 23,
+      "route": "/studio/shell/preview",
+      "url": "http://127.0.0.1:8787/#/studio/shell/preview",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/shell/preview",
+        "page": "CREATOR_SHELL\nPROTOTIPO UI · SIN BACKEND\nSHELL STUDIO — VISTA MULTIÁNGULO\nINICIO\n/\nShell Studio — Vista multiángulo\n\nFre",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 24,
+      "route": "/studio/habitat",
+      "url": "http://127.0.0.1:8787/#/studio/habitat",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/habitat",
+        "page": "HABITAT\nPROTOTIPO UI · SIN BACKEND\nHABITAT STUDIO — EDITOR\nINICIO\n/\nHabitat Studio — Editor\n\nWorkspace principal. No mod",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 25,
+      "route": "/studio/habitat/devices",
+      "url": "http://127.0.0.1:8787/#/studio/habitat/devices",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 61,
+        "incomplete": 3,
+        "passes": 28,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/habitat/devices",
+        "page": "HABITAT\nPROTOTIPO UI · SIN BACKEND\nHABITAT STUDIO — DISPOSITIVO\nINICIO\n/\nHabitat Studio — Dispositivo\n\nSimulador de carc",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 26,
+      "route": "/studio/habitat/library",
+      "url": "http://127.0.0.1:8787/#/studio/habitat/library",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 3,
+        "passes": 30,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/habitat/library",
+        "page": "HABITAT\nPROTOTIPO UI · SIN BACKEND\nHABITAT STUDIO — BIBLIOTECA\nINICIO\n/\nHabitat Studio — Biblioteca\n\nPresets ambientales",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 27,
+      "route": "/studio/marketing",
+      "url": "http://127.0.0.1:8787/#/studio/marketing",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING STUDIO — OVERVIEW\nINICIO\n/\nMarketing Studio — Overview\n\nPantalla maestra ",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 28,
+      "route": "/studio/marketing/brand",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/brand",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/brand",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — BRAND KIT\nINICIO\n/\nMarketing — Brand Kit\n\nBóveda de marca. Interfaz de ",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 29,
+      "route": "/studio/marketing/social",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/social",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 53,
+        "incomplete": 3,
+        "passes": 36,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/social",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — SOCIAL\nINICIO\n/\nMarketing — Social\n\nSin publicación externa. Interfaz d",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 30,
+      "route": "/studio/marketing/creative",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/creative",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 1
+      },
+      "violationCount": 1,
+      "violations": [
+        {
+          "help": "Heading levels should only increase by one",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/heading-order?application=axeAPI",
+          "id": "heading-order",
+          "impact": "moderate",
+          "nodeCount": 1,
+          "nodes": [
+            {
+              "failureSummary": "Fix any of the following:\n  Heading order invalid",
+              "html": "<h4 class=\"pg-mk-col__title\">CAPAS (EJEMPLO)</h4>",
+              "target": [
+                ".pg-mk-col:nth-child(1) > .pg-mk-col__title"
+              ]
+            }
+          ],
+          "tags": [
+            "cat.semantics",
+            "best-practice"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/creative",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — BANNER & CANVAS\nINICIO\n/\nMarketing — Banner & Canvas\n\nEditor tri-panel.",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 31,
+      "route": "/studio/marketing/press",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/press",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/press",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — PRESS KIT\nINICIO\n/\nMarketing — Press Kit\n\nDossier de prensa. Interfaz d",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 32,
+      "route": "/studio/marketing/roadmap",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/roadmap",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/roadmap",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — ROADMAP\nINICIO\n/\nMarketing — Roadmap\n\nAnuncios. Interfaz de referencia:",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 33,
+      "route": "/studio/marketing/campaigns",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/campaigns",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/campaigns",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — CAMPAIGNS\nINICIO\n/\nMarketing — Campaigns\n\nCampañas y newsletter; sin en",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 34,
+      "route": "/studio/marketing/copy",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/copy",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 53,
+        "incomplete": 3,
+        "passes": 36,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/copy",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — AI COPYWRITER\nINICIO\n/\nMarketing — AI Copywriter\n\nRedacción local y det",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 35,
+      "route": "/studio/marketing/localization",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/localization",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 53,
+        "incomplete": 3,
+        "passes": 36,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/localization",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — LOCALIZACIÓN\nINICIO\n/\nMarketing — Localización\n\nGlosario protegido. Int",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 36,
+      "route": "/studio/marketing/assets",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/assets",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/assets",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — MEDIA LIBRARY\nINICIO\n/\nMarketing — Media Library\n\nDAM local, sin subida",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 37,
+      "route": "/studio/marketing/calendar",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/calendar",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 53,
+        "incomplete": 3,
+        "passes": 36,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/calendar",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — CONTENT CALENDAR\nINICIO\n/\nMarketing — Content Calendar\n\nCalendario edit",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 38,
+      "route": "/studio/marketing/community",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/community",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/community",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — COMMUNITY HUB\nINICIO\n/\nMarketing — Community Hub\n\nDiscord y recursos: e",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 39,
+      "route": "/studio/marketing/analytics",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/analytics",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/analytics",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — ANALYTICS\nINICIO\n/\nMarketing — Analytics\n\nMétricas de ejemplo NO presen",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 40,
+      "route": "/studio/marketing/export",
+      "url": "http://127.0.0.1:8787/#/studio/marketing/export",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/studio/marketing/export",
+        "page": "MARKETING\nPROTOTIPO UI · SIN BACKEND\nMARKETING — EXPORT CENTER\nINICIO\n/\nMarketing — Export Center\n\nEmpaquetado: sin desc",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 41,
+      "route": "/emulation",
+      "url": "http://127.0.0.1:8787/#/emulation",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 59,
+        "incomplete": 3,
+        "passes": 30,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — ROOM EXPLORER\nINICIO\n/\nEmulation — Room Explorer\n\nLive Wall y explorado",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 42,
+      "route": "/emulation/flows",
+      "url": "http://127.0.0.1:8787/#/emulation/flows",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 55,
+        "incomplete": 3,
+        "passes": 34,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/flows",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — MAPA DE FLUJOS\nINICIO\n/\nEmulation — Mapa de flujos\n\nFlujo 01-06 documen",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 43,
+      "route": "/emulation/create",
+      "url": "http://127.0.0.1:8787/#/emulation/create",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 56,
+        "incomplete": 3,
+        "passes": 33,
+        "violations": 1
+      },
+      "violationCount": 1,
+      "violations": [
+        {
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 8,
+          "nodes": [
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.01 (foreground color: #e8f2ff, background color: #efefef, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button class=\"pg-em-wizard__step-btn\" type=\"button\" aria-label=\"02 · Generación y formato — mostrar paso (maqueta)\" aria-pressed=\"false\">02 · Generación y formato</button>",
+              "target": [
+                ".pg-em-wizard__step-btn[type=\"button\"]:nth-child(2)"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.01 (foreground color: #e8f2ff, background color: #efefef, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button class=\"pg-em-wizard__step-btn\" type=\"button\" aria-label=\"03 · Adaptador — mostrar paso (maqueta)\" aria-pressed=\"false\">03 · Adaptador</button>",
+              "target": [
+                ".pg-em-wizard__step-btn[type=\"button\"]:nth-child(3)"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.01 (foreground color: #e8f2ff, background color: #efefef, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button class=\"pg-em-wizard__step-btn\" type=\"button\" aria-label=\"04 · ROM / SAV — mostrar paso (maqueta)\" aria-pressed=\"false\">04 · ROM / SAV</button>",
+              "target": [
+                ".pg-em-wizard__step-btn[type=\"button\"]:nth-child(4)"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.01 (foreground color: #e8f2ff, background color: #efefef, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button class=\"pg-em-wizard__step-btn\" type=\"button\" aria-label=\"05 · Sincronización — mostrar paso (maqueta)\" aria-pressed=\"false\">05 · Sincronización</button>",
+              "target": [
+                ".pg-em-wizard__step-btn[type=\"button\"]:nth-child(5)"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.01 (foreground color: #e8f2ff, background color: #efefef, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button class=\"pg-em-wizard__step-btn\" type=\"button\" aria-label=\"06 · Participantes — mostrar paso (maqueta)\" aria-pressed=\"false\">06 · Participantes</button>",
+              "target": [
+                ".pg-em-wizard__step-btn[type=\"button\"]:nth-child(6)"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.01 (foreground color: #e8f2ff, background color: #efefef, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button class=\"pg-em-wizard__step-btn\" type=\"button\" aria-label=\"07 · Permisos — mostrar paso (maqueta)\" aria-pressed=\"false\">07 · Permisos</button>",
+              "target": [
+                ".pg-em-wizard__step-btn[type=\"button\"]:nth-child(7)"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.01 (foreground color: #e8f2ff, background color: #efefef, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button class=\"pg-em-wizard__step-btn\" type=\"button\" aria-label=\"08 · Parámetros LINK — mostrar paso (maqueta)\" aria-pressed=\"false\">08 · Parámetros LINK</button>",
+              "target": [
+                ".pg-em-wizard__step-btn[type=\"button\"]:nth-child(8)"
+              ]
+            },
+            {
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.01 (foreground color: #e8f2ff, background color: #efefef, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "html": "<button class=\"pg-em-wizard__step-btn\" type=\"button\" aria-label=\"09 · Validación tri-estado — mostrar paso (maqueta)\" aria-pressed=\"false\">09 · Validación tri-estado</button>",
+              "target": [
+                ".pg-em-wizard__step-btn[type=\"button\"]:nth-child(9)"
+              ]
+            }
+          ],
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 2
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/create",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — CREAR SALA\nINICIO\n/\nEmulation — Crear sala\n\nAsistente de 9 pasos presen",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 44,
+      "route": "/emulation/rooms/01",
+      "url": "http://127.0.0.1:8787/#/emulation/rooms/01",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 4
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/rooms/01",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — SALA 01 (1 JUGADOR)\nINICIO\n/\nEmulation — Sala 01 (1 jugador)\n\nVista de ",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 45,
+      "route": "/emulation/rooms/02",
+      "url": "http://127.0.0.1:8787/#/emulation/rooms/02",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 5
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/rooms/02",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — SALA 02 (2 JUGADORES)\nINICIO\n/\nEmulation — Sala 02 (2 jugadores)\n\nSin C",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 46,
+      "route": "/emulation/rooms/03",
+      "url": "http://127.0.0.1:8787/#/emulation/rooms/03",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 50,
+        "incomplete": 3,
+        "passes": 39,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 4
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/rooms/03",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — SALA 03 (DUAL VIEWPORT)\nINICIO\n/\nEmulation — Sala 03 (dual viewport)\n\nD",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 47,
+      "route": "/emulation/rooms/04",
+      "url": "http://127.0.0.1:8787/#/emulation/rooms/04",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 4
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/rooms/04",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — SALA 04 (ESPECTADOR)\nINICIO\n/\nEmulation — Sala 04 (espectador)\n\nModo es",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 48,
+      "route": "/emulation/rooms/05",
+      "url": "http://127.0.0.1:8787/#/emulation/rooms/05",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 51,
+        "incomplete": 3,
+        "passes": 38,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 4
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/rooms/05",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — SALA 05 (PANTALLA COMPLETA)\nINICIO\n/\nEmulation — Sala 05 (pantalla comp",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 49,
+      "route": "/emulation/battle",
+      "url": "http://127.0.0.1:8787/#/emulation/battle",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 50,
+        "incomplete": 3,
+        "passes": 39,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 4
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/battle",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — BATTLE ROOM\nINICIO\n/\nEmulation — Battle Room\n\nNO simula combates reales",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 50,
+      "route": "/emulation/trade",
+      "url": "http://127.0.0.1:8787/#/emulation/trade",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 50,
+        "incomplete": 3,
+        "passes": 39,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 4
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/trade",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — TRADE ROOM\nINICIO\n/\nEmulation — Trade Room\n\nSolo protocolo futuro por C",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 51,
+      "route": "/emulation/studio",
+      "url": "http://127.0.0.1:8787/#/emulation/studio",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 55,
+        "incomplete": 3,
+        "passes": 34,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/studio",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — ROOM SUITE STUDIO\nINICIO\n/\nEmulation — Room Suite Studio\n\nOverview del ",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 52,
+      "route": "/emulation/studio/manager",
+      "url": "http://127.0.0.1:8787/#/emulation/studio/manager",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 55,
+        "incomplete": 3,
+        "passes": 34,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/studio/manager",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — ROOM MANAGER\nINICIO\n/\nEmulation — Room Manager\n\nGestión visual de salas",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 53,
+      "route": "/emulation/studio/monitor",
+      "url": "http://127.0.0.1:8787/#/emulation/studio/monitor",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 53,
+        "incomplete": 3,
+        "passes": 36,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/studio/monitor",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — LIVE MONITOR\nINICIO\n/\nEmulation — Live Monitor\n\nMonitor en vivo simulad",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 54,
+      "route": "/emulation/studio/link",
+      "url": "http://127.0.0.1:8787/#/emulation/studio/link",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 53,
+        "incomplete": 3,
+        "passes": 36,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 2
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/studio/link",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — LINK MANAGER\nINICIO\n/\nEmulation — Link Manager\n\nSin enlaces reales. Int",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 55,
+      "route": "/emulation/studio/permissions",
+      "url": "http://127.0.0.1:8787/#/emulation/studio/permissions",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 55,
+        "incomplete": 3,
+        "passes": 34,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/studio/permissions",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — PERMISOS\nINICIO\n/\nEmulation — Permisos\n\nMatriz de permisos visual. Inte",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 56,
+      "route": "/emulation/studio/logs",
+      "url": "http://127.0.0.1:8787/#/emulation/studio/logs",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 55,
+        "incomplete": 3,
+        "passes": 34,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/studio/logs",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — SESSION LOGS\nINICIO\n/\nEmulation — Session Logs\n\nRegistros de ejemplo, s",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 57,
+      "route": "/emulation/studio/analytics",
+      "url": "http://127.0.0.1:8787/#/emulation/studio/analytics",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 55,
+        "incomplete": 3,
+        "passes": 34,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/studio/analytics",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — ANALYTICS\nINICIO\n/\nEmulation — Analytics\n\nAnalíticas ilustrativas. Inte",
+        "chipCount": 14
+      },
+      "error": null
+    },
+    {
+      "index": 58,
+      "route": "/emulation/studio/adapters",
+      "url": "http://127.0.0.1:8787/#/emulation/studio/adapters",
+      "status": "OK",
+      "axeVersion": "4.12.1",
+      "counts": {
+        "inapplicable": 55,
+        "incomplete": 3,
+        "passes": 34,
+        "violations": 0
+      },
+      "violationCount": 0,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-allowed-role",
+          "impact": "minor",
+          "nodeCount": 4
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodeCount": 1
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodeCount": 1
+        }
+      ],
+      "domVerification": {
+        "hash": "#/emulation/studio/adapters",
+        "page": "EMULATION\nPROTOTIPO UI · SIN BACKEND\nEMULATION — EMULATOR ADAPTERS\nINICIO\n/\nEmulation — Emulator Adapters\n\nListado de ad",
+        "chipCount": 14
+      },
+      "error": null
+    }
+  ]
+}

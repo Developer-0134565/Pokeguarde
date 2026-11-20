@@ -1,0 +1,57 @@
+{
+  "mission": "OC-STITCH-08",
+  "kind": "CONTROL_GATE",
+  "timestamp": "2026-11-20T19:51:18.870368+00:00",
+  "conditions": [
+    {
+      "id": 1,
+      "ok": true,
+      "detail": "inventario=89 items=89 uninspectable=4"
+    },
+    {
+      "id": 2,
+      "ok": true,
+      "detail": "clasificación principal presente en 89/89; sin UNKNOWN"
+    },
+    {
+      "id": 3,
+      "ok": true,
+      "detail": "rutas=58 duplicadas=0"
+    },
+    {
+      "id": 4,
+      "ok": true,
+      "detail": "ficheros protegidos presentes; línea base de hashes registrada"
+    },
+    {
+      "id": 5,
+      "ok": true,
+      "detail": "bun OK; python3 OK; MCP verificado en Fase B (89 pantallas listadas)"
+    },
+    {
+      "id": 6,
+      "ok": true,
+      "detail": "plan por lotes, arquitectura, mapa de rutas e inventario presentes"
+    },
+    {
+      "id": 7,
+      "ok": true,
+      "detail": "HEAD=b8cacb340088ad096b952e9196d6c16e0354e10b divergencia=0\t0 bun_run_check_exit=0"
+    }
+  ],
+  "ok": true,
+  "protectedBaselineHashes": {
+    "apps/web/src/pet-engine.ts": "26955014098ea15f36b21a8a0e714fcccf4183a8e0988cbea801abf9cfd096bb",
+    "apps/web/src/nursery.ts": "f629416d79699db7c4ff749f7b8064c42321ff7113dcf0f3a67e8885b2856262",
+    "apps/web/src/main.ts": "25e67b7aeb8e235fce4369166fbe8a7bf24c84f9c05dfa52bc28f93954ed7530",
+    "apps/web/assets/room/guarderia.png": "bcedbd6656113e43aca4f66cc932cd61b07fa02af4e7bb9a9ab26edaf56eb095",
+    "data/pokegotchi.db": "3c6fb19447b7f58441822006c7e422cb2744274a7817b3a8b9d9609d3001fb4a"
+  },
+  "initialCheckTail": [
+    "  ok   shell.css existe",
+    "",
+    "OC-STITCH-05: todas las comprobaciones correctas.",
+    "",
+    "Todo correcto."
+  ]
+}

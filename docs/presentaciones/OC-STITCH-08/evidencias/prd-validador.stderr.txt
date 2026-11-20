@@ -1,0 +1,2 @@
+      └─ [FAIL] RF-01.1 debe exigir Guardería Bi-Plaza (2/2 Pokémon)
+      └─ [FAIL] RF-01.4 debe incluir Crianza Biológica y eclosión Phione

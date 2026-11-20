@@ -1,0 +1,86 @@
+{
+  "politica": "PG-DOC-01",
+  "nota": "Fuentes canónicas de los paquetes retrospectivos. Solo se usan métricas documentadas.",
+  "misiones": [
+    {
+      "id": "PG-IP-01",
+      "fuente": "docs/presentaciones/PG-IP-01/PG-IP-01-INFORME.md"
+    },
+    {
+      "id": "PG-IP-02",
+      "fuente": "docs/presentaciones/PG-IP-02/PG-IP-02-INFORME.md"
+    },
+    {
+      "id": "PG-IP-03",
+      "fuente": "docs/presentaciones/PG-IP-03/PG-IP-03-INFORME.md"
+    },
+    {
+      "id": "PG-IP-04",
+      "fuente": "docs/presentaciones/PG-IP-04/PG-IP-04-INFORME.md"
+    },
+    {
+      "id": "PG-IP-04D",
+      "fuente": "docs/presentaciones/PG-IP-04D/PG-IP-04D-INFORME.md"
+    },
+    {
+      "id": "PG-IP-05",
+      "fuente": "docs/presentaciones/PG-IP-05/PG-IP-05-INFORME.md"
+    },
+    {
+      "id": "PG-IP-05B",
+      "fuente": "docs/presentaciones/PG-IP-05B/PG-IP-05B-INFORME.md"
+    },
+    {
+      "id": "PG-IP-06",
+      "fuente": "docs/presentaciones/PG-IP-06/PG-IP-06-INFORME.md"
+    },
+    {
+      "id": "PG-IP-07",
+      "fuente": "docs/presentaciones/PG-IP-07/PG-IP-07-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-01",
+      "fuente": "docs/informes/auditorias/OC-STITCH-01/OC-STITCH-01-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-02",
+      "fuente": "docs/presentaciones/OC-STITCH-02/OC-STITCH-02-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-03",
+      "fuente": "docs/presentaciones/OC-STITCH-03/OC-STITCH-03-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-04",
+      "fuente": "docs/presentaciones/OC-STITCH-04/OC-STITCH-04-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-04R",
+      "fuente": "docs/presentaciones/OC-STITCH-04R/OC-STITCH-04R-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-05",
+      "fuente": "docs/presentaciones/OC-STITCH-05/OC-STITCH-05-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-05V",
+      "fuente": "docs/presentaciones/OC-STITCH-05V/OC-STITCH-05V-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-06",
+      "fuente": "docs/presentaciones/OC-STITCH-06/OC-STITCH-06-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-07",
+      "fuente": "docs/presentaciones/OC-STITCH-07/OC-STITCH-07-INFORME.md"
+    },
+    {
+      "id": "OC-STITCH-08",
+      "fuente": "docs/presentaciones/OC-STITCH-08/OC-STITCH-08-INFORME.md"
+    },
+    {
+      "id": "OC-SYNC-09",
+      "fuente": "docs/presentaciones/OC-SYNC-09/OC-SYNC-09-INFORME.md"
+    }
+  ]
+}

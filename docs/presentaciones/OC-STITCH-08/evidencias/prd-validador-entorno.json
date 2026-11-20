@@ -1,0 +1,22 @@
+{
+  "mission": "OC-STITCH-08",
+  "phase": "I",
+  "validator": {
+    "original": "/tmp/opencode/stitch06-refs/prd-validator.txt",
+    "sha256": "9a8a76ffd2d7bfb7ca318c1622bc689c702d3035458d83734cc33efb82c2b989",
+    "isolatedCopy": "/tmp/opencode/oc-stitch-08-validator/verify-prd-conformance.ts",
+    "modified": false
+  },
+  "prd": {
+    "original": "/tmp/opencode/stitch06-refs/prd-master.json",
+    "sha256": "3601b9a6d0f8cc4a78a9d3bba059f65f136c6697a57c4ffaab00b99acf0bcb9f",
+    "isolatedCopy": "/tmp/opencode/oc-stitch-08-validator/prd-canonical.json"
+  },
+  "command": "env -i HOME=\"$HOME\" PATH=\"$PATH\" bun /tmp/opencode/oc-stitch-08-validator/verify-prd-conformance.ts /tmp/opencode/oc-stitch-08-validator/prd-canonical.json > evidencias/prd-validador.stdout.txt 2> evidencias/prd-validador.stderr.txt",
+  "exitCode": 1,
+  "outputs": {
+    "stdout": "evidencias/prd-validador.stdout.txt",
+    "stderr": "evidencias/prd-validador.stderr.txt",
+    "exit": "evidencias/prd-validador.exit.txt"
+  }
+}

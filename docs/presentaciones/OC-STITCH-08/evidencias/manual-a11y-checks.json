@@ -1,0 +1,61 @@
+{
+  "mission": "OC-STITCH-08",
+  "phase": "K",
+  "method": "agent-browser (Chrome/CDP), axe-core embebido 4.12.1 y comprobaciones DOM reales en http://127.0.0.1:8787",
+  "viewport": { "width": 1440, "height": 900 },
+  "checks": [
+    {
+      "id": "tap-targets-home-before",
+      "status": "VERIFICADO",
+      "route": "/",
+      "note": "Medición real antes del cambio de CSS; 12 controles visibles por debajo de 44 px.",
+      "elements": [
+        { "class": "pg-shell-nav__link", "heightPx": 30, "count": 4 },
+        { "class": "pg-shell-login", "heightPx": 32 },
+        { "class": "pg-switcher-trigger", "heightPx": 32 },
+        { "class": "pg-home__cta", "heightPx": 42, "count": 2 },
+        { "class": "pg-home__input", "heightPx": 34, "count": 3 },
+        { "class": "pg-home__social-btn", "heightPx": 29, "count": 2 }
+      ]
+    },
+    {
+      "id": "tap-targets-after",
+      "status": "VERIFICADO",
+      "routes": ["/", "/#/crianza"],
+      "visibleInteractiveElementsBelow44Px": 0,
+      "detail": "En '/' todos los controles visibles miden >=44 px; en '/#/crianza' tampoco queda ninguno por debajo de 44 px tras añadir min-height a .pg-btn/.pg-rail__item/.pg-page__crumb en shell.css."
+    },
+    {
+      "id": "focus-visible",
+      "status": "VERIFICADO",
+      "detail": "Al enfocar con teclado el primer .pg-home__feature, document.activeElement es el artículo y el outline calculado es solid de 3 px. Regla global :focus-visible en apps/web/src/theme/base.css (2 px, offset 2 px).",
+      "keyboardActivation": {
+        "key": "Enter",
+        "before": "#/",
+        "after": "#/guarderia",
+        "note": "El artículo es tabIndex=0 y tiene manejadores Enter/Espacio en apps/web/src/app/views.ts; el foco no se restaura tras el cambio de ruta (SPA), comportamiento observado no corregido por estar fuera del ámbito de edición."
+      }
+    },
+    {
+      "id": "dialogs",
+      "status": "VERIFICADO",
+      "detail": "Control+K abre un único dialog.pg-dialog.pg-dialog--switcher; el foco inicial está en input.pg-switcher__input; Escape lo cierra (openDialogs=0). Tras cerrar, el foco queda en BODY, no en el botón de apertura (mejora pendiente en switcher.ts, fuera de ámbito).",
+      "nativePokemonDialog": "index.html define <dialog id=\"mon\"> con botón de cierre; ruta de cierre en main.ts. No se abrió una ficha en esta comprobación."
+    },
+    {
+      "id": "reduced-motion",
+      "status": "VERIFICADO",
+      "detail": "Con emulación prefers-reduced-motion: reduce, matchMedia devuelve true; la transición y animación calculadas en .pg-shell-nav__link son 1e-05s y scrollBehavior es auto, gracias a la regla global en apps/web/src/theme/base.css."
+    }
+  ],
+  "computedContrastAfter": [
+    { "selector": ".pg-shell-head__badge--red", "foreground": "#fff9ec", "background": "#c92f2f", "ratio": 5.09 },
+    { "selector": ".pg-shell-nav__link[aria-current=page]", "foreground": "#fff9ec", "background": "#c92f2f", "ratio": 5.09 },
+    { "selector": ".pg-home__play", "foreground": "#fff9ec", "background": "#c92f2f", "ratio": 5.09 },
+    { "selector": ".pg-home__drop-hint", "foreground": "#78584f", "background": "#fff9ec", "ratio": 6.05 },
+    { "selector": ".pg-home__cta", "foreground": "#fff9ec", "background": "#c92f2f", "ratio": 5.09 },
+    { "selector": ".pg-home__mock-note", "foreground": "#78584f", "background": "#fff9ec", "ratio": 6.05 },
+    { "selector": ".pg-console__online", "foreground": "#06430a", "background": "#9bbc0f", "ratio": 5.29 },
+    { "selector": ".pg-switcher__side-brand", "foreground": "#ff5a5f", "background": "#1d1b1b", "ratio": 5.62 }
+  ]
+}

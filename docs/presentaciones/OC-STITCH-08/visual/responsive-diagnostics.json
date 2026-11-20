@@ -1,0 +1,979 @@
+{
+  "mission": "OC-STITCH-08",
+  "kind": "RESPONSIVE_DIAGNOSTICS",
+  "generatedAt": "2026-11-20T20:23:58+00:00",
+  "session": "stitch08j-957274a7fcad",
+  "note": "Diagnóstico de solo lectura. No se modifica el frontend; los ajustes se reportan al agente padre.",
+  "cases": [
+    {
+      "route": "/crianza",
+      "resolution": "390x844",
+      "overflowX": 17,
+      "probe": {
+        "clientWidth": 390,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+            "width": 395
+          }
+        ],
+        "route": "#/crianza",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/crianza",
+      "resolution": "360x800",
+      "overflowX": 47,
+      "probe": {
+        "clientWidth": 360,
+        "count": 2,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+            "width": 395
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 390,
+            "tag": "SPAN",
+            "text": "storefrontINVENTARIO &amp; TIENDA",
+            "width": 378
+          }
+        ],
+        "route": "#/crianza",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/perfil",
+      "resolution": "390x844",
+      "overflowX": 17,
+      "probe": {
+        "clientWidth": 390,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+            "width": 395
+          }
+        ],
+        "route": "#/perfil",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/perfil",
+      "resolution": "360x800",
+      "overflowX": 47,
+      "probe": {
+        "clientWidth": 360,
+        "count": 2,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+            "width": 395
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 390,
+            "tag": "SPAN",
+            "text": "storefrontINVENTARIO &amp; TIENDA",
+            "width": 378
+          }
+        ],
+        "route": "#/perfil",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/jugadores",
+      "resolution": "390x844",
+      "overflowX": 143,
+      "probe": {
+        "clientWidth": 390,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 533,
+            "tag": "SPAN",
+            "text": "backpackInventario & Tienda",
+            "width": 521
+          }
+        ],
+        "route": "#/jugadores",
+        "scrollWidth": 533
+      }
+    },
+    {
+      "route": "/jugadores",
+      "resolution": "360x800",
+      "overflowX": 173,
+      "probe": {
+        "clientWidth": 360,
+        "count": 2,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 382,
+            "tag": "SPAN",
+            "text": "inventory_2Biblioteca",
+            "width": 176
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 533,
+            "tag": "SPAN",
+            "text": "backpackInventario & Tienda",
+            "width": 521
+          }
+        ],
+        "route": "#/jugadores",
+        "scrollWidth": 533
+      }
+    },
+    {
+      "route": "/tienda",
+      "resolution": "390x844",
+      "overflowX": 17,
+      "probe": {
+        "clientWidth": 390,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+            "width": 395
+          }
+        ],
+        "route": "#/tienda",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/tienda",
+      "resolution": "360x800",
+      "overflowX": 47,
+      "probe": {
+        "clientWidth": 360,
+        "count": 2,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "nest_cam_wired_standCRIANZA &amp; HUEVOS",
+            "width": 395
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 390,
+            "tag": "SPAN",
+            "text": "storefrontINVENTARIO &amp; TIENDA",
+            "width": 378
+          }
+        ],
+        "route": "#/tienda",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/forensics",
+      "resolution": "390x844",
+      "overflowX": 260,
+      "probe": {
+        "clientWidth": 390,
+        "count": 4,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 432,
+            "tag": "SPAN",
+            "text": "▼BIBLIOTECA[03]",
+            "width": 126
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 533,
+            "tag": "SPAN",
+            "text": "◀TIENDA[04]",
+            "width": 101
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 608,
+            "tag": "SPAN",
+            "text": "Guardería",
+            "width": 76
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 650,
+            "tag": "SPAN",
+            "text": "Ficha / Datos",
+            "width": 638
+          }
+        ],
+        "route": "#/forensics",
+        "scrollWidth": 650
+      }
+    },
+    {
+      "route": "/forensics",
+      "resolution": "360x800",
+      "overflowX": 290,
+      "probe": {
+        "clientWidth": 360,
+        "count": 4,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 432,
+            "tag": "SPAN",
+            "text": "▼BIBLIOTECA[03]",
+            "width": 126
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 533,
+            "tag": "SPAN",
+            "text": "◀TIENDA[04]",
+            "width": 101
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 608,
+            "tag": "SPAN",
+            "text": "Guardería",
+            "width": 76
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 650,
+            "tag": "SPAN",
+            "text": "Ficha / Datos",
+            "width": 638
+          }
+        ],
+        "route": "#/forensics",
+        "scrollWidth": 650
+      }
+    },
+    {
+      "route": "/studio/theme/spacing",
+      "resolution": "360x800",
+      "overflowX": 13,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 373,
+            "tag": "SPAN",
+            "text": "straightenSpacing &amp; Density",
+            "width": 361
+          }
+        ],
+        "route": "#/studio/theme/spacing",
+        "scrollWidth": 373
+      }
+    },
+    {
+      "route": "/studio/theme/components",
+      "resolution": "360x800",
+      "overflowX": 5,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 365,
+            "tag": "SPAN",
+            "text": "nest_multi_roomCrianza &amp; Huevos",
+            "width": 353
+          }
+        ],
+        "route": "#/studio/theme/components",
+        "scrollWidth": 365
+      }
+    },
+    {
+      "route": "/studio/theme/layout",
+      "resolution": "360x800",
+      "overflowX": 5,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 365,
+            "tag": "SPAN",
+            "text": "nest_multi_roomCrianza &amp; Huevos",
+            "width": 353
+          }
+        ],
+        "route": "#/studio/theme/layout",
+        "scrollWidth": 365
+      }
+    },
+    {
+      "route": "/studio/theme/preview",
+      "resolution": "360x800",
+      "overflowX": 5,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 365,
+            "tag": "SPAN",
+            "text": "nest_multi_roomCrianza &amp; Huevos",
+            "width": 353
+          }
+        ],
+        "route": "#/studio/theme/preview",
+        "scrollWidth": 365
+      }
+    },
+    {
+      "route": "/studio/theme/tokens",
+      "resolution": "360x800",
+      "overflowX": 5,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 365,
+            "tag": "SPAN",
+            "text": "nest_multi_roomCrianza &amp; Huevos",
+            "width": 353
+          }
+        ],
+        "route": "#/studio/theme/tokens",
+        "scrollWidth": 365
+      }
+    },
+    {
+      "route": "/studio/shell",
+      "resolution": "390x844",
+      "overflowX": 17,
+      "probe": {
+        "clientWidth": 390,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "play_arrowTEST RUN",
+            "width": 395
+          }
+        ],
+        "route": "#/studio/shell",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/studio/shell",
+      "resolution": "360x800",
+      "overflowX": 47,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "play_arrowTEST RUN",
+            "width": 395
+          }
+        ],
+        "route": "#/studio/shell",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/studio/shell/export",
+      "resolution": "390x844",
+      "overflowX": 17,
+      "probe": {
+        "clientWidth": 390,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "play_arrowTEST RUN",
+            "width": 395
+          }
+        ],
+        "route": "#/studio/shell/export",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/studio/shell/export",
+      "resolution": "360x800",
+      "overflowX": 47,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "play_arrowTEST RUN",
+            "width": 395
+          }
+        ],
+        "route": "#/studio/shell/export",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/studio/shell/preview",
+      "resolution": "390x844",
+      "overflowX": 17,
+      "probe": {
+        "clientWidth": 390,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "play_arrowTEST RUN",
+            "width": 395
+          }
+        ],
+        "route": "#/studio/shell/preview",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/studio/shell/preview",
+      "resolution": "360x800",
+      "overflowX": 47,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "play_arrowTEST RUN",
+            "width": 395
+          }
+        ],
+        "route": "#/studio/shell/preview",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/studio/habitat",
+      "resolution": "390x844",
+      "overflowX": 218,
+      "probe": {
+        "clientWidth": 390,
+        "count": 2,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 449,
+            "tag": "SPAN",
+            "text": "play_arrowPREVIEW",
+            "width": 143
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 608,
+            "tag": "SPAN",
+            "text": "file_downloadEXPORT",
+            "width": 160
+          }
+        ],
+        "route": "#/studio/habitat",
+        "scrollWidth": 608
+      }
+    },
+    {
+      "route": "/studio/habitat",
+      "resolution": "360x800",
+      "overflowX": 248,
+      "probe": {
+        "clientWidth": 360,
+        "count": 2,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 449,
+            "tag": "SPAN",
+            "text": "play_arrowPREVIEW",
+            "width": 143
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 608,
+            "tag": "SPAN",
+            "text": "file_downloadEXPORT",
+            "width": 160
+          }
+        ],
+        "route": "#/studio/habitat",
+        "scrollWidth": 608
+      }
+    },
+    {
+      "route": "/studio/habitat/devices",
+      "resolution": "390x844",
+      "overflowX": 17,
+      "probe": {
+        "clientWidth": 390,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "play_arrowTEST RUN",
+            "width": 395
+          }
+        ],
+        "route": "#/studio/habitat/devices",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/studio/habitat/devices",
+      "resolution": "360x800",
+      "overflowX": 47,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 407,
+            "tag": "SPAN",
+            "text": "play_arrowTEST RUN",
+            "width": 395
+          }
+        ],
+        "route": "#/studio/habitat/devices",
+        "scrollWidth": 407
+      }
+    },
+    {
+      "route": "/studio/habitat/library",
+      "resolution": "390x844",
+      "overflowX": 218,
+      "probe": {
+        "clientWidth": 390,
+        "count": 2,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 449,
+            "tag": "SPAN",
+            "text": "play_arrowPREVIEW",
+            "width": 143
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 608,
+            "tag": "SPAN",
+            "text": "file_downloadEXPORT",
+            "width": 160
+          }
+        ],
+        "route": "#/studio/habitat/library",
+        "scrollWidth": 608
+      }
+    },
+    {
+      "route": "/studio/habitat/library",
+      "resolution": "360x800",
+      "overflowX": 248,
+      "probe": {
+        "clientWidth": 360,
+        "count": 2,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 449,
+            "tag": "SPAN",
+            "text": "play_arrowPREVIEW",
+            "width": 143
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 608,
+            "tag": "SPAN",
+            "text": "file_downloadEXPORT",
+            "width": 160
+          }
+        ],
+        "route": "#/studio/habitat/library",
+        "scrollWidth": 608
+      }
+    },
+    {
+      "route": "/studio/marketing/localization",
+      "resolution": "360x800",
+      "overflowX": 13,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 373,
+            "tag": "SPAN",
+            "text": "nest_cam_indoorCrianza &amp; Huevos",
+            "width": 361
+          }
+        ],
+        "route": "#/studio/marketing/localization",
+        "scrollWidth": 373
+      }
+    },
+    {
+      "route": "/studio/marketing/assets",
+      "resolution": "360x800",
+      "overflowX": 13,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 373,
+            "tag": "SPAN",
+            "text": "nest_cam_indoorCrianza &amp; Huevos",
+            "width": 361
+          }
+        ],
+        "route": "#/studio/marketing/assets",
+        "scrollWidth": 373
+      }
+    },
+    {
+      "route": "/studio/marketing/calendar",
+      "resolution": "360x800",
+      "overflowX": 13,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 373,
+            "tag": "SPAN",
+            "text": "nest_cam_indoorCrianza &amp; Huevos",
+            "width": 361
+          }
+        ],
+        "route": "#/studio/marketing/calendar",
+        "scrollWidth": 373
+      }
+    },
+    {
+      "route": "/studio/marketing/community",
+      "resolution": "360x800",
+      "overflowX": 13,
+      "probe": {
+        "clientWidth": 360,
+        "count": 1,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 373,
+            "tag": "SPAN",
+            "text": "nest_cam_indoorCrianza &amp; Huevos",
+            "width": 361
+          }
+        ],
+        "route": "#/studio/marketing/community",
+        "scrollWidth": 373
+      }
+    },
+    {
+      "route": "/emulation/rooms/03",
+      "resolution": "768x1024",
+      "overflowX": 241,
+      "probe": {
+        "clientWidth": 768,
+        "count": 3,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 824,
+            "tag": "SPAN",
+            "text": "devicesChasis",
+            "width": 109
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 908,
+            "tag": "SPAN",
+            "text": "drawEditor",
+            "width": 84
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 1009,
+            "tag": "SPAN",
+            "text": "paletteBrand Kit",
+            "width": 991
+          }
+        ],
+        "route": "#/emulation/rooms/03",
+        "scrollWidth": 1009
+      }
+    },
+    {
+      "route": "/emulation/rooms/03",
+      "resolution": "390x844",
+      "overflowX": 613,
+      "probe": {
+        "clientWidth": 390,
+        "count": 9,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 482,
+            "tag": "SPAN",
+            "text": "inventory_2Cajas",
+            "width": 134
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 608,
+            "tag": "SPAN",
+            "text": "backpackMochila",
+            "width": 126
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 709,
+            "tag": "SPAN",
+            "text": "forestBiomas",
+            "width": 101
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 818,
+            "tag": "SPAN",
+            "text": "devicesChasis",
+            "width": 109
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 902,
+            "tag": "SPAN",
+            "text": "drawEditor",
+            "width": 84
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 1003,
+            "tag": "SPAN",
+            "text": "paletteBrand Kit",
+            "width": 991
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 398,
+            "tag": "SPAN",
+            "text": "colorizeColores",
+            "width": 126
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 566,
+            "tag": "SPAN",
+            "text": "match_caseTipografía",
+            "width": 168
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 659,
+            "tag": "SPAN",
+            "text": "tokenTokens",
+            "width": 92
+          }
+        ],
+        "route": "#/emulation/rooms/03",
+        "scrollWidth": 1003
+      }
+    },
+    {
+      "route": "/emulation/rooms/03",
+      "resolution": "360x800",
+      "overflowX": 643,
+      "probe": {
+        "clientWidth": 360,
+        "count": 9,
+        "offenders": [
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 482,
+            "tag": "SPAN",
+            "text": "inventory_2Cajas",
+            "width": 134
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 608,
+            "tag": "SPAN",
+            "text": "backpackMochila",
+            "width": 126
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 709,
+            "tag": "SPAN",
+            "text": "forestBiomas",
+            "width": 101
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 818,
+            "tag": "SPAN",
+            "text": "devicesChasis",
+            "width": 109
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 902,
+            "tag": "SPAN",
+            "text": "drawEditor",
+            "width": 84
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 1003,
+            "tag": "SPAN",
+            "text": "paletteBrand Kit",
+            "width": 991
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 398,
+            "tag": "SPAN",
+            "text": "colorizeColores",
+            "width": 126
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 566,
+            "tag": "SPAN",
+            "text": "match_caseTipografía",
+            "width": 168
+          },
+          {
+            "cls": "pg-outline__chip",
+            "id": "",
+            "right": 659,
+            "tag": "SPAN",
+            "text": "tokenTokens",
+            "width": 92
+          }
+        ],
+        "route": "#/emulation/rooms/03",
+        "scrollWidth": 1003
+      }
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "mission": "OC-SYNC-09",
+  "engine": "axe-core 4.12.1 embebido en agent-browser",
+  "bundleJs": "b446105a9596b41ecc3e79814067d5ebb0b0473998de26c7c21b55d8db9dc006",
+  "bundleCss": "c88acfd3f97c7a57b1c4f2044bdc7a3184382b54ebde95c732fdcf047af97d15",
+  "routesAudited": 58,
+  "routesWithViolations": 0,
+  "totalViolations": 0,
+  "results": [
+    {
+      "route": "/home",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/guarderia",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/biblioteca",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/biblioteca/equipo",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/ficha",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/crianza",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/perfil",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/jugadores",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/tienda",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/forensics",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/colors",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/typography",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/spacing",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/components",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/layout",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/preview",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/tokens",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/designmd",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/theme/tripanel",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/shell",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/shell/export",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/shell/preview",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/habitat",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/habitat/devices",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/habitat/library",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/brand",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/social",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/creative",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/press",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/roadmap",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/campaigns",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/copy",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/localization",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/assets",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/calendar",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/community",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/analytics",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/studio/marketing/export",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/flows",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/create",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/rooms/01",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/rooms/02",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/rooms/03",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/rooms/04",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/rooms/05",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/battle",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/trade",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/studio",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/studio/manager",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/studio/monitor",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/studio/link",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/studio/permissions",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/studio/logs",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/studio/analytics",
+      "exitCode": 0,
+      "violations": []
+    },
+    {
+      "route": "/emulation/studio/adapters",
+      "exitCode": 0,
+      "violations": []
+    }
+  ]
+}
