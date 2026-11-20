@@ -1,14 +1,14 @@
 {
   "mision": "OC-SYNC-09",
   "titulo": "OC-SYNC-09 — Informe ejecutivo y final",
-  "fecha": "2026-11-20T21:07:59+00:00",
+  "fecha": "2026-11-20T21:11:12+00:00",
   "ok": true,
   "errores": [],
   "pendientes": [
     "Apertura desde la GUI de Base NO comprobada: el bridge UNO aborta en este equipo (DisposedException); las 9 tablas SÍ se consultaron con el motor HSQLDB embebido que usa Base"
   ],
   "entregables": {
-    "OC-SYNC-09-INFORME.md": 6600,
+    "OC-SYNC-09-INFORME.md": 6992,
     "OC-SYNC-09-PRESENTACION.odp": 28856,
     "OC-SYNC-09-DIAGRAMA.odg": 18057,
     "OC-SYNC-09-INFORME.pdf": 44628,
@@ -21,7 +21,7 @@
     "tablas_consultables": true,
     "tablas": {
       "misiones": 21,
-      "fuentes": 169,
+      "fuentes": 171,
       "roms": 168,
       "saves": 11,
       "pokemon": 34,

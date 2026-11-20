@@ -37,7 +37,7 @@ Auditar el repositorio Pokeguarde, separar por procedencia los cambios de OC-STI
 
 1. **Estado de OC-SYNC-09:** SYNC_PASS_WITH_WARNINGS.
 2. **HEAD inicial:** `b8cacb340088ad096b952e9196d6c16e0354e10b` (`docs(stitch): add visual reference designs (deduplicated)`).
-3. **HEAD final:** ver punto 17 (último commit de esta misión).
+3. **HEAD final:** el commit de cierre documental de esta misión (último de los cinco; véanse sus hash y los de los cuatro anteriores en el punto 17 y en `git log`).
 4. **Rama:** `main`, remoto `https://github.com/Developer-0134565/Pokeguarde.git`.
 5. **Divergencia inicial:** `HEAD...origin/main` = `0 0` tras `git fetch origin`.
 6. **Divergencia final:** `0 0`; HEAD local = `origin/main` (ver punto 19).
@@ -51,9 +51,9 @@ Auditar el repositorio Pokeguarde, separar por procedencia los cambios de OC-STI
 14. **Resultado del validador PRD:** EXIT 1 literal, 5/6 suites, 40 aserciones, `NO CONFORME`. `RF-01.1` y `RF-01.4` exigen literales dentro de `specs` que el PRD solo contiene en `title`. Desalineación documental, no fallo funcional; corregirla exigiría decisiones nuevas no autorizadas. Queda BLOQUEADO y documentado sin modificar PRD ni validador (SHAs `3601b9a6…c0bcb9f` y `9a8a76ff…b82c2b989` intactos).
 15. **Resultado de `bun run check`:** EXIT 0, «Todo correcto.», 22/22 comandos sin FAIL, tras todas las correcciones.
 16. **Integridad de BD, fixtures, ROMs y saves:** 23/23 archivos sin cambios (ANTES==DESPUÉS). BD `3c6fb19447b7f58441822006c7e422cb2744274a7817b3a8b9d9609d3001fb4a`, servidor `6db1a5aa58178dda531a9f172a24a8526702d7ca53099da5110fe5c7139c14f7`, 7 fixtures y 14 ROMs idénticos. Solo lectura; sin extracciones ni publicación de material protegido.
-17. **Commits creados:** ver el registro final de commits en este paquete documental.
-18. **Push realizado:** ver el registro final en este paquete documental; sin `--force`.
-19. **HEAD remoto confirmado:** ver el registro final; divergencia `0 0`.
+17. **Commits creados:** `fda2ef7aa53a07bd99132420c3897d46e3e41087` (infraestructura), `1ffb87abb98a5a8c9a9e7b506ef61b1ddfbe1186` (58 páginas), `e12d33b8f61417cb60dc02a214fc531103e08fa7` (comparador visual), `230cb0bee72eeeb89c1e839ad7175b1ceb45e186` (documentación) y el commit de cierre documental que registra estos hashes.
+18. **Push realizado:** `git push origin main`, fast-forward, sin `--force`; se confirma en el registro final del paquete.
+19. **HEAD remoto confirmado:** `origin/main` igual al HEAD local; divergencia `0 0`.
 20. **Riesgos pendientes:** revisión visual independiente (el modelo no acepta imágenes), doce `VISUAL_FAIL` históricos sin recaptura, quince `REVIEW_REQUIRED`, validador PRD BLOQUEADO, dominios UI prototipo sin backend, y regla Phione/dos plazas PG-08 pendiente de decisión ajena.
 
 ### Hashes protegidos
