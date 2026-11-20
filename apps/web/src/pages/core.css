@@ -1,0 +1,13 @@
+/* OC-STITCH-08 — estilos del núcleo (prefijo pg-co-). */
+.pg-co-flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+.pg-co-step {
+  border: 1px solid #2f5a7a; background: #1b2f49; color: #4fc3f7;
+  padding: 12px 10px; font-size: 11px; letter-spacing: .06em; text-align: center;
+}
+.pg-co-step[data-pg-stitch]::after {
+  content: attr(data-pg-stitch); display: block; margin-top: 6px;
+  font-size: 9px; color: #93b4cf; letter-spacing: 0;
+}
+.pg-co-panel-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.pg-co-panel-links .pg-btn.is-active { border-color: #ffc857; color: #ffc857; background: #2a2413; }
+@media (max-width: 520px) { .pg-co-flow { grid-template-columns: 1fr; } }

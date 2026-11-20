@@ -1,0 +1,110 @@
+/* OC-STITCH-08 — estilos compartidos de las páginas integradas.
+   Prefijo pg- para evitar colisiones con shell.css y theme/*.css. */
+
+.pg-page {
+  --pg-bg: #0c1626;
+  --pg-panel: #14243a;
+  --pg-panel-2: #1b2f49;
+  --pg-line: #2f5a7a;
+  --pg-ink: #e8f2ff;
+  --pg-dim: #93b4cf;
+  --pg-red: #ff5a5f;
+  --pg-blue: #4fc3f7;
+  --pg-amber: #ffc857;
+  --pg-green: #6ee7a8;
+  color: var(--pg-ink);
+  background: var(--pg-bg);
+  padding: 18px clamp(12px, 3vw, 34px) 40px;
+  min-height: 70vh;
+  font-family: "Courier New", ui-monospace, monospace;
+}
+
+.pg-page__head { border-bottom: 2px solid var(--pg-line); padding-bottom: 14px; margin-bottom: 16px; }
+.pg-page__kicker { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pg-page__domain, .pg-page__state {
+  font-size: 10px; letter-spacing: .12em; padding: 4px 8px; border: 1px solid var(--pg-line);
+  text-transform: uppercase;
+}
+.pg-page__domain { color: var(--pg-blue); }
+.pg-page__state--operational { color: var(--pg-green); border-color: var(--pg-green); }
+.pg-page__state--partial { color: var(--pg-amber); border-color: var(--pg-amber); }
+.pg-page__state--ui_prototype { color: var(--pg-red); border-color: var(--pg-red); }
+.pg-page__state--blocked { color: #fff; background: var(--pg-red); }
+.pg-page__title { margin: 10px 0 8px; font-size: clamp(20px, 2.6vw, 34px); letter-spacing: .04em; text-transform: uppercase; }
+.pg-page__crumbs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 11px; color: var(--pg-dim); }
+.pg-page__crumb-sep { color: var(--pg-blue); }
+.pg-page__crumb-current { color: var(--pg-ink); }
+
+.pg-page__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 320px); gap: 18px; align-items: start; }
+.pg-page__aside:empty { display: none; }
+@media (max-width: 900px) { .pg-page__layout { grid-template-columns: 1fr; } }
+
+.pg-page__notice {
+  border-left: 4px solid var(--pg-amber); background: #2a2413; color: #ffe6a8;
+  padding: 10px 12px; font-size: 12px; line-height: 1.5; margin: 0 0 16px;
+}
+.pg-page__body { display: grid; gap: 16px; }
+.pg-page__aside { display: grid; gap: 16px; position: sticky; top: 10px; }
+
+.pg-sec { background: var(--pg-panel); border: 1px solid var(--pg-line); padding: 14px; }
+.pg-sec__title { margin: 0 0 8px; font-size: 14px; color: var(--pg-blue); letter-spacing: .08em; text-transform: uppercase; }
+.pg-sec__sub { margin: 0 0 12px; font-size: 12px; color: var(--pg-dim); }
+
+.pg-btn {
+  font: inherit; font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--pg-ink); background: var(--pg-panel-2); border: 1px solid var(--pg-line);
+  padding: 7px 10px; min-height: 44px; cursor: pointer;
+}
+.pg-btn:hover:not(:disabled) { border-color: var(--pg-blue); background: #24415f; }
+.pg-btn:focus-visible { outline: 2px solid var(--pg-amber); outline-offset: 2px; }
+.pg-btn:disabled { opacity: .55; cursor: not-allowed; }
+.pg-page__crumb {
+  padding: 3px 6px; font-size: 10px; min-height: 44px;
+  color: var(--pg-blue); background: var(--pg-panel-2); border: 1px solid var(--pg-line);
+}
+
+.pg-toolbar { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; border: 1px dashed var(--pg-line); background: #101d2f; }
+
+.pg-table-wrap { overflow-x: auto; }
+.pg-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.pg-table caption { text-align: left; color: var(--pg-dim); padding-bottom: 6px; font-size: 11px; }
+.pg-table th, .pg-table td { border: 1px solid var(--pg-line); padding: 7px 9px; text-align: left; vertical-align: top; }
+.pg-table thead th { background: var(--pg-panel-2); color: var(--pg-blue); font-size: 10px; letter-spacing: .1em; }
+.pg-table tbody th { color: var(--pg-dim); font-weight: normal; width: 38%; }
+
+.pg-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.pg-card { border: 1px solid var(--pg-line); background: var(--pg-panel-2); padding: 12px; }
+.pg-card__tag { display: inline-block; font-size: 9px; letter-spacing: .1em; color: var(--pg-amber); border: 1px solid var(--pg-amber); padding: 2px 5px; margin-bottom: 7px; }
+.pg-card__title { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; }
+.pg-card__text { margin: 0; font-size: 11px; color: var(--pg-dim); line-height: 1.5; }
+
+.pg-empty { display: flex; align-items: center; gap: 10px; border: 1px dashed var(--pg-line); padding: 12px; color: var(--pg-dim); font-size: 12px; }
+.pg-empty__icon { font-size: 22px; color: var(--pg-blue); }
+
+.pg-progress { margin-bottom: 10px; font-size: 11px; }
+.pg-progress__head { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.pg-progress__track { height: 8px; background: #0a1422; border: 1px solid var(--pg-line); }
+.pg-progress__fill { height: 100%; background: var(--pg-blue); }
+
+.pg-code { display: block; overflow-wrap: anywhere; background: #0a1422; border: 1px solid var(--pg-line); padding: 8px; font-size: 11px; color: var(--pg-amber); }
+
+.pg-rail { background: var(--pg-panel); border: 1px solid var(--pg-line); padding: 12px; }
+.pg-rail__title { margin: 0 0 10px; font-size: 12px; color: var(--pg-blue); text-transform: uppercase; letter-spacing: .08em; }
+.pg-rail__list { display: grid; gap: 4px; }
+.pg-rail__item {
+  text-align: left; width: 100%; font: inherit; font-size: 14px; cursor: pointer;
+  color: var(--pg-ink); background: var(--pg-panel-2); border: 1px solid var(--pg-line);
+  padding: 7px 9px; min-height: 44px;
+}
+.pg-rail__item.is-active { border-color: var(--pg-amber); color: var(--pg-amber); background: #2a2413; }
+
+.pg-outline { background: var(--pg-panel); border: 1px solid var(--pg-line); padding: 12px; }
+.pg-outline__title { margin: 0 0 8px; font-size: 12px; color: var(--pg-blue); text-transform: uppercase; }
+.pg-outline__sub { margin: 10px 0 5px; font-size: 10px; color: var(--pg-dim); text-transform: uppercase; }
+.pg-outline__list { margin: 0; padding-left: 18px; font-size: 11px; line-height: 1.7; }
+.pg-outline__chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.pg-outline__chip { border: 1px solid var(--pg-line); padding: 2px 5px; font-size: 9px; color: var(--pg-dim); }
+.pg-outline__id { font-size: 9px; color: #6f93b0; margin: 10px 0 0; }
+
+/* Componentes específicos por dominio: se añaden en creator.css,
+   marketing.css y emulation.css sin sobrescribir estas reglas base. */

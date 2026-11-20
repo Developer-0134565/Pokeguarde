@@ -1,0 +1,194 @@
+/* OC-STITCH-08 — Lote 3: Marketing Studio.
+   Prefijo pg-mk- para no colisionar con pages.css ni con otros estudios.
+   Hereda los tokens --pg-* definidos en .pg-page. */
+
+.pg-mk-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  border: 1px solid var(--pg-red);
+  background: #2a131a;
+  padding: 10px 12px;
+}
+
+.pg-mk-badge {
+  display: inline-block;
+  flex: none;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  background: #b3262b;
+  border: 1px solid #ffffff;
+  padding: 3px 7px;
+}
+
+.pg-mk-banner__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #ffd9db;
+}
+
+.pg-mk-panel { display: block; min-width: 0; }
+
+.pg-mk-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.9fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.pg-mk-split__main,
+.pg-mk-split__side {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .pg-mk-split { grid-template-columns: 1fr; }
+}
+
+.pg-mk-gauges { display: grid; gap: 2px; }
+
+/* Paleta de marca: la muestra es decorativa, la etiqueta aporta el texto. */
+.pg-mk-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pg-mk-swatch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--pg-line);
+  background: var(--pg-panel-2);
+  padding: 6px 8px;
+}
+
+.pg-mk-swatch__chip {
+  display: inline-block;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 0 1px var(--pg-line);
+}
+
+.pg-mk-swatch__label { font-size: 10px; color: var(--pg-ink); }
+
+.pg-mk-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.pg-mk-chip {
+  display: inline-block;
+  border: 1px dashed var(--pg-line);
+  color: var(--pg-dim);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 4px 7px;
+}
+
+/* Editor tri-panel: tres columnas visuales, sin controles interactivos. */
+.pg-mk-triPanel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.pg-mk-col {
+  border: 1px solid var(--pg-line);
+  background: #101d2f;
+  padding: 10px;
+  min-width: 0;
+}
+
+.pg-mk-col__title {
+  margin: 0 0 8px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--pg-blue);
+}
+
+.pg-mk-col .pg-code { min-height: 46px; }
+
+.pg-mk-timeline { display: grid; gap: 6px; }
+
+.pg-mk-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 3px solid var(--pg-blue);
+  background: var(--pg-panel-2);
+  padding: 7px 9px;
+  font-size: 11px;
+  color: var(--pg-ink);
+}
+
+.pg-mk-step__n {
+  flex: none;
+  font-weight: bold;
+  color: var(--pg-amber);
+}
+
+.pg-mk-week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+}
+
+@media (max-width: 620px) {
+  .pg-mk-week { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.pg-mk-day {
+  display: grid;
+  gap: 6px;
+  border: 1px solid var(--pg-line);
+  background: #101d2f;
+  padding: 7px 4px;
+  text-align: center;
+  min-width: 0;
+}
+
+.pg-mk-day__name {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: var(--pg-blue);
+}
+
+.pg-mk-day__slot {
+  font-size: 9px;
+  color: var(--pg-dim);
+  overflow-wrap: anywhere;
+}
+
+.pg-mk-disclaimer {
+  margin: 0;
+  border-left: 4px solid var(--pg-amber);
+  background: #2a2413;
+  color: #ffe6a8;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.pg-mk-copy .pg-code + .pg-code { margin-top: 8px; }
+
+/* Foco visible para cualquier control añadido dentro del estudio.
+   Los botones de contract.ts ya traen su propio :focus-visible. */
+.pg-mk-panel button:focus-visible,
+.pg-mk-banner button:focus-visible,
+.pg-mk-panel [tabindex]:focus-visible {
+  outline: 2px solid var(--pg-amber);
+  outline-offset: 2px;
+}
+
+/* Los botones de maqueta deben verse inequívocamente inertes. */
+.pg-mk-panel .pg-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

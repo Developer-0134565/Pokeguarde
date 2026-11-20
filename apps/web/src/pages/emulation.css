@@ -1,0 +1,225 @@
+/* OC-STITCH-08 — Lote 4: estilos exclusivos de la suite de emulación.
+   Prefijo pg-em- para no colisionar con pages.css, shell.css ni theme/*.css.
+   Todo el contenido es una maqueta: no hay señal, sesión ni enlace real. */
+
+.pg-em-root {
+  --pg-em-warn-bg: #2a1013;
+  --pg-em-warn-ink: #ffd9dc;
+  --pg-em-panel: #101d2f;
+  --pg-em-line: #2f5a7a;
+  --pg-em-dim: #93b4cf;
+}
+
+.pg-em-view {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.pg-em-grid {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.pg-em-grid--room,
+.pg-em-grid--link {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+@media (max-width: 700px) {
+  .pg-em-grid--room,
+  .pg-em-grid--link {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Aviso explícito de Battle Room y Trade Room. */
+.pg-em-warning {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 2px solid var(--pg-red, #ff5a5f);
+  background: var(--pg-em-warn-bg);
+  color: var(--pg-em-warn-ink);
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.pg-em-warning strong {
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.pg-em-warning__text {
+  display: block;
+}
+
+/* Taxonomía literal de la referencia Stitch (headings y buttons reales). */
+.pg-em-source {
+  border: 1px dashed var(--pg-em-line);
+  background: var(--pg-em-panel);
+  padding: 12px;
+  min-width: 0;
+}
+
+.pg-em-source__title {
+  margin: 0 0 8px;
+  font-size: 11px;
+  color: var(--pg-blue, #4fc3f7);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pg-em-source__list {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--pg-em-dim);
+}
+
+.pg-em-source__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.pg-em-source__chip {
+  border: 1px solid var(--pg-em-line);
+  background: #14243a;
+  color: var(--pg-ink, #e8f2ff);
+  padding: 3px 6px;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+/* LCD de referencia: rejilla estática, sin sprites ni partidas. */
+.pg-em-viewport {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.pg-em-viewport__screen {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 10 / 9;
+  border: 6px solid #0a1422;
+  outline: 1px solid var(--pg-em-line);
+  background:
+    repeating-linear-gradient(0deg, rgba(79, 195, 247, 0.08) 0 1px, transparent 1px 6px),
+    repeating-linear-gradient(90deg, rgba(79, 195, 247, 0.06) 0 1px, transparent 1px 6px),
+    #0c1626;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.pg-em-viewport__label {
+  color: var(--pg-blue, #4fc3f7);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.pg-em-viewport__signal {
+  color: var(--pg-red, #ff5a5f);
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+}
+
+.pg-em-viewport__note {
+  color: var(--pg-em-dim);
+  font-size: 10px;
+  max-width: 85%;
+  line-height: 1.5;
+}
+
+/* Asistente de creación: solo cambia el paso visible. */
+.pg-em-wizard {
+  border: 1px solid var(--pg-em-line);
+  background: var(--pg-em-panel);
+  padding: 12px;
+}
+
+.pg-em-wizard__steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pg-em-wizard__step-btn {
+  color: #253347;
+  background: #e6edf6;
+}
+
+.pg-em-wizard__step-btn[aria-current="step"] {
+  border-color: #7a4a00;
+  color: #4a2d00;
+  background: #ffe6a8;
+}
+
+.pg-em-wizard__panel {
+  border: 1px solid var(--pg-em-line);
+  background: #14243a;
+  padding: 14px;
+  min-height: 140px;
+}
+
+.pg-em-wizard__title {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--pg-blue, #4fc3f7);
+  text-transform: uppercase;
+}
+
+.pg-em-wizard__detail {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--pg-ink, #e8f2ff);
+}
+
+.pg-em-wizard__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* Textos auxiliares y de estado. */
+.pg-em-connection {
+  display: grid;
+  gap: 8px;
+}
+
+.pg-em-hint,
+.pg-em-note {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--pg-em-dim);
+}
+
+.pg-em-note {
+  border-left: 3px solid var(--pg-blue, #4fc3f7);
+  padding-left: 10px;
+}
+
+.pg-em-toolbar {
+  margin-top: 4px;
+}
+
+/* Foco visible en todos los controles interactivos del módulo. */
+.pg-em-root :is(button, [tabindex]):focus-visible {
+  outline: 2px solid var(--pg-amber, #ffc857);
+  outline-offset: 2px;
+}
