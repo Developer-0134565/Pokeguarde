@@ -2,6 +2,7 @@ import { adoptPet, closeNursery, openNursery, type Pet } from "/nursery.js";
 import { statName } from "/pet-engine.js";
 import { getLocale, localeTag, t } from "/i18n.ts";
 import { initOverworldSprites, paintOverworld } from "/sprite-runtime.js";
+import { bootShell } from "/shell.js";
 
 type Move = { slot: number; id: number; name: string; pp: number; ppUps: number };
 type Stats = { hp: number; hpMax: number; atk: number; def: number; spa: number; spd: number; spe: number };
@@ -1631,6 +1632,7 @@ function openDossierFromLibrary(ref: MonRef, fromTeam = false) {
 
 function openDossierFromPet(pet: Pet) {
   closeNursery();
+  delete $("#nursery").dataset.pgMounted;
   document.querySelector(".layout")?.classList.add("hidden");
   document.querySelector("#nursery")?.classList.add("hidden");
   const dialog = document.querySelector<HTMLDialogElement>("#mon");
@@ -1720,12 +1722,38 @@ function wireDrop() {
   $("#refresh").onclick = () => loadSaves();
 }
 
-/* Navegación entre biblioteca, ficha y guardería. */
+/* Navegación entre biblioteca, ficha y guardería.
+ * OC-STITCH-05: el router del shell es la fuente de verdad; estas funciones
+ * siguen siendo los adaptadores de la UI legacy y conservan sus contratos. */
+type PgShellHandle = { router: { current(): string; navigate(path: string): void } };
+
+function pgShell(): PgShellHandle | undefined {
+  return (window as unknown as { pgShell?: PgShellHandle }).pgShell;
+}
+
+function syncRoute(path: string) {
+  const shell = pgShell();
+  if (!shell) return;
+  const current = shell.router.current();
+  if (current === path) return;
+  // OC-STITCH-08: /biblioteca/equipo es una subruta de la Biblioteca; el
+  // adaptador legacy no debe reemplazarla por /biblioteca al restaurar la pestaña.
+  if (path === "/biblioteca" && current.startsWith("/biblioteca/")) return;
+  shell.router.navigate(path);
+}
+
+function hideShellViews() {
+  $("#pg-home")?.classList.add("hidden");
+  $("#pg-stub")?.classList.add("hidden");
+}
+
 function libraryChrome() {
-  closeNursery();
+  // La Guardería permanece montada y oculta: conserva su estado y su único rAF.
   $("#nursery").classList.add("hidden");
   $(".layout").classList.remove("hidden");
+  hideShellViews();
   setDossierNav("library");
+  syncRoute("/biblioteca");
 }
 
 function showLibrary() {
@@ -1746,13 +1774,29 @@ function showNursery(preferId?: number) {
   $("#mon")?.close?.();
   $(".layout").classList.add("hidden");
   $("#nursery").classList.remove("hidden");
+  hideShellViews();
   setDossierNav("nursery");
-  openNursery($("#nursery"), showLibrary, preferId, openDossierFromPet);
+  const host = $("#nursery");
+  if (host.dataset.pgMounted !== "1") {
+    openNursery($("#nursery"), showLibrary, preferId, openDossierFromPet);
+    host.dataset.pgMounted = "1";
+  }
+  host.dataset.pgNurseryOpen = "1";
+  syncRoute("/guarderia");
 }
 
-$("#nav-library").onclick = () => showLibrary();
-$("#nav-nursery").onclick = () => showNursery();
-$("#nav-sheet").onclick = () => {
+function showHome() {
+  clearDossier();
+  $(".layout").classList.add("hidden");
+  $("#nursery").classList.add("hidden");
+  $("#sheet").classList.add("hidden");
+  $("#pg-stub").classList.add("hidden");
+  $("#pg-home").classList.remove("hidden");
+  setDossierNav("library");
+  syncRoute("/home");
+}
+
+function showSheet() {
   const ref = currentInventory ? refsOf(currentInventory)[0] : undefined;
   if (ref) {
     openDossierFromLibrary(ref);
@@ -1764,10 +1808,33 @@ $("#nav-sheet").onclick = () => {
   setDossierNav("sheet");
   $(".layout").classList.add("hidden");
   $("#nursery").classList.add("hidden");
+  $("#pg-home")?.classList.add("hidden");
+  $("#pg-stub")?.classList.add("hidden");
   renderDossier();
-};
+  syncRoute("/ficha");
+}
+
+$("#nav-library").onclick = () => showLibrary();
+$("#nav-nursery").onclick = () => showNursery();
+$("#nav-sheet").onclick = showSheet;
 
 applyStaticI18n();
 loadHealth();
 loadSaves();
 wireDrop();
+bootShell({
+  hosts: {
+    home: $("#pg-home"),
+    library: $(".layout"),
+    nursery: $("#nursery"),
+    sheet: $("#sheet"),
+    stub: $("#pg-stub"),
+    header: $("header.top"),
+  },
+  showHome,
+  showLibrary,
+  restoreLibrary,
+  showNursery,
+  showSheet,
+  closeDossier,
+});

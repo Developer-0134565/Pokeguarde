@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="app.title">Pokeguarde · Biblioteca de partidas</title>
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/components.css">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/shell.css">
+  <!-- OC-STITCH-08 — páginas integradas del catálogo Stitch (bundle aislado). -->
+  <link rel="stylesheet" href="/assets/pg08/workbenches.css">
 </head>
 <body>
   <header class="top">
@@ -18,10 +24,15 @@
       <button id="nav-sheet" class="ghost" data-i18n="nav.sheet">Ficha / Datos</button>
       <button id="nav-nursery" class="ghost" data-i18n="nav.nursery">Guardería</button>
     </nav>
+    <button id="pg-switcher" class="ghost pg-switcher-trigger" data-i18n="nav.switcher" aria-keyshortcuts="Control+K Meta+K">Buscador</button>
     <div id="health" class="health" data-i18n="health.checking">comprobando…</div>
   </header>
 
-  <main class="layout">
+  <!-- OC-STITCH-08 — un único landmark principal para todas las vistas. -->
+  <main id="pg-main">
+  <section id="pg-home" class="pg-view" aria-label="Inicio"></section>
+
+  <div class="layout">
     <aside class="panel saves">
       <div class="panel-head">
         <h2 data-i18n="saves.heading">Partidas</h2>
@@ -39,11 +50,14 @@
     <section id="detail" class="panel detail empty">
       <p class="placeholder" data-i18n="detail.placeholder">Selecciona una partida para ver el inventario.</p>
     </section>
-  </main>
+  </div>
 
   <section id="nursery" class="panel nursery hidden"></section>
 
   <section id="sheet" class="panel dossier hidden" aria-live="polite"></section>
+
+  <section id="pg-stub" class="pg-view hidden" aria-live="polite"></section>
+  </main>
 
   <dialog id="mon">
     <form method="dialog"><button class="close" data-i18n-aria="dialog.close" aria-label="Cerrar">×</button></form>

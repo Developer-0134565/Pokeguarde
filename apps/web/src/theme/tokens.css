@@ -1,0 +1,79 @@
+/* OC-STITCH-04 — Pocket Tech 1999 tokens.
+ * Intención visual extraída de Stitch; valores adaptados a ejecución local sin CDN.
+ * Este archivo no se carga automáticamente en index.html todavía.
+ */
+
+:root {
+  /* Color — superficie y tinta */
+  --pg-color-canvas: #fff9ec;
+  --pg-color-paper: #faf3e2;
+  --pg-color-surface: #fffdf7;
+  --pg-color-ink: #1d1b1b;
+  --pg-color-ink-soft: #5b403e;
+  --pg-color-muted: #8f706d;
+  --pg-color-line: #d8d2c2;
+
+  /* Color — acentos de la marca */
+  --pg-color-red: #d93636;
+  --pg-color-red-dark: #b51a21;
+  --pg-color-blue: #0055c7;
+  --pg-color-yellow: #f8bd2a;
+  --pg-color-green: #9bbc0f;
+  --pg-color-purple: #5865f2;
+
+  /* Color — estados semánticos */
+  --pg-color-legal: #2f7d32;
+  --pg-color-unverified: #a86b00;
+  --pg-color-illegal: #d93636;
+  --pg-color-focus: #0055c7;
+  --pg-color-shadow: rgb(29 27 27 / 0.22);
+
+  /* Tipografía — equivalentes locales, sin Google Fonts */
+  --pg-font-display: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --pg-font-mono: ui-monospace, "DejaVu Sans Mono", "Courier New", monospace;
+  --pg-font-size-xs: 0.75rem;
+  --pg-font-size-sm: 0.875rem;
+  --pg-font-size-md: 1rem;
+  --pg-font-size-lg: 1.25rem;
+  --pg-font-size-xl: 1.5rem;
+  --pg-font-size-2xl: 2rem;
+  --pg-font-weight-regular: 400;
+  --pg-font-weight-bold: 700;
+  --pg-line-height-tight: 1.15;
+  --pg-line-height-normal: 1.5;
+
+  /* Espaciado */
+  --pg-space-1: 4px;
+  --pg-space-2: 8px;
+  --pg-space-3: 12px;
+  --pg-space-4: 16px;
+  --pg-space-5: 24px;
+  --pg-space-6: 32px;
+  --pg-space-7: 48px;
+  --pg-space-8: 64px;
+
+  /* Radio */
+  --pg-radius-sm: 4px;
+  --pg-radius-md: 8px;
+  --pg-radius-lg: 14px;
+  --pg-radius-pill: 999px;
+
+  /* Sombra */
+  --pg-shadow-1: 0 1px 0 rgb(29 27 27 / 0.12);
+  --pg-shadow-2: 0 8px 24px var(--pg-color-shadow);
+
+  /* Capas */
+  --pg-z-base: 0;
+  --pg-z-raised: 10;
+  --pg-z-sticky: 100;
+  --pg-z-overlay: 1000;
+  --pg-z-toast: 1100;
+
+  /* Estados y movimiento */
+  --pg-state-hover: rgb(217 54 54 / 0.08);
+  --pg-state-active: rgb(217 54 54 / 0.16);
+  --pg-state-disabled-opacity: 0.5;
+  --pg-state-focus-ring: 0 0 0 3px rgb(0 85 199 / 0.35);
+  --pg-transition-fast: 120ms ease-out;
+  --pg-transition-medium: 200ms ease-out;
+}

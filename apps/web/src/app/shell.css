@@ -1,0 +1,1001 @@
+/* OC-STITCH-06 — shell visual reconstruido desde las pantallas canónicas de
+ * Stitch. Se aplica solo cuando bootShell añade `pg-stitch-06` al body: la
+ * apariencia oscura heredada queda intacta en archivos, pero deja de verse.
+ * No se modifica el Canvas, el motor ni los contratos de OC-STITCH-05. */
+
+body.pg-stitch-06 {
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  color: #1d1b1b;
+  background-color: #fef8f7;
+  background-image:
+    radial-gradient(#1d1b1b 0.65px, transparent 0.65px),
+    linear-gradient(135deg, rgb(255 249 236 / 0.94), rgb(224 218 201 / 0.82));
+  background-size: 16px 16px, auto;
+  font-family: "Space Mono", "DejaVu Sans Mono", ui-monospace, monospace;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+body.pg-stitch-06 *,
+body.pg-stitch-06 *::before,
+body.pg-stitch-06 *::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Cabecera: una sola navegación visible --------------------- */
+
+body.pg-stitch-06 header.top {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 10px max(16px, calc((100vw - 1440px) / 2));
+  border-bottom: 2px solid #1d1b1b;
+  background: #fff9ec;
+  box-shadow: 0 2px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 header.top .brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  margin: 0;
+}
+
+body.pg-stitch-06 header.top .brand .dot {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border: 3px solid #1d1b1b;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #c92f2f 0 50%, #fff9ec 50% 100%);
+  box-shadow: 2px 2px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 header.top .brand h1 {
+  margin: 0;
+  color: #c92f2f;
+  font: 800 1.2rem/1 "Trebuchet MS", "DejaVu Sans", sans-serif;
+  letter-spacing: 0.09em;
+  text-shadow: 2px 2px 0 #1d1b1b;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 header.top .brand .tag {
+  display: none;
+}
+
+body.pg-stitch-06 header.top .pg-brand-sub {
+  color: #5b403e;
+  font: 700 0.55rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  body.pg-stitch-06 header.top .pg-brand-sub {
+    display: none;
+  }
+}
+
+body.pg-stitch-06 .pg-shell-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+body.pg-stitch-06 .pg-shell-head__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+body.pg-stitch-06 .pg-shell-head__badge,
+body.pg-stitch-06 .pg-chip {
+  display: inline-block;
+  padding: 3px 7px;
+  border: 2px solid #1d1b1b;
+  background: #fff9ec;
+  box-shadow: 2px 2px 0 #1d1b1b;
+  color: #1d1b1b;
+  font: 700 0.63rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-shell-head__badge--red {
+  background: #c92f2f;
+  color: #fff9ec;
+}
+
+body.pg-stitch-06 .pg-shell-head__badge--blue {
+  background: #0055c7;
+  color: #fff9ec;
+}
+
+body.pg-stitch-06 .pg-shell-head__badge--amber {
+  background: #fbc02d;
+}
+
+body.pg-stitch-06 .pg-shell-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+  margin-left: auto;
+}
+
+body.pg-stitch-06 .pg-shell-nav__link {
+  min-height: 44px;
+  padding: 7px 9px;
+  border: 2px solid transparent;
+  background: transparent;
+  color: #1d1b1b;
+  font: 700 0.7rem/1.1 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+body.pg-stitch-06 .pg-shell-nav__link:hover,
+body.pg-stitch-06 .pg-shell-nav__link[aria-current="page"] {
+  border-color: #1d1b1b;
+  background: #c92f2f;
+  color: #fff9ec;
+  box-shadow: 2px 2px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 .pg-shell-login {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 2px solid #1d1b1b;
+  background: #fbc02d;
+  box-shadow: 2px 2px 0 #1d1b1b;
+  color: #1d1b1b;
+  font: 700 0.68rem/1.1 "DejaVu Sans Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+/* La navegación heredada permanece en el DOM por contrato, pero no se ve. */
+body.pg-stitch-06 header.top nav.nav,
+body.pg-stitch-06 header.top #pg-nav,
+body.pg-stitch-06 header.top .pg-domains {
+  display: none !important;
+}
+
+body.pg-stitch-06 #pg-switcher {
+  min-height: 44px;
+  padding: 8px 11px;
+  border: 2px solid #1d1b1b;
+  border-radius: 0;
+  background: #0055c7;
+  box-shadow: 2px 2px 0 #1d1b1b;
+  color: #fff9ec;
+  font: 700 0.68rem/1.1 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 #health {
+  color: #1d1b1b;
+  font: 0.63rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 #health::before {
+  content: "● ";
+  color: #2f8f3a;
+}
+
+/* ---------- Contenedores y paneles ------------------------------------ */
+
+body.pg-stitch-06 .pg-view,
+body.pg-stitch-06 .layout {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 22px 18px 38px;
+}
+
+body.pg-stitch-06 .panel {
+  border: 2px solid #1d1b1b;
+  border-radius: 0;
+  background: #fff9ec;
+  box-shadow: 3px 3px 0 #1d1b1b;
+  color: #1d1b1b;
+}
+
+body.pg-stitch-06 .panel-head h2 {
+  color: #c92f2f;
+  font-family: "Trebuchet MS", "DejaVu Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .ghost {
+  border: 2px solid #1d1b1b;
+  border-radius: 0;
+  background: #fff9ec;
+  box-shadow: 2px 2px 0 #1d1b1b;
+  color: #1d1b1b;
+  font-family: "DejaVu Sans Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .hidden {
+  display: none !important;
+}
+
+/* ---------- Homepage canónica ---------------------------------------- */
+
+body.pg-stitch-06 #pg-home {
+  padding-top: 24px;
+}
+
+body.pg-stitch-06 .pg-home {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+body.pg-stitch-06 .pg-home__banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 2px solid #1d1b1b;
+  background: #fff9ec;
+  box-shadow: 3px 3px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 .pg-home__banner-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+body.pg-stitch-06 .pg-home__banner-mark {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+  background: #c92f2f;
+  box-shadow: 2px 2px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 .pg-home__banner-title {
+  margin: 0;
+  color: #1d1b1b;
+  font: 700 0.8rem/1.35 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-home__banner-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+body.pg-stitch-06 .pg-home__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+body.pg-stitch-06 .pg-home__left,
+body.pg-stitch-06 .pg-home__center,
+body.pg-stitch-06 .pg-home__right {
+  min-width: 0;
+}
+
+body.pg-stitch-06 .pg-home__left {
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body.pg-stitch-06 .pg-home__center {
+  grid-column: 4 / 9;
+}
+
+body.pg-stitch-06 .pg-home__right {
+  grid-column: 9 / 13;
+}
+
+body.pg-stitch-06 .pg-home__specs-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 10px;
+  border: 2px solid #1d1b1b;
+  background: #1d1b1b;
+  color: #fff9ec;
+}
+
+body.pg-stitch-06 .pg-home__specs-title {
+  margin: 0;
+  font: 800 0.66rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-home__specs-range {
+  color: #fbc02d;
+  font: 700 0.6rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  white-space: nowrap;
+}
+
+body.pg-stitch-06 .pg-home__feature {
+  position: relative;
+  padding: 14px 12px 12px;
+  border: 2px solid #1d1b1b;
+  background: #fff9ec;
+  box-shadow: 3px 3px 0 #1d1b1b;
+  cursor: pointer;
+}
+
+body.pg-stitch-06 .pg-home__feature:hover,
+body.pg-stitch-06 .pg-home__feature:focus-visible {
+  outline: 3px solid #0055c7;
+  outline-offset: 2px;
+  background: #fffdf7;
+}
+
+body.pg-stitch-06 .pg-home__feature-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 6px;
+  border: 2px solid #1d1b1b;
+  background: #0055c7;
+  box-shadow: 2px 2px 0 #1d1b1b;
+  color: #fff9ec;
+  font: 700 0.55rem/1.1 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-home__feature-title {
+  margin: 0 92px 6px 0;
+  color: #1d1b1b;
+  font: 800 0.82rem/1.2 "Trebuchet MS", "DejaVu Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-home__feature-text {
+  margin: 0;
+  color: #5b403e;
+  font-size: 0.73rem;
+  line-height: 1.45;
+}
+
+body.pg-stitch-06 .pg-home__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+body.pg-stitch-06 .pg-console {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  aspect-ratio: 1312 / 1199;
+  border: 3px solid #1d1b1b;
+  border-radius: 42px 42px 92px 92px;
+  /* Base más oscura que el resto de la carcasa: el degradado claro superior
+     debe mantener el texto claro por encima de 4.5:1 (WCAG 1.4.3). */
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.16), transparent 36%),
+    #b92828;
+  box-shadow: 6px 6px 0 #1d1b1b;
+  overflow: hidden;
+}
+
+body.pg-stitch-06 .pg-console__top {
+  position: absolute;
+  top: 7%;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: #fff9ec;
+  font: 800 0.72rem/1 "Trebuchet MS", "DejaVu Sans", sans-serif;
+  letter-spacing: 0.12em;
+}
+
+body.pg-stitch-06 .pg-console__model {
+  font-family: "DejaVu Sans Mono", ui-monospace, monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+body.pg-stitch-06 .pg-console__screen {
+  position: absolute;
+  top: 32.5%;
+  left: 23.5%;
+  width: 53%;
+  height: 40.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8% 7%;
+  border: 11px solid #b92828;
+  border-radius: 12px;
+  background:
+    repeating-linear-gradient(0deg, rgb(29 27 27 / 0.06) 0 1px, transparent 1px 4px),
+    #9bbc0f;
+  color: #1d1b1b;
+  box-shadow: inset 0 0 0 3px #8b956d;
+  font: 700 0.62rem/1.35 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.05em;
+}
+
+body.pg-stitch-06 .pg-console__slot,
+body.pg-stitch-06 .pg-console__online,
+body.pg-stitch-06 .pg-console__active,
+body.pg-stitch-06 .pg-console__matrix {
+  white-space: nowrap;
+}
+
+body.pg-stitch-06 .pg-console__online {
+  color: #06430a;
+}
+
+body.pg-stitch-06 .pg-console__lcd {
+  align-self: center;
+  padding: 6px 8px;
+  border: 2px solid #1d1b1b;
+  background: rgb(255 249 236 / 0.72);
+  text-align: center;
+}
+
+body.pg-stitch-06 .pg-console__pad {
+  position: absolute;
+  bottom: 7%;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff9ec;
+  font: 800 0.78rem/1 "DejaVu Sans Mono", ui-monospace, monospace;
+}
+
+body.pg-stitch-06 .pg-console__ab {
+  letter-spacing: 0.35em;
+}
+
+body.pg-stitch-06 .pg-home__play {
+  width: 100%;
+  max-width: 660px;
+  min-height: 72px; /* muy por encima del objetivo táctil de 44 px del PRD */
+  border: 3px solid #1d1b1b;
+  border-radius: 0;
+  background: #c92f2f;
+  box-shadow: 5px 5px 0 #1d1b1b;
+  color: #fff9ec;
+  font: 800 1.1rem/1 "Trebuchet MS", "DejaVu Sans", sans-serif;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+}
+
+body.pg-stitch-06 .pg-home__play:hover,
+body.pg-stitch-06 .pg-home__cta:hover {
+  background: #b92828;
+}
+
+body.pg-stitch-06 .pg-home__right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+body.pg-stitch-06 .pg-home__import,
+body.pg-stitch-06 .pg-home__signup {
+  padding: 14px;
+  border: 2px solid #1d1b1b;
+  background: #fff9ec;
+  box-shadow: 3px 3px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 .pg-home__side-title {
+  margin: 0 0 10px;
+  color: #0055c7;
+  font: 800 0.85rem/1.2 "Trebuchet MS", "DejaVu Sans", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-home__drop {
+  padding: 18px 10px;
+  border: 2px dashed #1d1b1b;
+  background: #fffdf7;
+  color: #1d1b1b;
+  font-weight: 700;
+  text-align: center;
+}
+
+body.pg-stitch-06 .pg-home__drop-hint {
+  margin: 8px 0;
+  color: #78584f;
+  font-size: 0.68rem;
+  text-align: center;
+}
+
+body.pg-stitch-06 .pg-home__cta {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px;
+  border: 2px solid #1d1b1b;
+  border-radius: 0;
+  background: #c92f2f;
+  box-shadow: 3px 3px 0 #1d1b1b;
+  color: #fff9ec;
+  font: 800 0.72rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+body.pg-stitch-06 .pg-home__field {
+  display: block;
+  margin-bottom: 9px;
+}
+
+body.pg-stitch-06 .pg-home__field-label {
+  display: block;
+  margin-bottom: 3px;
+  color: #1d1b1b;
+  font: 700 0.6rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.05em;
+}
+
+body.pg-stitch-06 .pg-home__input {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px;
+  border: 2px solid #1d1b1b;
+  border-radius: 0;
+  background: #fffdf7;
+  color: #1d1b1b;
+  font: 0.75rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+}
+
+body.pg-stitch-06 .pg-home__social {
+  display: flex;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+body.pg-stitch-06 .pg-home__social-btn {
+  flex: 1;
+  min-height: 44px;
+  padding: 7px;
+  border: 2px solid #1d1b1b;
+  border-radius: 0;
+  background: #e0dac9;
+  color: #1d1b1b;
+  font: 700 0.6rem/1.1 "DejaVu Sans Mono", ui-monospace, monospace;
+  opacity: 0.75;
+}
+
+body.pg-stitch-06 .pg-home__mock-note {
+  margin: 9px 0 0;
+  color: #78584f;
+  font-size: 0.62rem;
+  line-height: 1.4;
+}
+
+body.pg-stitch-06 .pg-home__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 3px solid #1d1b1b;
+  background: #fff9ec;
+  color: #1d1b1b;
+  font: 0.65rem/1.4 "DejaVu Sans Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-home__footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- Guardería integrada --------------------------------------- */
+
+body.pg-stitch-06 #nursery.nursery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
+  gap: 16px;
+  padding: 20px 18px 36px;
+}
+
+body.pg-stitch-06 #nursery .nursery-main {
+  min-width: 0;
+  padding: 14px;
+  border: 2px solid #1d1b1b;
+  background: #fff9ec;
+  box-shadow: 3px 3px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 #nursery .pg-nursery-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 9px 11px;
+  border: 2px solid #1d1b1b;
+  background: #1d1b1b;
+  color: #fff9ec;
+}
+
+body.pg-stitch-06 #nursery .pg-nursery-banner__title {
+  margin-right: auto;
+  color: #fff9ec;
+  font: 800 0.68rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 #nursery .pg-nursery-banner__meta {
+  padding: 3px 6px;
+  border: 1px solid #fff9ec;
+  color: #fbc02d;
+  font: 700 0.6rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  white-space: nowrap;
+}
+
+body.pg-stitch-06 #nursery .device-shell {
+  width: min(100%, 1000px);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* applyScale() fija el ancho en píxeles enteros; un max-width global heredado
+ * lo reducía a 682px y rompía el escalado pixel-perfect (4.26x). */
+body.pg-stitch-06 #nursery .screen-frame,
+body.pg-stitch-06 #nursery #pg-canvas {
+  max-width: none;
+  width: max-content;
+}
+
+body.pg-stitch-06 #nursery .device-buttons .device-button {
+  border: 2px solid #1d1b1b;
+  border-radius: 0;
+  background: #c92f2f;
+  box-shadow: 2px 2px 0 #1d1b1b;
+  color: #fff9ec;
+}
+
+body.pg-stitch-06 #nursery aside.nursery-side {
+  min-width: 0;
+}
+
+/* ---------- Quick Switcher y diálogos -------------------------------- */
+
+body.pg-stitch-06 dialog.pg-dialog {
+  padding: 0;
+  border: 3px solid #1d1b1b;
+  border-radius: 0;
+  background: #fff9ec;
+  box-shadow: 5px 5px 0 #1d1b1b;
+  color: #1d1b1b;
+}
+
+body.pg-stitch-06 dialog.pg-dialog--switcher {
+  width: min(1120px, 94vw);
+  max-width: 94vw;
+}
+
+body.pg-stitch-06 dialog.pg-dialog::backdrop {
+  background: rgb(29 27 27 / 0.55);
+}
+
+body.pg-stitch-06 .pg-dialog__head {
+  border-bottom: 2px solid #1d1b1b;
+  background: #c92f2f;
+  color: #fff9ec;
+}
+
+body.pg-stitch-06 .pg-switcher {
+  width: 100%;
+  min-width: 0;
+}
+
+body.pg-stitch-06 .pg-switcher__chassis {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  min-height: 380px;
+}
+
+body.pg-stitch-06 .pg-switcher__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 14px;
+  border-right: 3px solid #1d1b1b;
+  background: #1d1b1b;
+  color: #fff9ec;
+  font: 700 0.66rem/1.3 "DejaVu Sans Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-switcher__side-brand {
+  /* Rojo claro sobre el raíl oscuro: el rojo de la carcasa no llega a 4.5:1. */
+  color: #ff5a5f;
+  font: 800 1.05rem/1 "Trebuchet MS", "DejaVu Sans", sans-serif;
+  letter-spacing: 0.08em;
+  text-shadow: 2px 2px 0 #fff9ec;
+}
+
+body.pg-stitch-06 .pg-switcher__side-sub {
+  color: #fbc02d;
+  font-size: 0.62rem;
+}
+
+body.pg-stitch-06 .pg-switcher__side-bus {
+  margin-top: 16px;
+  padding: 5px 7px;
+  border: 2px solid #fff9ec;
+  background: #0055c7;
+  text-align: center;
+}
+
+body.pg-stitch-06 .pg-switcher__side-domains {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto;
+}
+
+body.pg-stitch-06 .pg-switcher__side-domain {
+  padding: 3px 6px;
+  border: 1px solid rgb(255 249 236 / 0.55);
+  color: #fff9ec;
+  font-size: 0.6rem;
+}
+
+body.pg-stitch-06 .pg-switcher__main {
+  min-width: 0;
+  padding: 16px;
+}
+
+body.pg-stitch-06 .pg-switcher__title {
+  margin: 0;
+  color: #c92f2f;
+  font: 800 1.35rem/1 "Trebuchet MS", "DejaVu Sans", sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-switcher__subtitle {
+  margin: 5px 0 14px;
+  color: #5b403e;
+  font: 0.68rem/1.3 "DejaVu Sans Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-switcher__domain,
+body.pg-stitch-06 .pg-switcher__option,
+body.pg-stitch-06 .pg-switcher__empty,
+body.pg-stitch-06 .pg-stub__path {
+  border-radius: 0;
+  border-color: #1d1b1b;
+  background: #fffdf7;
+}
+
+body.pg-stitch-06 .pg-switcher__domain[aria-selected="true"] {
+  border-color: #1d1b1b;
+  background: #0055c7;
+  box-shadow: 2px 2px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 .pg-switcher__option.is-active,
+body.pg-stitch-06 .pg-switcher__option:hover {
+  border-color: #1d1b1b;
+  background: #fbc02d;
+  box-shadow: 2px 2px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 .pg-switcher__input {
+  border: 2px solid #1d1b1b;
+  border-radius: 0;
+  background: #fffdf7;
+  box-shadow: inset 2px 2px 0 rgb(29 27 27 / 0.12);
+  color: #1d1b1b;
+  font-family: "DejaVu Sans Mono", ui-monospace, monospace;
+}
+
+body.pg-stitch-06 .pg-switcher__head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body.pg-stitch-06 .pg-switcher__input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+body.pg-stitch-06 .pg-switcher__input-row > :first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+body.pg-stitch-06 .pg-switcher__hotkey {
+  padding: 6px 8px;
+  border: 2px solid #1d1b1b;
+  background: #fbc02d;
+  box-shadow: 2px 2px 0 #1d1b1b;
+  color: #1d1b1b;
+  font: 700 0.6rem/1.1 "DejaVu Sans Mono", ui-monospace, monospace;
+  white-space: nowrap;
+}
+
+body.pg-stitch-06 .pg-switcher__results-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 14px;
+  align-items: start;
+}
+
+body.pg-stitch-06 .pg-switcher__preview {
+  min-height: 220px;
+  padding: 14px;
+  border: 2px solid #1d1b1b;
+  background: #fffdf7;
+  box-shadow: 3px 3px 0 #1d1b1b;
+}
+
+body.pg-stitch-06 .pg-switcher__preview-kicker {
+  color: #0055c7;
+  font: 700 0.6rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+  letter-spacing: 0.06em;
+}
+
+body.pg-stitch-06 .pg-switcher__preview-title {
+  margin: 8px 0 4px;
+  color: #c92f2f;
+  font: 800 1.05rem/1.2 "Trebuchet MS", "DejaVu Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+body.pg-stitch-06 .pg-switcher__preview-path {
+  display: inline-block;
+  padding: 3px 6px;
+  border: 1px solid #1d1b1b;
+  background: #fff9ec;
+  font: 0.65rem/1.2 "DejaVu Sans Mono", ui-monospace, monospace;
+}
+
+body.pg-stitch-06 .pg-switcher__preview-desc {
+  margin: 12px 0;
+  color: #5b403e;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+body.pg-stitch-06 .pg-switcher__preview-state {
+  display: inline-block;
+  padding: 3px 6px;
+  border: 2px solid #1d1b1b;
+  font: 700 0.58rem/1.1 "DejaVu Sans Mono", ui-monospace, monospace;
+}
+
+body.pg-stitch-06 .pg-switcher__preview-state.is-ready {
+  background: #9bbc0f;
+}
+
+body.pg-stitch-06 .pg-switcher__preview-state.is-pending {
+  background: #e0dac9;
+}
+
+body.pg-stitch-06 .pg-switcher__preview-empty {
+  margin: 0;
+  color: #78584f;
+  font-size: 0.72rem;
+}
+
+/* ---------- Objetivos táctiles de las páginas integradas ------------- */
+/* pages.css no se sirve todavía como hoja independiente: el bundle pg08 solo
+   incluye los estilos por dominio. Se refuerza aquí el mínimo de 44 px del PRD
+   para que la corrección sea efectiva en la app servida. */
+body.pg-stitch-06 .pg-page .pg-btn,
+body.pg-stitch-06 .pg-page .pg-rail__item,
+body.pg-stitch-06 .pg-page .pg-page__crumb {
+  min-height: 44px;
+}
+
+/* ---------- Puntos de ruptura ---------------------------------------- */
+
+@media (max-width: 1100px) {
+  body.pg-stitch-06 .pg-home__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  }
+  body.pg-stitch-06 .pg-home__left,
+  body.pg-stitch-06 .pg-home__center {
+    grid-column: auto;
+  }
+  body.pg-stitch-06 .pg-home__right {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  body.pg-stitch-06 #nursery.nursery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  body.pg-stitch-06 header.top {
+    padding: 10px 12px;
+  }
+  body.pg-stitch-06 .pg-shell-nav {
+    width: 100%;
+    margin-left: 0;
+  }
+  body.pg-stitch-06 .pg-home__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body.pg-stitch-06 .pg-home__right {
+    grid-column: auto;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body.pg-stitch-06 .pg-home__feature-title {
+    margin-right: 0;
+    padding-top: 20px;
+  }
+  body.pg-stitch-06 .pg-console__screen {
+    border-width: 7px;
+    font-size: 0.52rem;
+  }
+  body.pg-stitch-06 .pg-view,
+  body.pg-stitch-06 .layout,
+  body.pg-stitch-06 #nursery.nursery {
+    padding: 14px 12px 28px;
+  }
+  body.pg-stitch-06 .pg-switcher {
+    min-width: 0;
+    width: 100%;
+  }
+  body.pg-stitch-06 .pg-switcher__results-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body.pg-stitch-06 .pg-switcher__preview {
+    min-height: 0;
+  }
+  body.pg-stitch-06 .pg-switcher__hotkey {
+    display: none;
+  }
+  body.pg-stitch-06 #nursery .device-shell {
+    padding: 8px 2px 12px;
+    border-width: 2px;
+  }
+  body.pg-stitch-06 #nursery .device-shell .screen-frame {
+    padding: 0;
+    border-width: 2px;
+  }
+}
